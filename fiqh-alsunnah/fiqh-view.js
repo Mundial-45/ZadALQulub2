@@ -1,7 +1,7 @@
 // واجهة فقه السنة: تنقل ثنائي اللغة (عربي/إسباني).
 (function () {
   const books = () => window.feqhData || [];
-  const lang = () => (window.currentLang === "es" ? "es" : "ar");
+  const lang = () => (document.documentElement.lang === "es" ? "es" : "ar");
   const tr = value => value && (value[lang()] || value.ar || value.es) || "";
   let activeBook = null, activeSection = null;
 
