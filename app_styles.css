@@ -756,3 +756,42 @@ button[onclick="jumpToInputPage()"]:hover {
 #fiqhView.hidden { display: none !important; }
 #homeView #fiqhHomeCard { background: linear-gradient(135deg, #b45309 0%, #7c2d12 100%) !important; color: #fff !important; }
 #homeView #fiqhHomeCard * { color: #fff !important; }
+
+/* تنسيق محتوى فقه السنة على نمط الموسوعة الفقهية بالدرر السنية */
+.fiqh-article-text {
+  line-height: 2.15;
+  text-align: start;
+  overflow-wrap: anywhere;
+}
+.fiqh-article-text .fiqh-quran {
+  color: #16804a;
+  font-family: 'Amiri Quran', 'Amiri', serif;
+  font-weight: 700;
+  background: rgba(22, 128, 74, 0.075);
+  border-radius: 0.3rem;
+  padding-inline: 0.12rem;
+}
+.fiqh-article-text .fiqh-hadith {
+  color: #b45309;
+  font-family: 'Amiri', 'Tajawal', serif;
+  font-weight: 700;
+  background: rgba(217, 119, 6, 0.075);
+  border-radius: 0.3rem;
+  padding-inline: 0.12rem;
+}
+.fiqh-article-text .fiqh-source {
+  color: #64748b;
+  font-size: 0.92em;
+  font-weight: 700;
+}
+.dark .fiqh-article-text .fiqh-quran {
+  color: #6ee7a5;
+  background: rgba(52, 211, 153, 0.10);
+}
+.dark .fiqh-article-text .fiqh-hadith {
+  color: #fdba74;
+  background: rgba(251, 146, 60, 0.10);
+}
+.dark .fiqh-article-text .fiqh-source {
+  color: #a1a1aa;
+}
