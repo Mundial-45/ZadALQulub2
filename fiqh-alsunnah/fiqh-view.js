@@ -101,7 +101,8 @@
   }
   window.openFiqhSection = open;
   window.refreshFiqhLanguage = refreshLanguage;
-  document.addEventListener("DOMContentLoaded", addHomeCard);
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", addHomeCard, { once: true });
+  else addHomeCard();
   const oldToggle = window.toggleLanguage;
   if (typeof oldToggle === "function") {
     window.toggleLanguage = function () { oldToggle.apply(this, arguments); refreshLanguage(); };
