@@ -65,7 +65,7 @@
     v.querySelector("#fiqhIntro").textContent = lang() === "es" ? "Seleccione un libro para consultar sus temas." : "اختر كتابًا لاستعراض أبوابه ومسائله.";
     content.replaceChildren();
     books().forEach(book => content.appendChild(card(tr(book.title), lang() === "es" ? "Abrir libro" : "فتح الكتاب", () => renderBook(book))));
-    v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Contenido introductorio organizado por temas. Las pruebas textuales y las atribuciones se incorporarán con referencias verificadas." : "محتوى تمهيدي مرتب حسب الموضوعات. ستضاف الأدلة والنقول مع عزوها إلى مراجع موثقة.";
+    v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Contenido introductorio organizado por temas. Las pruebas textuales y las atribuciones se incorporarán con referencias verificadas." : "محتوى فقهي مرتب حسب الأبواب والمسائل.";
   }
   function renderBook(book, skipHistory = false) {
     activeBook = book; activeSection = null;
@@ -146,6 +146,7 @@
     const sections = topic.content && (topic.content[lang()] || topic.content.ar || topic.content.es);
     if (Array.isArray(sections)) {
       sections.forEach(part => {
+        if (part.heading && /^(المراجع(?: الفقهية)?|المصادر(?: الفقهية)?|أسئلة وأجوبة|أسئلة شائعة|Referencias(?: jurídicas)?|Fuentes(?: jurídicas)?|Preguntas y respuestas|Bibliografía)$/i.test(part.heading.trim())) return;
         const block = document.createElement("section");
         block.className = "space-y-2";
         if (part.heading) {
@@ -156,7 +157,7 @@
         }
         const paragraph = document.createElement("p");
         paragraph.className = "fiqh-article-text whitespace-pre-line text-slate-800 dark:text-slate-100";
-        appendStyledEvidence(paragraph, part.text || "");
+        appendStyledEvidence(paragraph, (part.text || "").replace(/https?:\\/\\/\\S+|www\\.\\S+/gi, "").replace(/[ \\t]+([،؛,.])/g, "$1"));
         block.appendChild(paragraph);
         article.appendChild(block);
       });
