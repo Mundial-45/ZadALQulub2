@@ -76,7 +76,7 @@
     content.replaceChildren();
     book.sections.forEach(section => {
       const sub = section.id === "water" && section.chapters
-        ? (lang() === "es" ? "Introducción y tres capítulos" : "تمهيد وثلاثة فصول")
+        ? (lang() === "es" ? "Abrir capítulo" : "فتح الباب")
         : lang() === "es" ? "Abrir sección" : "فتح الباب";
       content.appendChild(card(tr(section.title), sub, () => renderSection(section)));
     });
