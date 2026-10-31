@@ -1348,14 +1348,53 @@ window.addEventListener('popstate', (e) => {
   }
 });
 
+function restoreInitialAppView() {
+  const state = window.history && window.history.state;
+  if (!state || !state.view) {
+    if (!window.location.hash) {
+      try { window.history.replaceState({ view: 'home' }, '', window.location.href); } catch (e) {}
+      goHome(true);
+      return;
+    }
+    const hash = window.location.hash.slice(1);
+    if (hash === 'home') { goHome(true); return; }
+    if (hash === 'tasbeeh') { showTasbeeh(true); return; }
+    if (hash === 'favorites') { showFavorites(true); return; }
+    if (hash === 'quran') { showQuranView(true); return; }
+    if (hash === 'quranSurahs') { showQuranSurahsView(true); return; }
+    if (hash === 'quranAhzab') { showQuranAhzabView(true); return; }
+    const page = hash.match(/^quran-page-(\\d+)$/);
+    if (page) { openQuranPage(Number(page[1]), true); return; }
+    const section = hash.match(/^section-(azkar|adya|munajat|ruqyah)$/);
+    if (section) { showSection(section[1], true); return; }
+    goHome(true);
+    return;
+  }
+  switch (state.view) {
+    case 'home': goHome(true); break;
+    case 'section': showSection(state.sec, true); break;
+    case 'detail':
+      if (state.sec) currentSection = state.sec;
+      openGroup(state.groupId, true);
+      break;
+    case 'tasbeeh': showTasbeeh(true); break;
+    case 'favorites': showFavorites(true); break;
+    case 'quran': showQuranView(true); break;
+    case 'quranSurahs': showQuranSurahsView(true); break;
+    case 'quranAhzab': showQuranAhzabView(true); break;
+    case 'quranReader': openQuranPage(state.page || 1, true); break;
+    case 'fiqh':
+      if (typeof window.restoreFiqhRoute === 'function') window.restoreFiqhRoute(state);
+      else goHome(true);
+      break;
+    default: goHome(true);
+  }
+}
+
 window.addEventListener('DOMContentLoaded', () => {
   checkDailyReset();
   loadSavedTheme();
   loadFavorites();
   applyLanguageUI();
-  if (window.history && window.history.replaceState) {
-    try {
-      window.history.replaceState({ view: 'home' }, '', '#home');
-    } catch (e) {}
-  }
+  restoreInitialAppView();
 });
