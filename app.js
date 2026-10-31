@@ -447,7 +447,11 @@ function toggleFavorite(text) {
 
 function hideAllViews() {
   ['homeView', 'categoryListView', 'detailView', 'tasbeehView', 'favoritesView', 'quranView', 'quranSurahsView', 'quranAhzabView', 'quranReaderView', 'fiqhView'].forEach(id => {
-    document.getElementById(id)?.classList.add('hidden');
+    const view = document.getElementById(id);
+    if (view) {
+      view.classList.add('hidden');
+      if (id === 'fiqhView') view.style.display = 'none';
+    }
   });
 }
 
