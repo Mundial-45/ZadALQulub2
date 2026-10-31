@@ -111,7 +111,7 @@
   }
   // إبراز النصوص الشرعية والمراجع على نمط الموسوعة الفقهية بالدرر السنية.
   function appendStyledEvidence(target, value) {
-    const pattern = /(﴿[^﴿﴾]*﴾|»[^»«]*«|«[^«»]*»|\\(\\([^()\\n]{2,}\\)\\))/g;
+    const pattern = /(﴿[^﴿﴾]*﴾|»[^»«]*«|«[^«»]*»|\\(\\([^()\\n]{2,}\\)\\)|(?:رواه|أخرجه|متفق عليه|انظر|راجع|المصدر:)\\s*[^\\n،؛.]*)/g;
     let last = 0, match;
     while ((match = pattern.exec(value)) !== null) {
       if (match.index > last) target.appendChild(document.createTextNode(value.slice(last, match.index)));
