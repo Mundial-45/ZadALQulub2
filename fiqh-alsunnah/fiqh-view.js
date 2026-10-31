@@ -324,7 +324,13 @@
         topic = (chapter.topics || []).find(item => item.id === state.topicId);
       } else if (state.topicId === section.intro.id) topic = section.intro;
     }
-    if (topic) renderTopic(topic, true);
+    if (topic) {
+      renderTopic(topic, true);
+      if (state.level === "issue" && topic.issues) {
+        const issue = topic.issues.find(item => item.id === state.issueId);
+        if (issue) renderIssue(issue, true);
+      }
+    }
   }
   function back() {
     if (history.state && history.state.view === "fiqh" && history.length > 1) { history.back(); return; }
