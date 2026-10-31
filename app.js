@@ -1341,6 +1341,7 @@ window.addEventListener('popstate', (e) => {
       case 'quranSurahs': if (typeof showQuranSurahsView === 'function') showQuranSurahsView(true); break;
       case 'quranAhzab': if (typeof showQuranAhzabView === 'function') showQuranAhzabView(true); break;
       case 'quranReader': if (typeof openQuranPage === 'function') openQuranPage(e.state.page || 1, true); break;
+      case 'fiqh': if (typeof window.restoreFiqhRoute === 'function') window.restoreFiqhRoute(e.state); else goHome(true); break;
       default: goHome(true);
     }
   } else {
