@@ -157,7 +157,7 @@
         }
         const paragraph = document.createElement("p");
         paragraph.className = "fiqh-article-text whitespace-pre-line text-slate-800 dark:text-slate-100";
-        appendStyledEvidence(paragraph, (part.text || "").replace(/https?:\\/\\/\\S+|www\\.\\S+/gi, "").replace(/[ \\t]+([،؛,.])/g, "$1"));
+        appendStyledEvidence(paragraph, (part.text || "").replace(/https?:\/\/\S+|www\.\S+/gi, "").replace(/[ \\t]+([،؛,.])/g, "$1"));
         block.appendChild(paragraph);
         article.appendChild(block);
       });
