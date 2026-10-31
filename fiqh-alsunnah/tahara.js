@@ -1,3 +1,4 @@
+window.FiqhBooks = window.FiqhBooks || {};
 window.FiqhBooks.tahara = {
   "id": "tahara",
   "title": {
