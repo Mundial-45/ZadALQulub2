@@ -150,6 +150,57 @@
     content.replaceChildren();
     const article = document.createElement("article");
     article.className = "rounded-2xl border border-emerald-200 dark:border-emerald-900 bg-white dark:bg-slate-800 p-5 text-base leading-8 space-y-5";
+    if (topic.id === "water-used") {
+      const labels = lang() === "es" ? [
+        "Primer asunto: Agua utilizada para eliminar el hadath",
+        "Segundo asunto: Agua utilizada en una purificación recomendada",
+        "Tercer asunto: Agua utilizada para refrescarse y limpiarse",
+        "Cuarto asunto: Agua en la que introduce la mano quien despierta",
+        "Quinto asunto: Agua utilizada para eliminar una impureza",
+        "Sexto asunto: Purificación con el agua sobrante de un hombre o una mujer"
+      ] : [
+        "المطلب الأول: الماء المستعمل في رفع الحدث",
+        "المطلب الثاني: الماء المستعمل في طهارة مستحبة",
+        "المطلب الثالث: الماء المستعمل في التبرد والنظافة",
+        "المطلب الرابع: الماء المستعمل بغمس يد القائم من النوم",
+        "المطلب الخامس: الماء المستعمل في إزالة النجاسة",
+        "المطلب السادس: حكم التطهر بفضل الرجل أو المرأة"
+      ];
+      const intro = document.createElement("p");
+      intro.className = "fiqh-article-text whitespace-pre-line text-slate-800 dark:text-slate-100";
+      const first = topic.content && (topic.content[lang()] || topic.content.ar || topic.content.es);
+      if (Array.isArray(first) && first[0]) appendStyledEvidence(intro, first[0].text || "");
+      article.appendChild(intro);
+      const nav = document.createElement("div");
+      nav.className = "grid grid-cols-1 gap-3";
+      const detail = document.createElement("section");
+      detail.className = "rounded-xl border border-emerald-200 dark:border-emerald-900 bg-slate-50 dark:bg-slate-900 p-4 space-y-2";
+      const detailTitle = document.createElement("h3");
+      detailTitle.className = "font-extrabold text-emerald-800 dark:text-emerald-300 text-lg";
+      const detailText = document.createElement("p");
+      detailText.className = "fiqh-article-text whitespace-pre-line text-slate-800 dark:text-slate-100";
+      detail.append(detailTitle, detailText);
+      labels.forEach((label, index) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 text-start font-bold text-slate-800 dark:text-slate-100 shadow-sm hover:border-emerald-500";
+        btn.textContent = label;
+        btn.addEventListener("click", () => {
+          detailTitle.textContent = label;
+          detailText.textContent = lang() === "es"
+            ? "Este apartado trata la norma jurídica correspondiente a esta situación dentro del tema del agua utilizada."
+            : "يتناول هذا المطلب الحكم الفقهي لهذه الصورة من صور الماء المستعمل.";
+          detail.hidden = false;
+          detail.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        });
+        nav.appendChild(btn);
+      });
+      article.append(nav, detail);
+      detail.hidden = true;
+      content.appendChild(article);
+      v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Seleccione uno de los seis asuntos." : "اختر أحد المطالب الستة لعرضه.";
+      return;
+    }
     const sections = topic.content && (topic.content[lang()] || topic.content.ar || topic.content.es);
     if (Array.isArray(sections)) {
       sections.forEach(part => {
