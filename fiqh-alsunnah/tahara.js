@@ -1331,3 +1331,115 @@ window.FiqhBooks.tahara = {
     }
   ]
 };
+
+
+// البنية المعتمدة لكتاب الطهارة: باب ← فصل ← مبحث ← مطلب.
+// تُحفظ البنية السابقة كاملة في legacySections لتوزيع نصوصها على المطالب دون فقدها.
+(function () {
+  const book = window.FiqhBooks && window.FiqhBooks.tahara;
+  if (!book || book._outlineVersion === 1) return;
+  book.legacySections = book.sections;
+  const makeIssues = (prefix, labels) => labels.map((label, i) => ({
+    id: prefix + "-issue-" + (i + 1),
+    title: { ar: "المطلب " + ["الأول","الثاني","الثالث","الرابع","الخامس","السادس"][i] + ": " + label[0], es: ["Primer asunto: ","Segundo asunto: ","Tercer asunto: ","Cuarto asunto: ","Quinto asunto: ","Sexto asunto: "][i] + label[1] }
+  }));
+  const topic = (id, ar, es, issues) => ({ id, title:{ar,es}, issues });
+  const chapter = (id, ar, es, topics) => ({ id, title:{ar,es}, topics });
+  const section = (id, ar, es, chapters) => ({ id, title:{ar,es}, chapters });
+  const b1 = section("water","الباب الأول: أحكام المياه","Capítulo 1: Normas del agua",[
+    chapter("water-types","الفصل الأول: أقسام المياه","Capítulo 1: Clases de agua",[
+      topic("water-pure","المبحث الأول: الماء الطهور","Apartado 1: Agua purificadora",makeIssues("water-pure",[["تعريف الماء الطهور","Definición del agua purificadora"],["حكم الماء الطهور","Norma del agua purificadora"],["ما يخرج به الماء عن الطهورية","Circunstancias que le hacen perder su capacidad purificadora"]])),
+      topic("water-impure","المبحث الثاني: الماء النجس","Apartado 2: Agua impura",makeIssues("water-impure",[["تعريف الماء النجس","Definición del agua impura"],["علامات تنجس الماء","Signos de contaminación del agua"],["حكم الماء النجس واستعماله","Norma y uso del agua impura"]])),
+      topic("water-used","المبحث الثالث: الماء المستعمل","Apartado 3: Agua usada",makeIssues("water-used",[["تعريف الماء المستعمل","Definición del agua usada"],["حكم الماء المستعمل","Norma del agua usada"]]))
+    ]),
+    chapter("utensils","الفصل الثاني: أحكام الآنية","Capítulo 2: Normas de los recipientes",[
+      topic("gold-silver","المبحث الأول: حكم استعمال آنية الذهب والفضة","Apartado 1: Uso de recipientes de oro y plata",makeIssues("gold-silver",[["تحريم الأكل والشرب فيهما","Prohibición de comer y beber en ellos"],["حكم الاستعمال في غير الأكل والشرب","Uso para fines distintos de comer y beber"]])),
+      topic("nonmuslim-utensils","المبحث الثاني: حكم آنية الكفار","Apartado 2: Recipientes de los no musulmanes",makeIssues("nonmuslim-utensils",[["الأصل في آنية الكفار","Principio general sobre sus recipientes"],["وجوب غسلها","Cuándo deben lavarse"]]))
+    ])
+  ]);
+  const b2 = section("istinja","الباب الثاني: الاستنجاء والاستجمار","Capítulo 2: Istinyá e istijmar",[
+    chapter("istinja-ch","الفصل الأول: الاستنجاء","Capítulo 1: Istinyá",[
+      topic("istinja-definition","المبحث الأول: تعريف الاستنجاء وحكمه","Apartado 1: Definición y norma del istinyá",makeIssues("istinja-definition",[["تعريف الاستنجاء","Definición del istinyá"],["حكم الاستنجاء","Norma del istinyá"]])),
+      topic("istinja-etiquette","المبحث الثاني: آداب الاستنجاء","Apartado 2: Modales del istinyá",makeIssues("istinja-etiquette",[["الآداب قبل الاستنجاء","Modales previos"],["الآداب أثناء الاستنجاء","Modales durante la limpieza"],["الآداب بعد الاستنجاء","Modales posteriores"]]))
+    ]),
+    chapter("istijmar-ch","الفصل الثاني: الاستجمار","Capítulo 2: Istijmar",[
+      topic("istijmar-conditions","المبحث الأول: تعريف الاستجمار وشروطه","Apartado 1: Definición y condiciones del istijmar",makeIssues("istijmar-conditions",[["تعريف الاستجمار","Definición del istijmar"],["شروط الاستجمار","Condiciones del istijmar"]])),
+      topic("istijmar-materials","المبحث الثاني: ما يجوز الاستجمار به وما لا يجوز","Apartado 2: Materiales permitidos y prohibidos",makeIssues("istijmar-materials",[["ما يجوز الاستجمار به","Materiales permitidos"],["ما لا يجوز الاستجمار به","Materiales no permitidos"]]))
+    ])
+  ]);
+  const b3 = section("wudu","الباب الثالث: الوضوء","Capítulo 3: Wudu",[
+    chapter("wudu-definition","الفصل الأول: تعريف الوضوء وفضله","Capítulo 1: Definición y virtud del wudu",[
+      topic("wudu-meaning","المبحث الأول: تعريف الوضوء","Apartado 1: Definición del wudu",makeIssues("wudu-meaning",[["تعريف الوضوء لغة","Definición lingüística"],["تعريف الوضوء اصطلاحًا","Definición jurídica"]])),
+      topic("wudu-virtue","المبحث الثاني: فضل الوضوء","Apartado 2: Virtud del wudu",makeIssues("wudu-virtue",[["أدلة فضل الوضوء","Pruebas sobre su virtud"],["أجر المتوضئ","Recompensa de quien realiza el wudu"]]))
+    ]),
+    chapter("wudu-conditions","الفصل الثاني: شروط الوضوء","Capítulo 2: Condiciones del wudu",[
+      topic("wudu-obligation-conditions","المبحث الأول: شروط الوجوب","Apartado 1: Condiciones de obligatoriedad",makeIssues("wudu-obligation-conditions",[["الإسلام والبلوغ والعقل","Islam, mayoría de edad y razón"],["القدرة على الماء","Capacidad de disponer de agua"]])),
+      topic("wudu-validity-conditions","المبحث الثاني: شروط الصحة","Apartado 2: Condiciones de validez",makeIssues("wudu-validity-conditions",[["النية","Intención"],["الإسلام والتمييز","Islam y discernimiento"],["الطهارة من الحدث والخبث","Purificación del estado ritual y de impurezas"],["إزالة المانع","Eliminar aquello que impide el agua"]]))
+    ]),
+    chapter("wudu-pillars","الفصل الثالث: فرائض الوضوء","Capítulo 3: Obligaciones del wudu",[
+      topic("wudu-agreed-pillars","المبحث الأول: الفرائض المتفق عليها","Apartado 1: Obligaciones reconocidas",makeIssues("wudu-agreed-pillars",[["غسل الوجه","Lavado del rostro"],["غسل اليدين إلى المرفقين","Lavado de los brazos hasta los codos"],["مسح الرأس","Pasar las manos húmedas por la cabeza"],["غسل الرجلين إلى الكعبين","Lavado de los pies hasta los tobillos"],["الترتيب","Orden"],["الموالاة","Continuidad"]])),
+      topic("wudu-disputed-pillars","المبحث الثاني: ما زاد على الفرائض","Apartado 2: Cuestiones adicionales",makeIssues("wudu-disputed-pillars",[["المضمضة والاستنشاق","Enjuague de la boca e inhalación de agua"],["مسح الأذنين","Pasar las manos húmedas por las orejas"]]))
+    ]),
+    chapter("wudu-sunnahs","الفصل الرابع: سنن الوضوء","Capítulo 4: Actos recomendados del wudu",[
+      topic("wudu-verbal-sunnahs","المبحث الأول: السنن القولية","Apartado 1: Actos verbales",makeIssues("wudu-verbal-sunnahs",[["التسمية","Mencionar el nombre de Dios"],["الذكر بعد الوضوء","Invocación después del wudu"]])),
+      topic("wudu-practical-sunnahs","المبحث الثاني: السنن الفعلية","Apartado 2: Actos prácticos",makeIssues("wudu-practical-sunnahs",[["السواك","Uso del siwak"],["غسل الكفين","Lavado de las palmas"],["البدء بالميامن","Comenzar por el lado derecho"],["تخليل الأصابع","Entrelazar los dedos"]]))
+    ]),
+    chapter("wudu-description","الفصل الخامس: صفة الوضوء","Capítulo 5: Forma del wudu",[
+      topic("wudu-complete","المبحث الأول: الصفة الكاملة","Apartado 1: Forma completa",makeIssues("wudu-complete",[["صفة وضوء النبي ﷺ","Forma del wudu del Profeta ﷺ"],["الخطوات التفصيلية","Pasos detallados"]])),
+      topic("wudu-minimum","المبحث الثاني: الصفة المجزئة","Apartado 2: Forma mínima válida",makeIssues("wudu-minimum",[["الاقتصار على الفرائض","Limitarse a las obligaciones"],["حكم ترك السنن","Norma de omitir los actos recomendados"]]))
+    ]),
+    chapter("wudu-nullifiers","الفصل السادس: نواقض الوضوء","Capítulo 6: Anuladores del wudu",[
+      topic("wudu-agreed-nullifiers","المبحث الأول: النواقض المتفق عليها","Apartado 1: Anuladores acordados",makeIssues("wudu-agreed-nullifiers",[["الخارج من السبيلين","Lo que sale de las dos vías"],["زوال العقل","Pérdida de la razón"],["مس الفرج","Tocar los genitales"],["أكل لحم الإبل","Comer carne de camello"]])),
+      topic("wudu-disputed-nullifiers","المبحث الثاني: النواقض المختلف فيها","Apartado 2: Anuladores discutidos",makeIssues("wudu-disputed-nullifiers",[["القيء والدم","Vómito y sangre"],["لمس المرأة","Contacto físico con una mujer"],["غسل الميت","Lavar a un difunto"]])),
+      topic("wudu-non-nullifiers","المبحث الثالث: ما لا ينقض الوضوء","Apartado 3: Lo que no anula el wudu",makeIssues("wudu-non-nullifiers",[["الشك في الحدث","Duda sobre haber perdido el estado ritual"],["النوم اليسير جالسًا","Sueño ligero estando sentado"]]))
+    ])
+  ]);
+  const b4 = section("ghusl","الباب الرابع: الغسل","Capítulo 4: Ghusl",[
+    chapter("ghusl-causes","الفصل الأول: موجبات الغسل","Capítulo 1: Causas que hacen obligatorio el ghusl",[
+      topic("ghusl-agreed-causes","المبحث الأول: الموجبات المتفق عليها","Apartado 1: Causas acordadas",makeIssues("ghusl-agreed-causes",[["خروج المني","Emisión de semen"],["الجماع","Relación sexual"],["الحيض والنفاس","Menstruación y puerperio"],["الموت","Fallecimiento"]])),
+      topic("ghusl-disputed-causes","المبحث الثاني: الموجبات المختلف فيها","Apartado 2: Causas discutidas",makeIssues("ghusl-disputed-causes",[["غسل الجمعة","Baño del viernes"],["غسل العيدين","Baño de las dos festividades"]]))
+    ]),
+    chapter("ghusl-rulings","الفصل الثاني: فرائض الغسل وسننه","Capítulo 2: Obligaciones y actos recomendados del ghusl",[
+      topic("ghusl-obligations","المبحث الأول: فرائض الغسل","Apartado 1: Obligaciones",makeIssues("ghusl-obligations",[["النية","Intención"],["تعميم البدن","Mojar todo el cuerpo"],["إزالة النجاسة إن وجدت","Eliminar impurezas si las hubiera"]])),
+      topic("ghusl-sunnahs","المبحث الثاني: سنن الغسل","Apartado 2: Actos recomendados",makeIssues("ghusl-sunnahs",[["التسمية","Mencionar el nombre de Dios"],["الوضوء قبل الغسل","Realizar wudu antes del ghusl"],["البدء باليمين","Comenzar por el lado derecho"],["دلك البدن","Frotar el cuerpo"]]))
+    ]),
+    chapter("ghusl-form","الفصل الثالث: صفة الغسل","Capítulo 3: Forma del ghusl",[
+      topic("ghusl-complete","المبحث الأول: الصفة الكاملة","Apartado 1: Forma completa",makeIssues("ghusl-complete",[["صفة غسل النبي ﷺ","Forma del baño del Profeta ﷺ"],["الخطوات التفصيلية","Pasos detallados"]])),
+      topic("ghusl-minimum","المبحث الثاني: الصفة المجزئة","Apartado 2: Forma mínima válida",makeIssues("ghusl-minimum",[["الاقتصار على الفرائض","Limitarse a las obligaciones"]]))
+    ])
+  ]);
+  const b5 = section("tayammum","الباب الخامس: التيمم","Capítulo 5: Tayammum",[
+    chapter("tayammum-definition","الفصل الأول: تعريف التيمم ومشروعيته","Capítulo 1: Definición y legitimidad",[
+      topic("tayammum-meaning","المبحث الأول: تعريف التيمم","Apartado 1: Definición",makeIssues("tayammum-meaning",[["تعريف التيمم لغة","Definición lingüística"],["تعريف التيمم اصطلاحًا","Definición jurídica"]])),
+      topic("tayammum-evidence","المبحث الثاني: مشروعية التيمم","Apartado 2: Fundamento jurídico",makeIssues("tayammum-evidence",[["أدلة القرآن","Pruebas del Corán"],["أدلة السنة","Pruebas de la Sunna"]]))
+    ]),
+    chapter("tayammum-causes","الفصل الثاني: أسباب التيمم","Capítulo 2: Causas del tayammum",[
+      topic("tayammum-no-water","المبحث الأول: عدم وجود الماء","Apartado 1: Falta de agua",makeIssues("tayammum-no-water",[["تعريف عدم وجود الماء","Qué significa no disponer de agua"],["البحث عن الماء","Búsqueda de agua"]])),
+      topic("tayammum-illness","المبحث الثاني: المرض والعجز","Apartado 2: Enfermedad e incapacidad",makeIssues("tayammum-illness",[["خوف الضرر","Temor de sufrir daño"],["العجز","Incapacidad"]]))
+    ]),
+    chapter("tayammum-form-conditions","الفصل الثالث: صفة التيمم وشروطه","Capítulo 3: Forma y condiciones",[
+      topic("tayammum-form","المبحث الأول: صفة التيمم","Apartado 1: Forma",makeIssues("tayammum-form",[["ضربة واحدة للوجه والكفين","Un solo contacto para el rostro y las manos"],["الخطوات","Pasos"]])),
+      topic("tayammum-conditions","المبحث الثاني: شروط التيمم","Apartado 2: Condiciones",makeIssues("tayammum-conditions",[["النية","Intención"],["الطهارة من الخبث","Ausencia de impureza física"],["دخول الوقت","Entrada del tiempo de oración"],["الصعيد الطاهر","Tierra limpia"]]))
+    ]),
+    chapter("tayammum-invalidators","الفصل الرابع: مبطلات التيمم","Capítulo 4: Anuladores del tayammum",[
+      topic("tayammum-invalidators-list","المبحث الأول: ما يبطل التيمم","Apartado 1: Qué invalida el tayammum",makeIssues("tayammum-invalidators-list",[["زوال العذر","Desaparición de la excusa"],["وجود الماء","Disponibilidad de agua"],["نواقض الوضوء","Anuladores del wudu"]]))
+    ])
+  ]);
+  const b6 = section("women","الباب السادس: الحيض والنفاس والاستحاضة","Capítulo 6: Menstruación, puerperio y metrorragia",[
+    chapter("hayd","الفصل الأول: الحيض","Capítulo 1: Menstruación",[
+      topic("hayd-definition","المبحث الأول: تعريف الحيض وصفة الدم","Apartado 1: Definición y características",makeIssues("hayd-definition",[["تعريف الحيض","Definición de la menstruación"],["صفة دم الحيض","Características de la sangre menstrual"]])),
+      topic("hayd-duration","المبحث الثاني: سن الحيض ومدده","Apartado 2: Edad y duración",makeIssues("hayd-duration",[["سن الحيض وأقله وأكثره","Edad y duración mínima y máxima"],["أقل الطهر وأكثره","Duración mínima y máxima de la pureza"]])),
+      topic("hayd-rulings","المبحث الثالث: أحكام الحائض","Apartado 3: Normas de la mujer menstruante",makeIssues("hayd-rulings",[["ما يحرم على الحائض","Actos prohibidos"],["ما يجوز للحائض","Actos permitidos"],["الطلاق في الحيض","Divorcio durante la menstruación"]]))
+    ]),
+    chapter("nifas","الفصل الثاني: النفاس","Capítulo 2: Puerperio",[
+      topic("nifas-definition","المبحث الأول: تعريف النفاس ومدته","Apartado 1: Definición y duración",makeIssues("nifas-definition",[["تعريف النفاس","Definición del puerperio"],["مدة النفاس","Duración del puerperio"]])),
+      topic("nifas-rulings","المبحث الثاني: أحكام النفساء","Apartado 2: Normas de la mujer en puerperio",makeIssues("nifas-rulings",[["ما يحرم على النفساء","Actos prohibidos"],["انقطاع الدم قبل الأربعين","Cese del sangrado antes de cuarenta días"]]))
+    ]),
+    chapter("istihada","الفصل الثالث: الاستحاضة","Capítulo 3: Metrorragia",[
+      topic("istihada-definition","المبحث الأول: تعريف الاستحاضة وصفة الدم","Apartado 1: Definición y características",makeIssues("istihada-definition",[["تعريف الاستحاضة","Definición de la metrorragia"],["صفة دم الاستحاضة","Características del sangrado irregular"]])),
+      topic("istihada-rulings","المبحث الثاني: أحكام المستحاضة","Apartado 2: Normas de la mujer con metrorragia",makeIssues("istihada-rulings",[["الوضوء لكل صلاة","Ablución para cada oración"],["الجماع والصيام","Relaciones sexuales y ayuno"],["ما يجب عليها","Obligaciones de la mujer afectada"]]))
+    ])
+  ]);
+  book.sections = [b1,b2,b3,b4,b5,b6];
+  book._outlineVersion = 1;
+})();
