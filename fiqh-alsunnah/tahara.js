@@ -426,36 +426,84 @@ window.FiqhBooks.tahara = {
                 "es": "Apartado 3: Agua impura"
               },
               "summary": {
-                "ar": "حكم الماء إذا وقعت فيه نجاسة، مع التغير وبدونه، وضابط القليل والكثير.",
-                "es": "Normas del agua cuando cae en ella una impureza, con o sin alteración, y criterios de cantidad."
+                "ar": "تعريف الماء النجس، وضابط تنجسه بتغير طعمه أو لونه أو ريحه بسبب النجاسة، وحكم استعماله في الوضوء والغسل وإزالة النجاسة، مع بيان الإجماع المنقول، والتفريق بين تغير الماء بالنجاسة ومجرد ملاقاة النجاسة له دون تغير.",
+                "es": "Definición del agua impura; criterio de impureza cuando una sustancia impura altera su sabor, color u olor; norma sobre su uso en wudu, ghusl y eliminación de impurezas; consenso transmitido y distinción entre alteración efectiva y mero contacto."
               },
               "content": {
                 "ar": [
                   {
-                    "heading": "المبحث الثالث: الماء النجس",
-                    "text": "إذا غيرت النجاسة لون الماء أو طعمه أو ريحه، حكم بنجاسته قليلاً كان أو كثيراً. أما إذا لم يتغير، فموضع خلاف في الماء القليل؛ فالحنفية والشافعية والمشهور عند الحنابلة يفرقون بين القليل والكثير، والمالكية يجعلون المدار على التغير لا مجرد القلة، مع تفاصيل داخل المذاهب."
+                    "heading": "أولاً: تعريف الماء النجس",
+                    "text": "الماء النجس هو الماء الذي تغيّر بسبب مخالطة نجاسة، بحيث يظهر أثرها في طعمه أو لونه أو ريحه. وهذا هو الضابط المذكور في «الشرح الممتع» للشيخ محمد بن صالح العثيمين (1/54). والمقصود بالتغير أن تنسب الصفة المتغيرة إلى النجاسة، لا إلى سبب طاهر مستقل."
                   },
                   {
-                    "heading": "الماء الذي تغير بالنجاسة",
-                    "text": "إذا غيرت النجاسة لون الماء أو طعمه أو ريحه، حكم بنجاسته قليلاً كان أو كثيراً."
+                    "heading": "ثانياً: حكم الماء الذي تغير بالنجاسة",
+                    "text": "لا يجوز التطهر بالماء الذي غيّرت النجاسة أحد أوصافه: الطعم أو اللون أو الرائحة. فلا يصح استعماله في الوضوء أو الغسل لرفع الحدث، ولا في إزالة النجاسة؛ لأنه صار ماءً نجساً."
                   },
                   {
-                    "heading": "الماء الذي لم يتغير",
-                    "text": "إذا لم تغير النجاسة شيئاً من أوصاف الماء، وقع الخلاف في الماء القليل: فالحنفية والشافعية والمشهور عند الحنابلة يفرقون بين القليل والكثير، والمالكية لا يجعلون مجرد القلة سبباً للتنجيس، بل يعتبرون التغير، مع تفصيل داخل المذاهب."
+                    "heading": "ثالثاً: دليل الحكم من الإجماع",
+                    "text": "نقل ابن المنذر الإجماع على أن الماء، قليلاً كان أو كثيراً، إذا وقعت فيه نجاسة فغيّرت طعمه أو لونه أو ريحه، فهو نجس ما دام على تلك الحال، ولا يجزئ الوضوء والاغتسال به. قال ابن المنذر في «الأوسط» (1/368): «أجمع أهل العلم على أن الماء القليل أو الكثير إذا وقعت فيه نجاسة فغيرت النجاسة الماء طعماً أو لوناً أو ريحاً أنه نجس ما دام كذلك، ولا يجزئ الوضوء والاغتسال به».\nونقل ابن نجيم الإجماع على أن الماء إذا تغير أحد أوصافه بالنجاسة لا تجوز الطهارة به، قليلاً كان أو كثيراً، جارياً كان أو غير جارٍ، في «البحر الرائق» (1/78)."
+                  },
+                  {
+                    "heading": "رابعاً: هل يختلف الحكم باختلاف كمية الماء؟",
+                    "text": "إذا تحقق تغير الماء بالنجاسة في الطعم أو اللون أو الرائحة، ثبت حكم النجاسة سواء كان الماء قليلاً أو كثيراً، جارياً أو راكداً؛ فلا تدفع كثرة الماء حكم النجاسة بعد ظهور أثرها. وهذا هو موضع الإجماع المنقول في هذا المبحث."
+                  },
+                  {
+                    "heading": "خامساً: الفرق بين تغير الماء بالنجاسة ومجرد ملامستها",
+                    "text": "ينبغي التفريق بين صورتين:\n1- ماء غيّرت النجاسة طعمه أو لونه أو ريحه: هذا نجس، ولا تصح الطهارة به، وقد نقل الإجماع على ذلك.\n2- ماء وقعت فيه نجاسة ولم يظهر تغير في أوصافه: هذه صورة أخرى وقع فيها التفصيل والخلاف بين الفقهاء، وتبحث أحكامها في مواضعها، ولا يصح أن ننقل إليها الإجماع الخاص بالصورة الأولى.\nوتختلف المذاهب في بعض ضوابط الماء الذي لم يتغير، ومن ذلك اعتبار القلتين عند الشافعية والحنابلة، وتفاصيل أخرى عند الحنفية والمالكية؛ ويُفرد لذلك بحثه حتى لا تختلط المسألتان."
+                  },
+                  {
+                    "heading": "سادساً: ما الذي يزيل حكم النجاسة؟",
+                    "text": "إذا زال أثر النجاسة عن الماء وزالت أوصافها التي أثرت فيه، عاد النظر في حكمه بحسب كيفية زوالها وما بقي من أثرها، وبحسب تفصيل المذاهب في التطهير. فلا يحكم بطهارته لمجرد مرور الزمن أو بمجرد إضافة ماء آخر دون تحقق زوال التغير. وتفصيل طرق تطهير الماء المتنجس يذكر في كتب الفقه في باب إزالة النجاسات."
+                  },
+                  {
+                    "heading": "سابعاً: خلاصة المبحث",
+                    "text": "الضابط الواضح في هذا المبحث أن الماء إذا غيّرت النجاسة طعمه أو لونه أو ريحه فهو نجس، ولا تصح الطهارة به، قليلاً كان أو كثيراً، جارياً أو راكداً. وقد نقل الإجماع على هذا الحكم ابن المنذر وابن نجيم. أما مجرد وقوع النجاسة في الماء من غير تغير، فمسألة أخرى لها تفصيل وخلاف، فلا تدخل في الإجماع المذكور."
+                  },
+                  {
+                    "heading": "المراجع",
+                    "text": "1- الدرر السنية، الموسوعة الفقهية، «المبحث الثالث: الماء النجس»: https://dorar.net/feqhia/10/المبحث-الثالث-الماء-النجس\n2- ابن المنذر، «الأوسط» (1/368).\n3- ابن نجيم، «البحر الرائق» (1/78).\n4- ابن عثيمين، «الشرح الممتع» (1/54)."
+                  },
+                  {
+                    "heading": "أسئلة وأجوبة",
+                    "text": "1- ما تعريف الماء النجس؟ هو ما تغير بنجاسة في طعمه أو لونه أو ريحه.\n2- ما الصفات التي إذا تغيرت بالنجاسة حكم بنجاسة الماء؟ الطعم واللون والرائحة.\n3- ما حكم الوضوء بالماء الذي تغير بالنجاسة؟ لا يصح الوضوء به.\n4- ما حكم الاغتسال به؟ لا يصح الاغتسال به لرفع الحدث.\n5- هل يجوز إزالة النجاسة به؟ لا؛ لأنه ماء نجس.\n6- هل يختلف الحكم إذا كان الماء كثيراً؟ لا، إذا غيرت النجاسة أحد أوصافه ثبتت نجاسته.\n7- هل يختلف الحكم بين الماء الجاري والراكد؟ لا في صورة التغير المؤثر بالنجاسة.\n8- من نقل الإجماع على هذه المسألة؟ ابن المنذر وابن نجيم.\n9- ما الدليل على عدم جواز التطهر به؟ الإجماع المنقول، كما في «الأوسط» و«البحر الرائق».\n10- هل مجرد وقوع النجاسة في الماء يجعله نجساً في كل حال؟ هذه صورة أخرى فيها تفصيل وخلاف، ولا تساوي صورة تغير أوصاف الماء.\n11- هل يصح تعميم الإجماع المنقول إلى الماء الذي لم يتغير؟ لا؛ الإجماع المنقول هنا متعلق بالماء الذي تغير بالنجاسة.\n12- ما الفرق بين الماء المتغير بالنجاسة والماء المخلوط بطاهر؟ الأول تغير بسبب نجاسة، والثاني بسبب مادة طاهرة، ولكل منهما حكمه."
                   }
                 ],
                 "es": [
                   {
-                    "heading": "Tercer apartado: agua impura",
-                    "text": "Si una impureza cambia el color, sabor u olor del agua, se considera impura, sea poca o mucha. Si no cambia, hay discrepancia respecto a la poca cantidad: hanafíes, shafiíes y la opinión conocida hanbalí distinguen entre poca y mucha; los malikíes atienden al cambio y no al mero hecho de que sea poca, con detalles propios de cada escuela."
+                    "heading": "Primero: definición del agua impura",
+                    "text": "El agua impura es aquella que cambia por la presencia de una sustancia impura, de modo que esta altera su sabor, color u olor. Esta es la definición recogida en «al-Sharh al-Mumti'» de Muhammad ibn Salih al-Uzaymin (1/54). El cambio debe atribuirse a la impureza y no a otra causa pura e independiente."
                   },
                   {
-                    "heading": "Agua alterada por una impureza",
-                    "text": "Si una impureza cambia el color, sabor u olor del agua, esta se considera impura, sea poca o mucha."
+                    "heading": "Segundo: norma del agua alterada por una impureza",
+                    "text": "No está permitido purificarse con agua cuyo sabor, color u olor haya sido alterado por una sustancia impura. No sirve para el wudu ni para el ghusl que elimina el estado ritual, ni para quitar impurezas, porque ha pasado a ser agua impura."
                   },
                   {
-                    "heading": "Agua no alterada",
-                    "text": "Si no cambia ninguno de sus atributos, existe discrepancia respecto a la poca cantidad. Hanafíes, shafiíes y la opinión conocida hanbalí distinguen entre poca y mucha; los malikíes no consideran que la mera escasez la vuelva impura, sino que atienden al cambio, con detalles propios de cada escuela."
+                    "heading": "Tercero: prueba basada en el consenso",
+                    "text": "Ibn al-Mundhir transmitió el consenso de los juristas: si una impureza cae en el agua y cambia su sabor, color u olor, el agua es impura mientras permanezca así, tanto si es poca como mucha. No es válida para el wudu ni el ghusl. Véase «al-Awsat» (1/368).\nIbn Nujaym también transmitió el consenso de que no es válida la purificación con agua cuando una impureza altera uno de sus atributos, sea poca o mucha, corriente o estancada. Véase «al-Bahr al-Ra'iq» (1/78)."
+                  },
+                  {
+                    "heading": "Cuarto: ¿influye la cantidad de agua?",
+                    "text": "Cuando la impureza altera efectivamente el sabor, color u olor del agua, se aplica la norma de impureza tanto si el agua es escasa como abundante, corriente o estancada. La gran cantidad de agua no elimina el efecto jurídico una vez que la alteración se ha producido. Este es el supuesto al que se refiere el consenso transmitido."
+                  },
+                  {
+                    "heading": "Quinto: diferencia entre alteración y mero contacto",
+                    "text": "Hay que distinguir dos situaciones:\n1- El agua cuyo sabor, color u olor ha sido alterado por una impureza: es impura y no sirve para la purificación. Se ha transmitido consenso sobre este caso.\n2- El agua en la que cae una impureza sin que cambien sus atributos: es otro supuesto que requiere un estudio separado y sobre el que existen detalles y discrepancias entre los juristas. No debe extenderse automáticamente a este caso el consenso relativo al agua alterada.\nLas escuelas difieren en algunos criterios para el agua que no ha cambiado, como la consideración de las dos qullas entre shafiíes y hanbalíes, además de otros detalles hanafíes y malikíes."
+                  },
+                  {
+                    "heading": "Sexto: ¿cómo desaparece la condición de impureza?",
+                    "text": "Si desaparece el efecto de la impureza y dejan de existir los atributos que había alterado, debe examinarse cómo se produjo esa desaparición y qué restos permanecen, conforme a los detalles de las escuelas. No basta el paso del tiempo ni añadir otra cantidad de agua sin comprobar que el cambio ha desaparecido. Los métodos de purificación del agua impura se tratan en los capítulos jurídicos sobre eliminación de impurezas."
+                  },
+                  {
+                    "heading": "Séptimo: conclusión",
+                    "text": "La regla central es que el agua cuyo sabor, color u olor ha sido alterado por una impureza es impura y no sirve para la purificación, sea poca o mucha, corriente o estancada. Ibn al-Mundhir e Ibn Nujaym transmitieron consenso sobre este supuesto. La mera caída de una impureza sin cambio perceptible es una cuestión distinta, con detalles y discrepancias."
+                  },
+                  {
+                    "heading": "Referencias",
+                    "text": "1- Al-Durar al-Saniyya, Enciclopedia jurídica, «Tercer apartado: el agua impura»: https://dorar.net/feqhia/10/المبحث-الثالث-الماء-النجس\n2- Ibn al-Mundhir, «al-Awsat» (1/368).\n3- Ibn Nujaym, «al-Bahr al-Ra'iq» (1/78).\n4- Ibn Uzaymin, «al-Sharh al-Mumti'» (1/54)."
+                  },
+                  {
+                    "heading": "Preguntas y respuestas",
+                    "text": "1- ¿Qué es el agua impura? La que cambia por una impureza en su sabor, color u olor.\n2- ¿Qué atributos se consideran? Sabor, color y olor.\n3- ¿Es válido el wudu con agua alterada por una impureza? No.\n4- ¿Es válido el ghusl ritual con ella? No.\n5- ¿Puede utilizarse para quitar impurezas? No, porque es agua impura.\n6- ¿Cambia la norma si hay mucha agua? No, cuando la impureza altera uno de sus atributos.\n7- ¿Importa que el agua fluya o esté estancada? No, en el supuesto de alteración efectiva.\n8- ¿Quiénes transmitieron consenso? Ibn al-Mundhir e Ibn Nujaym.\n9- ¿Cuál es la prueba de la prohibición? El consenso transmitido en «al-Awsat» y «al-Bahr al-Ra'iq».\n10- ¿Toda impureza que cae en el agua la vuelve impura en cualquier caso? Si no hay cambio, se trata de otro supuesto con detalles y discrepancias.\n11- ¿Se extiende el consenso al agua que no cambia? No; el consenso citado se refiere al agua alterada por la impureza.\n12- ¿En qué se diferencia el agua alterada por impureza del agua mezclada con algo puro? La primera cambia por una sustancia impura; la segunda, por una sustancia pura, y sus normas son distintas."
                   }
                 ]
               }
