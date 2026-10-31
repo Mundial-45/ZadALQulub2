@@ -750,3 +750,9 @@ button[onclick="jumpToInputPage()"]:hover {
 }
 #homeView #fiqhHomeCard * { color: #fff !important; }
 #homeView #fiqhHomeCard:hover { background: linear-gradient(135deg, #92400e 0%, #7c2d12 100%) !important; }
+
+
+/* Hard-hide the Fiqh view whenever navigation marks it hidden. */
+#fiqhView.hidden { display: none !important; }
+#homeView #fiqhHomeCard { background: linear-gradient(135deg, #b45309 0%, #7c2d12 100%) !important; color: #fff !important; }
+#homeView #fiqhHomeCard * { color: #fff !important; }
