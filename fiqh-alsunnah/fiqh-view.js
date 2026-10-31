@@ -40,7 +40,7 @@
     ["homeView","categoryListView","detailView","tasbeehView","favoritesView","quranView","quranSurahsView","quranAhzabView","quranReaderView"].forEach(id => {
       const el = document.getElementById(id); if (el) el.classList.add("hidden");
     });
-    const v = ensureView(); v.classList.remove("hidden");
+    const v = ensureView(); v.style.display = ""; v.classList.remove("hidden");
   }
   function card(title, sub, action) {
     const b = document.createElement("button");
@@ -150,8 +150,8 @@
     if (activeChapter) { renderSection(activeSection); return; }
     if (activeSection) { renderBook(activeBook); return; }
     if (activeBook) { renderBooks(); return; }
-    const v = document.getElementById("fiqhView"); if (v) v.classList.add("hidden");
-    const home = document.getElementById("homeView"); if (home) home.classList.remove("hidden");
+    const v = document.getElementById("fiqhView"); if (v) { v.classList.add("hidden"); v.style.display = "none"; }
+    const home = document.getElementById("homeView"); if (home) { home.style.display = ""; home.classList.remove("hidden"); }
   }
   function refreshLanguage() {
     const v = document.getElementById("fiqhView");
