@@ -160,6 +160,18 @@ window.FiqhBooks.tahara = {
                   {
                     "heading": "أسئلة وأجوبة",
                     "text": "1- إلى كم قسم ينقسم الماء بحسب أقوال أهل العلم؟\nأشهر الأقوال قولان: ثلاثة أقسام (طهور وطاهر ونجس)، وقسمان (طهور ونجس).\n\n2- ما الدليل من السنة على طهورية ماء البحر؟\nحديث أبي هريرة رضي الله عنه: »هو الطهور ماؤه، الحل ميتته«.\n\n3- ما وجه الدلالة من حديث ماء البحر عند القائلين بثلاثة أقسام؟\nقالوا إن السؤال كان عن صلاحية ماء البحر للتطهر، لا عن كونه طاهراً أو نجساً، فاستدلوا به على الفرق بين الطاهر والطهور.\n\n4- ما الأحاديث التي استدلوا بها على وجود ماء طاهر لا يُتطهر به؟\nأحاديث النهي عن البول والاغتسال في الماء الدائم، وحديث النهي عن غمس اليد في الإناء بعد الاستيقاظ قبل غسلها.\n\n5- ما الدليل القرآني عند القائلين بأن الماء قسمان؟\nقوله تعالى: ﴿وَأَنْزَلْنَا مِنَ السَّمَاءِ مَاءً طَهُورًا﴾ [الفرقان: 48]، وقوله: ﴿مَاءً لِيُطَهِّرَكُمْ بِهِ﴾ [الأنفال: 11].\n\n6- ما الحديث الذي استدلوا به؟\nحديث أبي سعيد الخدري رضي الله عنه: »إن الماء طهور لا ينجسه شيء«.\n\n7- ما وجه الدلالة من الآيات والحديث؟\nأن النصوص أطلقت اسم الماء ووصفته بالطهورية، ولم تنص على قسم مستقل اسمه الطاهر غير المطهر.\n\n8- ما حكم الماء إذا خالطه طاهر ولم يزل عنه اسم الماء؟\nيبقى طهوراً ويجوز التطهر به، ومن أدلته حديث غسل ابنة النبي ﷺ بالماء والسدر."
+                  },
+                  {
+                    "heading": "تفصيل الاستدلال بالآيات",
+                    "text": "استدل القائلون بأن الماء قسمان بعموم قوله تعالى: ﴿وَأَنْزَلْنَا مِنَ السَّمَاءِ مَاءً طَهُورًا﴾ [الفرقان: 48]، وبقوله سبحانه: ﴿وَيُنَزِّلُ عَلَيْكُمْ مِنَ السَّمَاءِ مَاءً لِيُطَهِّرَكُمْ بِهِ﴾ [الأنفال: 11]. قالوا: إن النصوص علّقت التطهير باسم الماء، ولم تذكر قسماً ثالثاً يسمى طاهراً غير مطهِّر. وأجاب القائلون بالتقسيم الثلاثي بأن السنة دلت عندهم على التفريق في بعض الصور، وأن إطلاق اسم الماء لا يمنع ورود أحكام خاصة على بعض أنواعه."
+                  },
+                  {
+                    "heading": "تنبيه في فهم حديث «إن الماء طهور لا ينجسه شيء»",
+                    "text": "لا يصح فهم الحديث على أن الماء لا يمكن أن يتنجس بحال؛ فقد نقل أهل العلم اتفاقاً على أن الماء إذا تغير أحد أوصافه بالنجاسة تغيراً مؤثراً فإنه ينجس. وإنما يقع البحث في الماء الذي تقع فيه نجاسة ولا يظهر أثرها، وفي مقدار الماء وأوصافه، وهذه مسائل تفصيلية تأتي في مبحث الماء النجس. كما أن ألفاظ الحديث وطرقه ودرجته تُراجع في مصادر التخريج."
+                  },
+                  {
+                    "heading": "أثر الخلاف في الفروع الفقهية",
+                    "text": "يظهر أثر الخلاف في حكم الماء المستعمل، وفي الماء الذي خالطه طاهر، وفي بعض الصور التي لم يتغير فيها اسم الماء. ولذلك لا ينبغي الاكتفاء بذكر التقسيم النظري؛ بل يجب عند كل مسألة لاحقة بيان المعتمد عند الحنفية والمالكية والشافعية والحنابلة، وذكر الروايات أو الاختيارات الأخرى عند الحاجة، ثم عرض الدليل والترجيح دون إلزام القارئ بمذهب واحد."
                   }
                 ],
                 "es": [
@@ -198,6 +210,18 @@ window.FiqhBooks.tahara = {
                   {
                     "heading": "Preguntas y respuestas",
                     "text": "1- ¿En cuántas clases se divide el agua? Las dos posiciones más conocidas son tres clases (purificadora, pura no purificadora e impura) o dos (purificadora e impura).\n\n2- ¿Qué prueba de la Sunna demuestra que el agua del mar purifica? El hadiz: »Su agua es purificadora y sus animales muertos son lícitos«.\n\n3- ¿Cómo interpretan ese hadiz quienes sostienen tres clases? Entienden que se preguntó por la capacidad purificadora del agua del mar, no por su pureza física.\n\n4- ¿Qué otros hadices citan? Los relativos a orinar o bañarse en agua estancada y a introducir la mano en un recipiente después de despertar sin lavarla.\n\n5- ¿Qué pruebas coránicas citan quienes sostienen dos clases? Los versículos 25:48 y 8:11.\n\n6- ¿Qué hadiz citan? »El agua es purificadora; nada la vuelve impura«.\n\n7- ¿Cuál es su argumento? Que los textos describen el agua en general como purificadora y no establecen expresamente una tercera clase.\n\n8- ¿Qué ocurre si se mezcla con una sustancia pura sin perder el nombre de agua? Sigue siendo purificadora; entre las pruebas está el hadiz de lavar a la hija del Profeta ﷺ con agua y sidr."
+                  },
+                  {
+                    "heading": "Detalle del argumento coránico",
+                    "text": "Quienes sostienen que solo hay dos clases citan la generalidad de los versículos 25:48 y 8:11: los textos relacionan la purificación con el agua y no mencionan expresamente una tercera categoría de agua pura pero no purificadora. Quienes defienden tres categorías responden que, a su juicio, la Sunna permite distinguir ciertos casos y que la denominación general de agua no impide que existan normas particulares."
+                  },
+                  {
+                    "heading": "Nota sobre el hadiz «El agua es purificadora; nada la vuelve impura»",
+                    "text": "No debe entenderse que el agua nunca pueda volverse impura. Los juristas transmiten que, cuando una impureza altera de forma efectiva uno de sus atributos, el agua se considera impura. La discusión se refiere, entre otros casos, a la impureza que cae en el agua sin que se aprecie cambio, así como a la cantidad y características del agua. Estos detalles se estudian en el apartado sobre el agua impura."
+                  },
+                  {
+                    "heading": "Efectos prácticos de la discrepancia",
+                    "text": "La diferencia repercute en cuestiones como el agua utilizada y el agua mezclada con sustancias puras. Por eso, en cada cuestión posterior conviene exponer la posición de las escuelas hanafí, malikí, shafií y hanbalí, señalar otras narraciones o elecciones jurídicas relevantes y presentar las pruebas y la valoración comparada sin imponer una sola escuela."
                   }
                 ]
               }
