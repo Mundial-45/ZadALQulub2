@@ -3,7 +3,7 @@
   const books = () => { const registered = window.FiqhBooks && Object.values(window.FiqhBooks); return registered && registered.length ? registered : (Array.isArray(window.feqhData) ? window.feqhData : []); };
   const lang = () => (document.documentElement.lang === "es" ? "es" : "ar");
   const tr = value => value && (value[lang()] || value.ar || value.es) || "";
-  let activeBook = null, activeSection = null;
+  let activeBook = null, activeSection = null, activeChapter = null;
 
   function addHomeCard() {
     const grid = document.querySelector(".home-category-grid");
@@ -54,7 +54,7 @@
   function renderBooks(skipHistory = false) {
     const v = ensureView(), content = v.querySelector("#fiqhContent");
     if (!skipHistory) saveRoute("books");
-    activeBook = null; activeSection = null;
+    activeBook = null; activeSection = null; activeChapter = null;
     v.querySelector("#fiqhHeading").textContent = lang() === "es" ? "Fiqh as-Sunnah" : "فقه السنة";
     v.querySelector("#fiqhIntro").textContent = lang() === "es" ? "Seleccione un libro para consultar sus temas." : "اختر كتابًا لاستعراض أبوابه ومسائله.";
     content.replaceChildren();
@@ -68,7 +68,12 @@
     v.querySelector("#fiqhHeading").textContent = tr(book.title);
     v.querySelector("#fiqhIntro").textContent = tr(book.intro);
     content.replaceChildren();
-    book.sections.forEach(section => content.appendChild(card(tr(section.title), section.topics.length + (lang()==="es" ? " temas" : " مسائل"), () => renderSection(section))));
+    book.sections.forEach(section => {
+      const sub = section.id === "water" && section.chapters
+        ? (lang() === "es" ? "Introducción y tres capítulos" : "تمهيد وثلاثة فصول")
+        : section.topics.length + (lang() === "es" ? " temas" : " مسائل");
+      content.appendChild(card(tr(section.title), sub, () => renderSection(section)));
+    });
     v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Seleccione un tema para leer su introducción." : "اختر مسألة لقراءة تعريفها التمهيدي.";
   }
   function renderSection(section, skipHistory = false) {
@@ -78,12 +83,28 @@
     v.querySelector("#fiqhHeading").textContent = tr(section.title);
     v.querySelector("#fiqhIntro").textContent = tr(activeBook.title);
     content.replaceChildren();
-    const visibleTopics = section.id === "water" ? section.topics.filter(topic => ["water-classes", "water-absolute", "water-impure", "water-mixed", "water-used"].includes(topic.id)) : section.topics;
-    visibleTopics.forEach(topic => content.appendChild(card(tr(topic.title), tr(topic.summary), () => renderTopic(topic))));
-    v.querySelector("#fiqhNotice").textContent = section.id === "water" ? (lang() === "es" ? "Seleccione uno de los cinco apartados." : "اختر أحد المباحث الخمسة لعرض محتواه.") : (lang() === "es" ? "Navegación: libro → sección → tema." : "مسار التصفح: الكتاب ← الباب ← المسألة.");
+    activeChapter = null;
+    if (section.id === "water" && section.chapters) {
+      content.appendChild(card(tr(section.intro.title), tr(section.intro.summary), () => renderTopic(section.intro)));
+      section.chapters.forEach(chapter => content.appendChild(card(tr(chapter.title), chapter.topics.length + (lang() === "es" ? " apartados" : " مباحث"), () => renderWaterChapter(chapter))));
+      v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Introducción y tres capítulos del tema del agua." : "التمهيد والفصول الثلاثة لباب المياه.";
+    } else {
+      section.topics.forEach(topic => content.appendChild(card(tr(topic.title), tr(topic.summary), () => renderTopic(topic))));
+      v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Navegación: libro → sección → tema." : "مسار التصفح: الكتاب ← الباب ← المسألة.";
+    }
+  }
+  function renderWaterChapter(chapter, skipHistory = false) {
+    activeChapter = chapter;
+    if (!skipHistory) saveRoute("chapter", { bookId: activeBook.id, sectionId: activeSection.id, chapterId: chapter.id });
+    const v = ensureView(), content = v.querySelector("#fiqhContent");
+    v.querySelector("#fiqhHeading").textContent = tr(chapter.title);
+    v.querySelector("#fiqhIntro").textContent = tr(activeBook.title) + " / " + tr(activeSection.title);
+    content.replaceChildren();
+    chapter.topics.forEach(topic => content.appendChild(card(tr(topic.title), tr(topic.summary), () => renderTopic(topic))));
+    v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Seleccione un apartado para consultar su contenido." : "اختر المبحث لعرض محتواه.";
   }
   function renderTopic(topic, skipHistory = false) {
-    if (!skipHistory) saveRoute("topic", { bookId: activeBook.id, sectionId: activeSection.id, topicId: topic.id });
+    if (!skipHistory) saveRoute("topic", { bookId: activeBook.id, sectionId: activeSection.id, chapterId: activeChapter && activeChapter.id, topicId: topic.id });
     const v = ensureView(), content = v.querySelector("#fiqhContent");
     v.querySelector("#fiqhHeading").textContent = tr(topic.title);
     v.querySelector("#fiqhIntro").textContent = tr(activeBook.title) + " / " + tr(activeSection.title);
@@ -102,12 +123,25 @@
     hideOtherViews();
     if (state.level === "book" || !section) { renderBook(book, true); return; }
     if (state.level === "section") { renderSection(section, true); return; }
-    const topic = (section.topics || []).find(item => item.id === state.topicId);
     renderSection(section, true);
+    if (state.level === "chapter" && section.chapters) {
+      const chapter = section.chapters.find(item => item.id === state.chapterId);
+      if (chapter) renderWaterChapter(chapter, true);
+      return;
+    }
+    let topic = (section.topics || []).find(item => item.id === state.topicId);
+    if (section.chapters) {
+      const chapter = section.chapters.find(item => item.id === state.chapterId);
+      if (chapter) {
+        renderWaterChapter(chapter, true);
+        topic = (chapter.topics || []).find(item => item.id === state.topicId);
+      } else if (state.topicId === section.intro.id) topic = section.intro;
+    }
     if (topic) renderTopic(topic, true);
   }
   function back() {
     if (history.state && history.state.view === "fiqh" && history.length > 1) { history.back(); return; }
+    if (activeChapter) { renderSection(activeSection); return; }
     if (activeSection) { renderBook(activeBook); return; }
     if (activeBook) { renderBooks(); return; }
     const v = document.getElementById("fiqhView"); if (v) v.classList.add("hidden");
