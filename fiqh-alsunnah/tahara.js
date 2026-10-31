@@ -233,8 +233,8 @@ window.FiqhBooks.tahara = {
                 "es": "Apartado 2: El agua absoluta (purificadora)"
               },
               "summary": {
-                "ar": "تعريف الماء المطلق، وأنواعه: ماء المطر والبحر والأنهار والآبار والثلج والعيون وزمزم، وأحكام الماء المسخن والماء المحرم.",
-                "es": "Definición del agua absoluta y sus tipos: lluvia, mar, ríos, pozos, nieve, manantiales y Zamzam; además del agua calentada y del agua cuyo uso está prohibido."
+                "ar": "تعريف الماء المطلق، وأدلة طهورية ماء المطر والبحر والأنهار والآبار والثلج والعيون وزمزم، وأحكام التطهر بماء زمزم والماء المشمس والماء المسخن بطاهر أو بنجاسة، وحكم الماء المغصوب والمسروق، مع عرض الخلاف الفقهي وأدلته.",
+                "es": "Definición del agua absoluta; pruebas sobre la capacidad purificadora de la lluvia, el mar, los ríos, pozos, nieve, manantiales y Zamzam; normas sobre el agua calentada y el agua usurpada, con exposición comparada de las opiniones jurídicas."
               },
               "content": {
                 "ar": [
@@ -287,12 +287,44 @@ window.FiqhBooks.tahara = {
                     "text": "الماء المطلق هو الباقي على أصل خلقته واسم الماء. ومياه المطر والبحر والأنهار والآبار والثلج والعيون وزمزم طاهرة مطهرة في الأصل. ولا يخرج الماء عن طهوريته لمجرد تسخينه، ولا بمجرد تسخينه بوقود نجس إذا لم تصل إليه النجاسة. أما الماء المغصوب فيصح التطهر به عند الجمهور مع الإثم. ويبقى الحكم متعلقاً ببقاء اسم الماء وعدم تغيره بنجاسة مؤثرة."
                   },
                   {
+                    "heading": "المسألة الأولى: حكم الوضوء والغسل بماء زمزم",
+                    "text": "يجوز الوضوء والغسل بماء زمزم، وهذا مذهب المذاهب الفقهية الأربعة: الحنفية والمالكية والشافعية والحنابلة، وحُكي الإجماع على جواز التطهر به. ونقل الحطاب عن القاضي تقي الدين الفاسي صحة التطهر به بالإجماع، كما ذكر استحباب الوضوء والغسل به في بعض النقول المالكية. وقال النووي إن مذهب الجمهور عدم كراهة الوضوء والغسل به، مع وجود رواية بالكراهة عن الإمام أحمد. فالخلاصة: أصل الجواز متفق عليه في المذاهب الأربعة، والخلاف المنقول إنما هو في الكراهة لا في أصل صحة الطهارة."
+                  },
+                  {
+                    "heading": "المسألة الثانية: حكم إزالة النجاسة بماء زمزم",
+                    "text": "تجزئ إزالة النجاسة بماء زمزم، وهذا ما قررته المذاهب الفقهية الأربعة. ومن أدلة ذلك عدم ورود دليل يمنع استعماله في إزالة النجاسة، وما نقل من أن أبا ذر رضي الله عنه غسل الدم عنه بماء زمزم بعد أن آذاه المشركون، وأن أسماء بنت أبي بكر رضي الله عنها غسلت ولدها عبد الله بن الزبير بماء زمزم بعد مقتله بحضور جمع من الصحابة وغيرهم، ولم ينقل إنكار ذلك. وينبغي التفريق بين احترام ماء زمزم وبين إثبات حكم شرعي يمنع استعماله؛ فلا يثبت المنع بمجرد الاستحسان."
+                  },
+                  {
+                    "heading": "المسألة الثالثة: أدلة طهورية ماء زمزم",
+                    "text": "يستدل لطهورية ماء زمزم بعموم أدلة طهورية الماء، ومنها قوله تعالى: ﴿وَيُنَزِّلُ عَلَيْكُمْ مِنَ السَّمَاءِ مَاءً لِيُطَهِّرَكُمْ بِهِ﴾ [الأنفال: 11]، وقوله تعالى: ﴿أَلَمْ تَرَ أَنَّ اللَّهَ أَنْزَلَ مِنَ السَّمَاءِ مَاءً فَسَلَكَهُ يَنَابِيعَ فِي الْأَرْضِ﴾ [الزمر: 21]، وحديث بئر بضاعة: »إن الماء طهور لا ينجسه شيء«، مع مراعاة الخلاف في تفاصيل دلالة الحديث وأحكام الماء إذا لاقته النجاسة."
+                  },
+                  {
+                    "heading": "تفصيل الخلاف في الماء المشمس",
+                    "text": "نُقلت كراهة الماء المشمس في بعض الأقوال، وربطها بعض الفقهاء بأوانٍ معينة أو ببلاد حارة أو باحتمال ضرر طبي. لكن النووي رجح عدم الكراهة، وذكر أن الحديث المروي في أنه يورث البرص ضعيف باتفاق المحدثين، وأن الأثر المنقول عن عمر لا يثبت من طريق صحيح. واختار عدم الكراهة ابن تيمية وابن القيم، وأفتت اللجنة الدائمة بأنه لا يعلم دليل صحيح يمنع استعماله. ومن قال بالكراهة من بعض الفقهاء فغالب كلامهم على كراهة تنزيه لا تمنع صحة الطهارة. لذلك فالأقوى عدم الكراهة لعدم ثبوت دليل صحيح عليها."
+                  },
+                  {
+                    "heading": "أدلة جواز الماء المسخن بطاهر",
+                    "text": "وردت آثار عن الصحابة في استعمال الماء الحميم، منها أن عمر بن الخطاب رضي الله عنه كان يتوضأ بالماء الحميم ويغتسل منه، وروي ذلك عن ابن عمر رضي الله عنهما، وعن ابن عباس رضي الله عنهما أنه قال: لا بأس أن يغتسل بالحميم ويتوضأ منه. أخرج هذه الآثار عبد الرزاق وابن أبي شيبة وغيرهما، وصحح أهل العلم أسانيد عدد منها. ونقل ابن تيمية اتفاق العلماء على أن الوقود الطاهر كالخشب والقصب والشوك لا يؤثر في طهورية الماء."
+                  },
+                  {
+                    "heading": "حكم الماء المسخن بنجاسة",
+                    "text": "إذا سخن الماء بوقود نجس، ولم تصل النجاسة إلى الماء ولم يحصل تغير ينجسه، بقي الماء على أصل طهارته. ونقل ابن تيمية اتفاق الأئمة على أن الماء المسخن بالنجاسة ليس بنجس إذا لم يحصل له ما ينجسه. فالعبرة بوصول النجاسة وتأثيرها، لا بمجرد كون الوقود نجساً."
+                  },
+                  {
+                    "heading": "حكم التطهر بالماء المغصوب أو المسروق",
+                    "text": "يصح التطهر بالماء المغصوب أو المسروق مع الإثم، وهذا مذهب الجمهور من الحنفية والمالكية والشافعية، وهو قول عند الحنابلة. ووجه ذلك أن النهي متوجه إلى الغصب والاعتداء على حق الغير، لا إلى ذات الوضوء أو الغسل. ومن القواعد الأصولية: أن النهي إذا عاد إلى أمر خارج عن ذات العبادة لم يقتض فسادها عند من يقول بذلك. ومع صحة الطهارة، يبقى الغصب محرماً، ويجب رد الحق إلى صاحبه والتوبة."
+                  },
+                  {
+                    "heading": "تنبيه في نسبة الأقوال إلى المذاهب",
+                    "text": "ينبغي التفريق بين الاتفاق على أصل طهورية الأنواع الطبيعية من الماء، وبين الخلاف في بعض المسائل الخاصة كالكراهة في الماء المشمس، أو إزالة النجاسة بماء زمزم، أو حكم استعمال الماء المغصوب. كما ينبغي التفريق بين صحة الطهارة وارتفاع الإثم؛ فقد تصح العبادة مع وقوع المكلف في معصية من جهة أخرى."
+                  },
+                  {
                     "heading": "المراجع",
                     "text": "الدرر السنية، الموسوعة الفقهية، المبحث الثاني: الماء المطلق (الطهور). بداية المجتهد لابن رشد (1/23). شرح منتهى الإرادات للبهوتي (1/15-16). سنن أبي داود (83، 66)، جامع الترمذي (69، 66)، سنن النسائي (59، 326)، وصحيحا البخاري ومسلم في حديث الماء والثلج والبرد. مواهب الجليل للحطاب (1/64-66، 1/111). المجموع للنووي (1/87، 1/90-91). مجموع الفتاوى لابن تيمية (21/69، 21/72). زاد المعاد لابن القيم (4/391)."
                   },
                   {
                     "heading": "أسئلة وأجوبة",
-                    "text": "1- ما المقصود بالماء المطلق؟\nهو الماء الباقي على أصل خلقته، ولم يزل عنه اسم الماء.\n\n2- ما حكم ماء المطر؟\nطهور يجوز الوضوء والغسل به، لقوله تعالى: ﴿مَاءً لِيُطَهِّرَكُمْ بِهِ﴾ [الأنفال: 11].\n\n3- هل يجوز الوضوء بماء البحر؟\nنعم، لقول النبي ﷺ: »هو الطهور ماؤه، الحل ميتته«.\n\n4- ما الدليل على طهورية ماء البئر؟\nحديث بئر بضاعة: »إن الماء طهور لا ينجسه شيء«، مع مراعاة أحكام التغير بالنجاسة.\n\n5- هل يجوز الوضوء والغسل بماء زمزم؟\nنعم، وهو قول المذاهب الأربعة، والجمهور على عدم كراهته.\n\n6- هل ماء الثلج والبَرَد طهور؟\nنعم، وهما من الماء النازل من السماء، وقد ورد ذكرهما في الدعاء النبوي.\n\n7- هل الماء المسخن بالشمس طهور؟\nنعم، ولا يثبت دليل صحيح على كراهة التطهر به.\n\n8- ما حكم الماء الذي سخن بوقود نجس؟\nيبقى طاهراً إذا لم تصل إليه النجاسة ولم يتغير بها.\n\n9- ما حكم الوضوء بالماء المغصوب؟\nيصح عند الجمهور مع الإثم بسبب الغصب."
+                    "text": "1- ما المقصود بالماء المطلق؟\nهو الماء الباقي على أصل خلقته، ولم يزل عنه اسم الماء.\n\n2- ما حكم ماء المطر؟\nطهور يجوز الوضوء والغسل به، لقوله تعالى: ﴿مَاءً لِيُطَهِّرَكُمْ بِهِ﴾ [الأنفال: 11].\n\n3- هل يجوز الوضوء بماء البحر؟\nنعم، لقول النبي ﷺ: »هو الطهور ماؤه، الحل ميتته«.\n\n4- ما الدليل على طهورية ماء البئر؟\nحديث بئر بضاعة: »إن الماء طهور لا ينجسه شيء«، مع مراعاة أحكام التغير بالنجاسة.\n\n5- هل يجوز الوضوء والغسل بماء زمزم؟\nنعم، وهو قول المذاهب الأربعة، والجمهور على عدم كراهته.\n\n6- هل ماء الثلج والبَرَد طهور؟\nنعم، وهما من الماء النازل من السماء، وقد ورد ذكرهما في الدعاء النبوي.\n\n7- هل الماء المسخن بالشمس طهور؟\nنعم، ولا يثبت دليل صحيح على كراهة التطهر به.\n\n8- ما حكم الماء الذي سخن بوقود نجس؟\nيبقى طاهراً إذا لم تصل إليه النجاسة ولم يتغير بها.\n\n9- ما حكم الوضوء بالماء المغصوب؟\nيصح عند الجمهور مع الإثم بسبب الغصب.\n\n10- هل يصح إزالة النجاسة بماء زمزم؟ نعم، وهو مقرر في المذاهب الأربعة.\n11- هل كراهة الماء المشمس ثابتة بحديث صحيح؟ لا، والحديث الذي يذكر البرص ضعيف.\n12- ما حكم الماء المسخن بوقود طاهر؟ يجوز التطهر به.\n13- ما حكم الماء المسخن بوقود نجس إذا لم تصل النجاسة إليه؟ يبقى طهوراً.\n14- هل تصح الطهارة بالماء المغصوب؟ تصح عند الجمهور مع الإثم.\n15- ما الفرق بين صحة الطهارة والإثم؟ قد تصح الطهارة مع بقاء إثم الغصب أو السرقة."
                   }
                 ],
                 "es": [
@@ -345,12 +377,44 @@ window.FiqhBooks.tahara = {
                     "text": "El agua absoluta conserva su naturaleza y el nombre de agua. La lluvia, el mar, los ríos, los pozos, la nieve, los manantiales y Zamzam son purificadores en principio. Calentar el agua no elimina por sí solo su carácter purificador. El agua calentada con combustible impuro sigue siendo pura si la impureza no llega a ella ni la altera. Según la mayoría, purificarse con agua usurpada es válido, aunque pecaminoso."
                   },
                   {
+                    "heading": "Primera cuestión: wudu y ghusl con agua de Zamzam",
+                    "text": "Está permitido realizar el wudu y el ghusl con agua de Zamzam. Es la posición de las cuatro escuelas: hanafí, malikí, shafií y hanbalí; además, se ha transmitido consenso sobre la validez de purificarse con ella. Al-Nawawi indicó que la mayoría no considera desaconsejable su uso, aunque existe una narración de desaprobación atribuida a Ahmad. Por tanto, el permiso básico está establecido; la discrepancia transmitida se refiere a si su uso es desaconsejable, no a la validez de la purificación."
+                  },
+                  {
+                    "heading": "Segunda cuestión: eliminar impurezas con agua de Zamzam",
+                    "text": "Las cuatro escuelas consideran válida la eliminación de impurezas con agua de Zamzam. Se argumenta que no existe una prueba que prohíba ese uso, y se transmiten relatos sobre Abu Dharr, que limpió con ella la sangre que le causaron los asociadores, y sobre Asma bint Abi Bakr, que lavó con ella a su hijo Abd Allah ibn al-Zubayr tras su muerte, en presencia de otras personas sin que se transmitiera objeción. El respeto debido al agua de Zamzam no basta por sí solo para establecer una prohibición jurídica."
+                  },
+                  {
+                    "heading": "Tercera cuestión: pruebas sobre Zamzam",
+                    "text": "Su carácter purificador se incluye en las pruebas generales sobre el agua: Corán 8:11 y 39:21, y el hadiz del pozo de Buda'a: »El agua es purificadora y nada la vuelve impura«, teniendo en cuenta las discusiones de los juristas sobre el alcance del hadiz y los casos en que una impureza entra en contacto con el agua."
+                  },
+                  {
+                    "heading": "Detalle de la discrepancia sobre el agua calentada por el sol",
+                    "text": "Algunas opiniones transmitieron desaprobación del agua calentada por el sol y la relacionaron con ciertos recipientes, regiones cálidas o un posible daño médico. Sin embargo, al-Nawawi prefirió que no es desaconsejable y señaló que el relato que afirma que causa lepra es débil según los especialistas del hadiz. También eligieron la ausencia de desaprobación Ibn Taymiyya e Ibn al-Qayyim, y el Comité Permanente indicó que no conocía una prueba auténtica que prohibiera su uso. Cuando algunos juristas hablaron de desaprobación, generalmente la consideraron leve y no invalidante. La posición más fuerte es que no hay desaprobación demostrada por falta de prueba auténtica."
+                  },
+                  {
+                    "heading": "Pruebas para el agua calentada con una sustancia pura",
+                    "text": "Se transmiten prácticas de los compañeros: Umar utilizaba agua caliente para el wudu y el ghusl; también se transmitió de Ibn Umar y de Ibn Abbas. Estas narraciones aparecen en las obras de Abd al-Razzaq e Ibn Abi Shayba, y varios especialistas autenticaron algunas de sus cadenas. Ibn Taymiyya transmitió el acuerdo de los juristas en que un combustible puro, como madera o cañas, no afecta a la condición purificadora del agua."
+                  },
+                  {
+                    "heading": "Agua calentada con una sustancia impura",
+                    "text": "Si el agua se calienta con combustible impuro, pero la impureza no llega al agua ni produce un cambio que la vuelva impura, conserva su pureza original. Ibn Taymiyya transmitió el acuerdo de los imanes sobre este principio. Lo relevante es que la impureza alcance el agua y la afecte, no el mero hecho de que el combustible sea impuro."
+                  },
+                  {
+                    "heading": "Purificación con agua usurpada o robada",
+                    "text": "Según la mayoría de hanafíes, malikíes y shafiíes, y una opinión hanbalí, la purificación con agua usurpada o robada es válida, aunque la persona comete pecado por apropiarse injustamente de un bien ajeno. La prohibición recae sobre la usurpación, no sobre la esencia del wudu o el ghusl. La validez de la purificación no elimina la obligación de devolver el derecho y arrepentirse."
+                  },
+                  {
+                    "heading": "Nota sobre la atribución de opiniones",
+                    "text": "Conviene distinguir entre el acuerdo sobre la pureza básica de las aguas naturales y las discrepancias particulares sobre la desaprobación del agua calentada por el sol, la eliminación de impurezas con Zamzam o el uso de agua usurpada. También debe distinguirse entre la validez de la purificación y la responsabilidad por un pecado cometido por otro motivo."
+                  },
+                  {
                     "heading": "Referencias",
                     "text": "Al-Durar al-Saniyya, Enciclopedia Jurídica, segundo apartado: agua absoluta (purificadora). Bidayat al-Mujtahid de Ibn Rushd (1/23). Sharh Muntaha al-Iradat de al-Buhuti (1/15-16). Abu Dawud (83, 66), al-Tirmidhi (69, 66), al-Nasa'i (59, 326), al-Bujari y Muslim (hadiz del agua, nieve y granizo). Mawahib al-Jalil (1/64-66, 1/111). Al-Majmu' de al-Nawawi (1/87, 1/90-91). Majmu' al-Fatawa de Ibn Taymiyya (21/69, 21/72). Zad al-Ma'ad de Ibn al-Qayyim (4/391)."
                   },
                   {
                     "heading": "Preguntas y respuestas",
-                    "text": "1- ¿Qué es el agua absoluta?\nEs el agua que conserva su naturaleza original y sigue llamándose agua.\n\n2- ¿Se puede usar el agua de lluvia?\nSí, es purificadora, según el Corán 8:11.\n\n3- ¿Se puede hacer el wudu con agua del mar?\nSí. El Profeta ﷺ dijo: »Su agua es purificadora y sus animales muertos son lícitos«.\n\n4- ¿Qué prueba se cita para el agua de los pozos?\nEl hadiz: »El agua es purificadora y nada la vuelve impura«, junto con las reglas sobre los cambios causados por impurezas.\n\n5- ¿Se permite usar agua de Zamzam?\nSí, es la posición de las cuatro escuelas; la mayoría no lo considera desaconsejable.\n\n6- ¿El agua de nieve y granizo es purificadora?\nSí, procede del agua que desciende del cielo y se menciona en una súplica profética.\n\n7- ¿El agua calentada por el sol sigue siendo purificadora?\nSí; no hay una prueba auténtica que prohíba su uso.\n\n8- ¿Qué ocurre si se calienta con combustible impuro?\nSigue siendo pura si la impureza no llega al agua ni la altera.\n\n9- ¿Es válido el wudu con agua usurpada?\nSegún la mayoría, sí, aunque la usurpación sigue siendo pecado."
+                    "text": "1- ¿Qué es el agua absoluta?\nEs el agua que conserva su naturaleza original y sigue llamándose agua.\n\n2- ¿Se puede usar el agua de lluvia?\nSí, es purificadora, según el Corán 8:11.\n\n3- ¿Se puede hacer el wudu con agua del mar?\nSí. El Profeta ﷺ dijo: »Su agua es purificadora y sus animales muertos son lícitos«.\n\n4- ¿Qué prueba se cita para el agua de los pozos?\nEl hadiz: »El agua es purificadora y nada la vuelve impura«, junto con las reglas sobre los cambios causados por impurezas.\n\n5- ¿Se permite usar agua de Zamzam?\nSí, es la posición de las cuatro escuelas; la mayoría no lo considera desaconsejable.\n\n6- ¿El agua de nieve y granizo es purificadora?\nSí, procede del agua que desciende del cielo y se menciona en una súplica profética.\n\n7- ¿El agua calentada por el sol sigue siendo purificadora?\nSí; no hay una prueba auténtica que prohíba su uso.\n\n8- ¿Qué ocurre si se calienta con combustible impuro?\nSigue siendo pura si la impureza no llega al agua ni la altera.\n\n9- ¿Es válido el wudu con agua usurpada?\nSegún la mayoría, sí, aunque la usurpación sigue siendo pecado.\n\n10- ¿Se pueden eliminar impurezas con agua de Zamzam? Sí, según las cuatro escuelas.\n11- ¿Existe un hadiz auténtico que desapruebe el agua calentada por el sol? No; el relato sobre la lepra es débil.\n12- ¿Se puede usar agua calentada con combustible puro? Sí.\n13- ¿Qué ocurre si se calienta con combustible impuro sin que la impureza llegue al agua? El agua conserva su pureza.\n14- ¿Es válido purificarse con agua usurpada? Según la mayoría, sí, aunque hay pecado.\n15- ¿Cuál es la diferencia entre validez y pecado? La purificación puede ser válida aunque persista el pecado de usurpación o robo."
                   }
                 ]
               }
