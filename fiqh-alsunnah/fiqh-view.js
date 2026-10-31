@@ -150,55 +150,96 @@
     content.replaceChildren();
     const article = document.createElement("article");
     article.className = "rounded-2xl border border-emerald-200 dark:border-emerald-900 bg-white dark:bg-slate-800 p-5 text-base leading-8 space-y-5";
-    if (topic.id === "water-used") {
-      const labels = lang() === "es" ? [
-        "Primer asunto: Agua utilizada para eliminar el hadath",
-        "Segundo asunto: Agua utilizada en una purificación recomendada",
-        "Tercer asunto: Agua utilizada para refrescarse y limpiarse",
-        "Cuarto asunto: Agua en la que introduce la mano quien despierta",
-        "Quinto asunto: Agua utilizada para eliminar una impureza",
-        "Sexto asunto: Purificación con el agua sobrante de un hombre o una mujer"
+    if (topic.id === "water-used" || topic.id === "water-mixed") {
+      const isUsed = topic.id === "water-used";
+      const items = isUsed ? [
+        {
+          ar: "المطلب الأول: الماء المستعمل في رفع الحدث",
+          es: "Primer asunto: Agua usada para levantar el estado ritual",
+          bodyAr: "الماء المستعمل في رفع الحدث هو الماء المنفصل عن أعضاء المتوضئ أو المغتسل بعد استعماله في وضوء أو غسل واجب. اختلف الفقهاء في حكمه: فالمشهور عند الحنفية والشافعية والحنابلة أنه طاهر في نفسه غير مطهِّر لغيره، وذهب المالكية، والظاهرية، وروايات وأقوال عند غيرهم إلى بقائه طهورًا. ومن أدلة القائلين ببقائه طهورًا عموم النصوص الدالة على طهورية الماء، وأن الأصل بقاء الطهورية ما لم يرد دليل ناقل.",
+          bodyEs: "El agua usada para levantar el estado ritual es la que se desprende de los miembros después del wudu o del ghusl obligatorio. Los juristas discrepan: la opinión conocida en las escuelas hanafí, shafií y hanbalí es que es pura en sí misma, pero no purificadora para otros; los malikíes, los zahiríes y otras opiniones sostienen que conserva su capacidad purificadora. Entre sus argumentos está la generalidad de los textos sobre la pureza del agua y la continuidad de su estado original mientras no exista una prueba que lo cambie."
+        },
+        {
+          ar: "المطلب الثاني: الماء المستعمل في طهارة مستحبة",
+          es: "Segundo asunto: Agua usada en una purificación recomendada",
+          bodyAr: "المقصود به الماء المستعمل في طهارة غير واجبة، كتجديد الوضوء. ذهب جمهور الفقهاء إلى أنه طهور يجوز التطهر به؛ لأن استعماله في عبادة مستحبة لا يخرجه عن اسم الماء ولا عن أصل طهوريته. واستدلوا بعموم أدلة طهارة الماء، وبأن البلل الباقي على أعضاء المتوضئ وقطراته على ثيابه محكوم بطهارتها.",
+          bodyEs: "Se refiere al agua empleada en una purificación no obligatoria, como renovar el wudu. La mayoría de los juristas considera que sigue siendo purificadora y que puede volver a utilizarse, pues su uso en un acto recomendado no la saca de la categoría de agua ni altera su estado original. Se apoyan en los textos generales sobre la pureza del agua y en que la humedad que queda en el cuerpo y las gotas en la ropa se consideran puras."
+        },
+        {
+          ar: "المطلب الثالث: الماء المستعمل في التبرد والنظافة",
+          es: "Tercer asunto: Agua usada para refrescarse y limpiarse",
+          bodyAr: "الماء المستعمل في التبرد والنظافة المعتادة طهور؛ لأنه لم يستعمل في رفع حدث ولا في إزالة نجاسة، وبقي على إطلاق اسم الماء. ونُقل الاتفاق على طهوريته في هذا الاستعمال؛ إذ لا موجب لنقله عن أصل الطهورية.",
+          bodyEs: "El agua utilizada para refrescarse o para la limpieza ordinaria sigue siendo purificadora, porque no se ha empleado para levantar un estado ritual ni para eliminar una impureza y conserva el nombre de agua. Se ha transmitido el acuerdo sobre su capacidad purificadora en este uso, pues no hay motivo para apartarla de su estado original."
+        },
+        {
+          ar: "المطلب الرابع: الماء المستعمل بغمس يد القائم من النوم",
+          es: "Cuarto asunto: Agua en la que introduce la mano quien despierta",
+          bodyAr: "غمس اليد في الإناء بعد الاستيقاظ من النوم قبل غسلها لا يجعل الماء نجسًا بمجرده إذا لم تعلم نجاسة اليد؛ فالأصل بقاء الماء على طهوريته، واليقين لا يزول بالشك. والنهي الوارد في غسل اليدين قبل إدخالهما الإناء يُعمل به، ولا يُحكم بنجاسة الماء لمجرد احتمال النجاسة.",
+          bodyEs: "Introducir la mano en el recipiente al despertar, antes de lavarla, no convierte por sí solo el agua en impura si no se conoce ninguna impureza en la mano. El agua conserva su estado original y la certeza no desaparece por una mera duda. Debe observarse la instrucción profética de lavar las manos antes de introducirlas, pero no se declara impuro el agua por una simple sospecha."
+        },
+        {
+          ar: "المطلب الخامس: الماء المستعمل في إزالة النجاسة",
+          es: "Quinto asunto: Agua usada para eliminar una impureza",
+          bodyAr: "الماء المنفصل عن محل النجاسة له أحوال: فإن تغير لونه أو طعمه أو ريحه بالنجاسة فهو نجس. وكذلك ما انفصل والنجاسة باقية أو قبل طهارة المحل على التفصيل المذكور عند الفقهاء. أما الماء المنفصل بعد زوال النجاسة من غير تغير، ففي حكمه خلاف؛ ومن الأقوال أنه طهور، وهو اختيار جماعة من أهل العلم، مع تفصيل في الغسلة التي يحصل بها التطهير.",
+          bodyEs: "El agua que se separa del lugar de la impureza tiene varios casos: si cambia de color, sabor u olor por ella, es impura. También se considera impura, según los detalles expuestos por los juristas, la que se separa mientras la impureza permanece o antes de que el lugar quede purificado. Si se separa después de desaparecer la impureza y sin cambio perceptible, existe discrepancia; una opinión la considera purificadora, con detalles sobre el lavado final."
+        },
+        {
+          ar: "المطلب السادس: حكم التطهر بفضل الرجل أو المرأة",
+          es: "Sexto asunto: Purificación con el agua sobrante de un hombre o una mujer",
+          bodyAr: "فضل الطهور هو ما بقي في الإناء بعد شرب الشخص أو استعماله للماء. والأصل أن الماء باقٍ على طهوريته ما لم تتغير أوصافه بنجاسة. أما استعمال الرجل أو المرأة لفضل الآخر في الطهارة ففيه تفصيل وخلاف بين الفقهاء، وتُجمع نصوص الباب بالنظر إلى أحوال الانفراد والاجتماع، وإلى دلالة النهي الوارد في بعض الصور مع الأحاديث الدالة على اغتسال النبي ﷺ وأزواجه من إناء واحد.",
+          bodyEs: "El agua sobrante es la que queda en el recipiente después de que una persona bebe o la utiliza. En principio conserva su capacidad purificadora mientras sus características no cambien por una impureza. El uso por un hombre o una mujer del agua sobrante del otro presenta matices y discrepancias entre los juristas. Los textos se estudian atendiendo a las distintas situaciones y conciliando la prohibición transmitida en algunos casos con los relatos de que el Profeta ﷺ y sus esposas se bañaban del mismo recipiente."
+        }
       ] : [
-        "المطلب الأول: الماء المستعمل في رفع الحدث",
-        "المطلب الثاني: الماء المستعمل في طهارة مستحبة",
-        "المطلب الثالث: الماء المستعمل في التبرد والنظافة",
-        "المطلب الرابع: الماء المستعمل بغمس يد القائم من النوم",
-        "المطلب الخامس: الماء المستعمل في إزالة النجاسة",
-        "المطلب السادس: حكم التطهر بفضل الرجل أو المرأة"
+        {
+          ar: "المطلب الأوَّل: الماءُ المُختلِط أو المتغَيِّر بنجاسةٍ",
+          es: "Primer asunto: Agua mezclada o alterada por una impureza",
+          bodyAr: "إذا لاقت الماءَ نجاسةٌ فغيّرت طعمه أو لونه أو رائحته، صار الماء نجسًا، قليلًا كان أو كثيرًا؛ وهذا محل اتفاق في الجملة. أما مجرد ملاقاة النجاسة من غير تغير، ففيه تفصيل وخلاف بين الفقهاء، وتُبحث أحكامه بحسب كمية الماء ونوعه وموضع وروده.",
+          bodyEs: "Si una impureza entra en contacto con el agua y cambia su sabor, color u olor, el agua se considera impura, sea poca o mucha; esta es, en términos generales, una cuestión de acuerdo. El mero contacto sin cambio perceptible tiene detalles y discrepancias, según la cantidad y las circunstancias."
+        },
+        {
+          ar: "المطلب الثَّاني: الماءُ المختَلِط بطاهرٍ",
+          es: "Segundo asunto: Agua mezclada con una sustancia pura",
+          bodyAr: "إذا خالط الماءَ شيءٌ طاهر، نُظر: فإن كان مما لا يمتزج بالماء ولا يتحلل فيه، كالدهن وقطع الكافور، بقي الماء طهورًا. وإن امتزج به، فالعبرة ببقاء اسم الماء المطلق وأوصافه؛ فإن بقي ماءً مطلقًا جاز التطهر به، وإن غلب عليه المخالط حتى صار شرابًا أو مرقًا، لم يعد ماءً مطلقًا.",
+          bodyEs: "Cuando se mezcla el agua con una sustancia pura, se distingue entre lo que no se disuelve ni se integra en ella —como el aceite o trozos de alcanfor—, caso en el que el agua sigue siendo purificadora, y lo que sí se mezcla. Si conserva el nombre de agua absoluta, puede utilizarse para la purificación; si la sustancia añadida la transforma hasta convertirla en bebida o caldo, deja de ser agua absoluta."
+        }
       ];
-      const intro = document.createElement("p");
-      intro.className = "fiqh-article-text whitespace-pre-line text-slate-800 dark:text-slate-100";
-      const first = topic.content && (topic.content[lang()] || topic.content.ar || topic.content.es);
-      if (Array.isArray(first) && first[0]) appendStyledEvidence(intro, first[0].text || "");
-      article.appendChild(intro);
       const nav = document.createElement("div");
       nav.className = "grid grid-cols-1 gap-3";
-      const detail = document.createElement("section");
-      detail.className = "rounded-xl border border-emerald-200 dark:border-emerald-900 bg-slate-50 dark:bg-slate-900 p-4 space-y-2";
-      const detailTitle = document.createElement("h3");
-      detailTitle.className = "font-extrabold text-emerald-800 dark:text-emerald-300 text-lg";
-      const detailText = document.createElement("p");
-      detailText.className = "fiqh-article-text whitespace-pre-line text-slate-800 dark:text-slate-100";
-      detail.append(detailTitle, detailText);
-      labels.forEach((label, index) => {
+      const showItem = (item) => {
+        content.replaceChildren();
+        const back = document.createElement("button");
+        back.type = "button";
+        back.className = "w-fit rounded-xl border border-emerald-300 dark:border-emerald-800 px-4 py-2 font-bold text-emerald-800 dark:text-emerald-200";
+        back.textContent = lang() === "es" ? "Volver a los asuntos" : "العودة إلى المطالب";
+        back.addEventListener("click", () => renderTopic(topic, true));
+        const page = document.createElement("article");
+        page.className = "rounded-2xl border border-emerald-200 dark:border-emerald-900 bg-white dark:bg-slate-800 p-5 text-base leading-8 space-y-4";
+        const heading = document.createElement("h3");
+        heading.className = "font-extrabold text-emerald-800 dark:text-emerald-300 text-lg";
+        heading.textContent = item[lang() === "es" ? "es" : "ar"];
+        const paragraph = document.createElement("p");
+        paragraph.className = "fiqh-article-text whitespace-pre-line text-slate-800 dark:text-slate-100";
+        paragraph.textContent = item[lang() === "es" ? "bodyEs" : "bodyAr"];
+        page.append(heading, paragraph);
+        content.append(back, page);
+        v.querySelector("#fiqhHeading").textContent = item[lang() === "es" ? "es" : "ar"];
+        v.querySelector("#fiqhIntro").textContent = tr(activeBook.title) + " / " + tr(activeSection.title) + " / " + tr(topic.title);
+        v.querySelector("#fiqhNotice").textContent = "";
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+      items.forEach(item => {
         const btn = document.createElement("button");
         btn.type = "button";
         btn.className = "w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 text-start font-bold text-slate-800 dark:text-slate-100 shadow-sm hover:border-emerald-500";
-        btn.textContent = label;
-        btn.addEventListener("click", () => {
-          detailTitle.textContent = label;
-          detailText.textContent = lang() === "es"
-            ? "Este apartado trata la norma jurídica correspondiente a esta situación dentro del tema del agua utilizada."
-            : "يتناول هذا المطلب الحكم الفقهي لهذه الصورة من صور الماء المستعمل.";
-          detail.hidden = false;
-          detail.scrollIntoView({ behavior: "smooth", block: "nearest" });
-        });
+        btn.textContent = item[lang() === "es" ? "es" : "ar"];
+        btn.addEventListener("click", () => showItem(item));
         nav.appendChild(btn);
       });
-      article.append(nav, detail);
-      detail.hidden = true;
+      article.appendChild(nav);
       content.appendChild(article);
-      v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Seleccione uno de los seis asuntos." : "اختر أحد المطالب الستة لعرضه.";
+      v.querySelector("#fiqhNotice").textContent = isUsed
+        ? (lang() === "es" ? "Seleccione uno de los seis asuntos para abrir su contenido." : "اضغط على أحد المطالب الستة لفتح محتواه.")
+        : (lang() === "es" ? "Seleccione uno de los dos asuntos para abrir su contenido." : "اضغط على أحد المطلبين لفتح محتواه.");
       return;
     }
     const sections = topic.content && (topic.content[lang()] || topic.content.ar || topic.content.es);
