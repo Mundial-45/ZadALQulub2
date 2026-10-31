@@ -426,8 +426,8 @@ window.FiqhBooks.tahara = {
             {
               "id": "water-doubt-confusion",
               "title": {
-                "ar": "الفصل الثاني: مسائل الشك والاشتباه",
-                "es": "Capítulo 2: Dudas y confusiones"
+                "ar": "الشك في طهارة الماء والاشتباه بين الطهور والنجس",
+                "es": "Dudas sobre la pureza del agua y confusión entre agua purificadora e impura"
               },
               "summary": {
                 "ar": "أحكام الشك في طهارة الماء، واشتباة الطهور بالنجس، والإخبار بنجاسته.",
@@ -484,8 +484,8 @@ window.FiqhBooks.tahara = {
             {
               "id": "water-asar",
               "title": {
-                "ar": "الفصل الثالث: الأسآر",
-                "es": "Capítulo 3: Restos de bebida"
+                "ar": "أحكام الأسآر",
+                "es": "Normas sobre los restos de bebida"
               },
               "summary": {
                 "ar": "تعريف السؤر، وطهارة سؤر الآدمي، وحكم سؤر الحيوانات المأكولة وغير المأكولة.",
