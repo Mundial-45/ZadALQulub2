@@ -802,3 +802,30 @@ button[onclick="jumpToInputPage()"]:hover {
   font-weight: 700;
 }
 .dark .fiqh-article-text .fiqh-source { color: #a1a1aa; }
+
+
+/* تحسين قراءة فقه السنة: خط نسخي، وتفريق الاقتباس العلمي عن الحديث النبوي */
+#fiqhView .fiqh-article-text,
+#fiqhView article {
+  font-family: "Noto Naskh Arabic", "Droid Arabic Naskh", "Amiri", Tahoma, serif !important;
+}
+#fiqhView .fiqh-article-text {
+  font-size: 1.08rem;
+  line-height: 2.15;
+  text-align: start;
+}
+#fiqhView article h3 {
+  font-family: "Noto Naskh Arabic", "Droid Arabic Naskh", "Amiri", Tahoma, serif !important;
+  font-weight: 800;
+  line-height: 1.7;
+}
+#fiqhView .fiqh-article-text .fiqh-quote {
+  color: inherit;
+  background: transparent;
+  font-weight: inherit;
+}
+#fiqhView .fiqh-article-text .fiqh-hadith {
+  color: #b45309;
+  font-weight: 700;
+}
+.dark #fiqhView .fiqh-article-text .fiqh-quote { color: inherit; }
