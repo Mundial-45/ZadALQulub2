@@ -106,7 +106,7 @@
     v.querySelector("#fiqhHeading").textContent = tr(chapter.title);
     v.querySelector("#fiqhIntro").textContent = tr(activeBook.title) + " / " + tr(activeSection.title);
     content.replaceChildren();
-    chapter.topics.forEach(topic => content.appendChild(card(tr(topic.title), tr(topic.summary), () => renderTopic(topic))));
+    chapter.topics.forEach(topic => content.appendChild(card(tr(topic.title), lang() === "es" ? "Abrir apartado" : "عرض المبحث", () => renderTopic(topic))));
     v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Seleccione un apartado para consultar su contenido." : "اختر المبحث لعرض محتواه.";
   }
   // إبراز النصوص الشرعية والمراجع على نمط الموسوعة الفقهية بالدرر السنية.
@@ -114,21 +114,23 @@
     const lines = String(value || "").split("\n");
     lines.forEach((line, index) => {
       if (index) target.appendChild(document.createElement("br"));
-      const pattern = /(﴿[^﴿﴾]*﴾|»[^»«]*«|«[^«»]*»|\(\([^()\n]{2,}\)\))/g;
-      let last = 0, match;
-      while ((match = pattern.exec(line)) !== null) {
-        if (match.index > last) target.appendChild(document.createTextNode(line.slice(last, match.index)));
-        const token = match[0], span = document.createElement("span");
-        const before = line.slice(0, match.index);
-        const prophetic = /(?:قال|عن|يروي|روى|سمعت|حدثنا|أخبرنا)\s*(?:رسول الله|النبي|الرسول)|(?:رسول الله|النبي)\s*(?:ﷺ|صلى الله عليه وسلم)|قال\s*ﷺ|قال\s*صلى الله عليه وسلم/.test(before);
+      const pattern = /(﴿[^﴿﴾]*﴾|»[^»«]*«|«[^«»]*»|(?:رواه|أخرجه|متفق عليه|أخرجهما|انظر|راجع|المصدر:)\s*[^،؛.]*|\[[^\]]{2,}\]|\(\([^()\n]{2,}\)\))/g;
+      const matches = [...line.matchAll(pattern)];
+      const hadithHasAttribution = /(?:رواه|أخرجه|متفق عليه)/.test(line);
+      let last = 0;
+      matches.forEach(match => {
+        const token = match[0], pos = match.index;
+        if (pos > last) target.appendChild(document.createTextNode(line.slice(last, pos)));
+        const span = document.createElement("span");
+        const before = line.slice(0, pos);
+        const propheticContext = /(?:قال|عن|يروي|روى|سمعت|حدثنا|أخبرنا|فقال)\s*(?:رسول الله|النبي|الرسول)|(?:رسول الله|النبي)\s*(?:ﷺ|صلى الله عليه وسلم)|قال\s*ﷺ|قال\s*صلى الله عليه وسلم/.test(before);
         if (token.startsWith("﴿")) span.className = "fiqh-quran";
-        else if ((token.startsWith("»") || token.startsWith("«")) && prophetic) span.className = "fiqh-hadith";
-        else if (token.startsWith("((")) span.className = "fiqh-source";
-        else span.className = "fiqh-quote";
+        else if (token.startsWith("»") || token.startsWith("«")) span.className = (propheticContext || hadithHasAttribution) && !/(?:قال|عن|ذكر|نقل)\s*(?:[اأإ]بو|ابن|الإمام|الشيخ)/.test(before.slice(-55)) ? "fiqh-hadith" : "fiqh-quote";
+        else span.className = "fiqh-source";
         span.textContent = token;
         target.appendChild(span);
-        last = pattern.lastIndex;
-      }
+        last = pos + token.length;
+      });
       if (last < line.length) target.appendChild(document.createTextNode(line.slice(last)));
     });
   }
