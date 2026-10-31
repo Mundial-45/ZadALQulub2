@@ -424,49 +424,100 @@ window.FiqhBooks.tahara = {
           },
           "topics": [
             {
-              "id": "water-doubt-confusion",
+              "id": "water-doubt-1",
               "title": {
-                "ar": "الشك في طهارة الماء والاشتباه بين الطهور والنجس",
-                "es": "Dudas sobre la pureza del agua y confusión entre agua purificadora e impura"
+                "ar": "المبحث الأول: مَن شكَّ في نجاسةِ ماءٍ أو طهارَتِه",
+                "es": "Primer apartado: duda sobre la pureza o impureza del agua"
               },
               "summary": {
-                "ar": "أحكام الشك في طهارة الماء، واشتباة الطهور بالنجس، والإخبار بنجاسته.",
-                "es": "Dudas sobre la pureza del agua, confusión entre agua pura e impura y avisos de impureza."
+                "ar": "من تيقن طهارة الماء ثم شك في ورود النجاسة عليه، فالأصل بقاؤه على الطهارة؛ لأن اليقين لا يزول بالشك. ومن تيقن نجاسته ثم شك في زوالها، بقي حكم النجاسة حتى يثبت ما يرفعها. و",
+                "es": "Si se tenía certeza de que el agua era pura y después surge una duda sobre si recibió una impureza, se mantiene el estado original: la certeza no desaparece por la duda. "
               },
               "content": {
                 "ar": [
                   {
-                    "heading": "المبحث الأول: من شك في نجاسة ماء أو طهارته",
+                    "heading": "المبحث الأول: مَن شكَّ في نجاسةِ ماءٍ أو طهارَتِه",
                     "text": "من تيقن طهارة الماء ثم شك في ورود النجاسة عليه، فالأصل بقاؤه على الطهارة؛ لأن اليقين لا يزول بالشك. ومن تيقن نجاسته ثم شك في زوالها، بقي حكم النجاسة حتى يثبت ما يرفعها. وتفاصيل الصور وتطبيقاتها محل بحث فقهي."
-                  },
+                  }
+                ],
+                "es": [
                   {
-                    "heading": "المبحث الثاني: من اشتبه عليه الطهور بالنجس",
+                    "heading": "Primer apartado: duda sobre la pureza o impureza del agua",
+                    "text": "Si se tenía certeza de que el agua era pura y después surge una duda sobre si recibió una impureza, se mantiene el estado original: la certeza no desaparece por la duda. Si se sabía que era impura y se duda de que se haya purificado, se mantiene ese juicio hasta que se pruebe lo contrario."
+                  }
+                ]
+              }
+            },
+            {
+              "id": "water-doubt-2",
+              "title": {
+                "ar": "المبحث الثاني: مَن اشتبَهَ عليه الطَّهورُ بالنَّجس",
+                "es": "Segundo apartado: confusión entre agua purificadora e impura"
+              },
+              "summary": {
+                "ar": "إذا اختلط على المكلف إناءان أو أكثر، أحدهما طهور والآخر نجس، ولم يتميز له الطاهر، فالحكم يختلف باختلاف عدد الأواني والبدائل وإمكان التحري، وفيه تفصيل بين المذاهب. لا يجوز",
+                "es": "Si se confunden dos o más recipientes y uno contiene agua purificadora y otro impura, las normas dependen del número de recipientes, de la posibilidad de distinguirlos y "
+              },
+              "content": {
+                "ar": [
+                  {
+                    "heading": "المبحث الثاني: مَن اشتبَهَ عليه الطَّهورُ بالنَّجس",
                     "text": "إذا اختلط على المكلف إناءان أو أكثر، أحدهما طهور والآخر نجس، ولم يتميز له الطاهر، فالحكم يختلف باختلاف عدد الأواني والبدائل وإمكان التحري، وفيه تفصيل بين المذاهب. لا يجوز الجزم بحكم واحد دون معرفة صورة الاشتباه."
-                  },
+                  }
+                ],
+                "es": [
+                  {
+                    "heading": "Segundo apartado: confusión entre agua purificadora e impura",
+                    "text": "Si se confunden dos o más recipientes y uno contiene agua purificadora y otro impura, las normas dependen del número de recipientes, de la posibilidad de distinguirlos y de la existencia de alternativas. Las escuelas ofrecen detalles diferentes."
+                  }
+                ]
+              }
+            },
+            {
+              "id": "water-doubt-3",
+              "title": {
+                "ar": "المبحث الثالث: الإخبار بنجاسة الماء",
+                "es": "Tercer apartado: aviso de que el agua es impura"
+              },
+              "summary": {
+                "ar": "إذا أخبر ثقة أو من يُقبل خبره بنجاسة الماء، بحث الفقهاء أثر خبره وشروط قبوله، وهل يجب العمل به أو يُطلب التثبت بحسب القرائن. ويُراعى أن الحكم يتصل بصدق المخبر وعلمه ووجود",
+                "es": "Los juristas estudian cuándo debe aceptarse el aviso de otra persona sobre la impureza del agua, atendiendo a su fiabilidad, conocimiento y a las pruebas que puedan contr"
+              },
+              "content": {
+                "ar": [
                   {
                     "heading": "المبحث الثالث: الإخبار بنجاسة الماء",
                     "text": "إذا أخبر ثقة أو من يُقبل خبره بنجاسة الماء، بحث الفقهاء أثر خبره وشروط قبوله، وهل يجب العمل به أو يُطلب التثبت بحسب القرائن. ويُراعى أن الحكم يتصل بصدق المخبر وعلمه ووجود ما يعارض خبره."
-                  },
+                  }
+                ],
+                "es": [
                   {
-                    "heading": "المبحث الرابع: اشتباه الثياب الطاهرة بالنجسة أو المحرمة",
+                    "heading": "Tercer apartado: aviso de que el agua es impura",
+                    "text": "Los juristas estudian cuándo debe aceptarse el aviso de otra persona sobre la impureza del agua, atendiendo a su fiabilidad, conocimiento y a las pruebas que puedan contradecirlo."
+                  }
+                ]
+              }
+            },
+            {
+              "id": "water-doubt-4",
+              "title": {
+                "ar": "المبحث الرابع: إن اشتبهت ثيابٌ طاهرةٌ بنجسةٍ أو محرَّمة",
+                "es": "Cuarto apartado: confusión entre ropa pura, impura o prohibida"
+              },
+              "summary": {
+                "ar": "تذكر الموسوعة هذه المسألة ضمن مسائل الاشتباه المتصلة بالطهارة؛ وهي ليست حكماً خاصاً بالماء، لكنها مرتبطة بتحري الطاهر عند اختلاط المشتبهات. وتفصيلها يذكر في موضعها مع بيا",
+                "es": "La enciclopedia incluye también el caso de prendas puras mezcladas con prendas impuras o prohibidas, por su relación con la investigación de la pureza. Sus detalles se ex"
+              },
+              "content": {
+                "ar": [
+                  {
+                    "heading": "المبحث الرابع: إن اشتبهت ثيابٌ طاهرةٌ بنجسةٍ أو محرَّمة",
                     "text": "تذكر الموسوعة هذه المسألة ضمن مسائل الاشتباه المتصلة بالطهارة؛ وهي ليست حكماً خاصاً بالماء، لكنها مرتبطة بتحري الطاهر عند اختلاط المشتبهات. وتفصيلها يذكر في موضعها مع بيان اختلاف الفقهاء."
                   }
                 ],
                 "es": [
                   {
-                    "heading": "Primer apartado: duda sobre la pureza o impureza",
-                    "text": "Si se tenía certeza de que el agua era pura y después surge una duda sobre si recibió una impureza, se mantiene el estado original: la certeza no desaparece por la duda. Si se sabía que era impura y se duda de que se haya purificado, se mantiene ese juicio hasta que se pruebe lo contrario."
-                  },
-                  {
-                    "heading": "Segundo apartado: confusión entre agua purificadora e impura",
-                    "text": "Si se confunden dos o más recipientes y uno contiene agua purificadora y otro impura, las normas dependen del número de recipientes, de la posibilidad de distinguirlos y de la existencia de alternativas. Las escuelas ofrecen detalles diferentes."
-                  },
-                  {
-                    "heading": "Tercer apartado: aviso de que el agua es impura",
-                    "text": "Los juristas estudian cuándo debe aceptarse el aviso de otra persona sobre la impureza del agua, atendiendo a su fiabilidad, conocimiento y a las pruebas que puedan contradecirlo."
-                  },
-                  {
-                    "heading": "Cuarto apartado: confusión entre ropa pura e impura",
+                    "heading": "Cuarto apartado: confusión entre ropa pura, impura o prohibida",
                     "text": "La enciclopedia incluye también el caso de prendas puras mezcladas con prendas impuras o prohibidas, por su relación con la investigación de la pureza. Sus detalles se explican en su apartado específico."
                   }
                 ]
@@ -482,41 +533,75 @@ window.FiqhBooks.tahara = {
           },
           "topics": [
             {
-              "id": "water-asar",
+              "id": "water-asar-1",
               "title": {
-                "ar": "أحكام الأسآر",
-                "es": "Normas sobre los restos de bebida"
+                "ar": "المبحث الأول: تعريف الأسآر",
+                "es": "Primer apartado: definición de su'r"
               },
               "summary": {
-                "ar": "تعريف السؤر، وطهارة سؤر الآدمي، وحكم سؤر الحيوانات المأكولة وغير المأكولة.",
-                "es": "Definición de su'r, restos de bebida de las personas y de animales comestibles y no comestibles."
+                "ar": "السؤر هو ما بقي في الإناء بعد شرب الشارب منه. وتختلف أحكامه باختلاف الشارب، ونوع الحيوان، وحكم لعابه، وما إذا ظهرت نجاسة في فمه.",
+                "es": "Su'r es el agua que queda en un recipiente después de que alguien bebe de él. Su norma depende de quién bebió, de la especie animal, del juicio sobre su saliva y de si ex"
               },
               "content": {
                 "ar": [
                   {
                     "heading": "المبحث الأول: تعريف الأسآر",
                     "text": "السؤر هو ما بقي في الإناء بعد شرب الشارب منه. وتختلف أحكامه باختلاف الشارب، ونوع الحيوان، وحكم لعابه، وما إذا ظهرت نجاسة في فمه."
-                  },
-                  {
-                    "heading": "المبحث الثاني: طهارة سؤر الآدمي",
-                    "text": "سؤر الآدمي طاهر، مسلماً كان أو غير مسلم، جنباً أو حائضاً؛ فالأصل طهارة بدن الإنسان. ولا يحكم بنجاسة الماء إلا إذا تحققت نجاسة وصلت إليه، مع مراعاة أحكام تغير الماء."
-                  },
-                  {
-                    "heading": "المبحث الثالث: حكم سؤر ما يؤكل لحمه وما لا يؤكل",
-                    "text": "سؤر الحيوان المأكول اللحم طاهر في الجملة. أما غير المأكول فتختلف أحكامه بين الفقهاء بحسب نوع الحيوان ودليل نجاسته أو طهارته. ومن المسائل الخاصة سؤر الهرة، وسؤر الكلب وولوغه في الإناء؛ ففي ولوغ الكلب ورد الأمر بغسل الإناء سبع مرات، واختلف الفقهاء في دلالة الحديث وحكم الماء والإناء، وفي اشتراط التراب."
                   }
                 ],
                 "es": [
                   {
                     "heading": "Primer apartado: definición de su'r",
                     "text": "Su'r es el agua que queda en un recipiente después de que alguien bebe de él. Su norma depende de quién bebió, de la especie animal, del juicio sobre su saliva y de si existe una impureza comprobada en la boca."
-                  },
+                  }
+                ]
+              }
+            },
+            {
+              "id": "water-asar-2",
+              "title": {
+                "ar": "المبحث الثاني: طهارة سُؤرِ الآدمي",
+                "es": "Segundo apartado: pureza de los restos de bebida de una persona"
+              },
+              "summary": {
+                "ar": "سؤر الآدمي طاهر، مسلماً كان أو غير مسلم، جنباً أو حائضاً؛ فالأصل طهارة بدن الإنسان. ولا يحكم بنجاسة الماء إلا إذا تحققت نجاسة وصلت إليه، مع مراعاة أحكام تغير الماء.",
+                "es": "Los restos de bebida de una persona son puros, sea musulmana o no, esté en estado de yanaba o menstruación. El principio es la pureza del ser humano. El agua solo se decl"
+              },
+              "content": {
+                "ar": [
                   {
-                    "heading": "Segundo apartado: restos de bebida de una persona",
+                    "heading": "المبحث الثاني: طهارة سُؤرِ الآدمي",
+                    "text": "سؤر الآدمي طاهر، مسلماً كان أو غير مسلم، جنباً أو حائضاً؛ فالأصل طهارة بدن الإنسان. ولا يحكم بنجاسة الماء إلا إذا تحققت نجاسة وصلت إليه، مع مراعاة أحكام تغير الماء."
+                  }
+                ],
+                "es": [
+                  {
+                    "heading": "Segundo apartado: pureza de los restos de bebida de una persona",
                     "text": "Los restos de bebida de una persona son puros, sea musulmana o no, esté en estado de yanaba o menstruación. El principio es la pureza del ser humano. El agua solo se declara impura si se constata que una impureza llegó a ella, aplicando las normas sobre alteración del agua."
-                  },
+                  }
+                ]
+              }
+            },
+            {
+              "id": "water-asar-3",
+              "title": {
+                "ar": "المبحث الثالث: حُكم سؤر ما يُؤكَل لحمه وما لا يُؤكل",
+                "es": "Tercer apartado: restos de bebida de animales comestibles y no comestibles"
+              },
+              "summary": {
+                "ar": "سؤر الحيوان المأكول اللحم طاهر في الجملة. أما غير المأكول فتختلف أحكامه بين الفقهاء بحسب نوع الحيوان ودليل نجاسته أو طهارته. ومن المسائل الخاصة سؤر الهرة، وسؤر الكلب وولو",
+                "es": "Los restos de bebida de animales cuya carne es lícita son, en general, puros. Para los animales no comestibles existen diferencias según la especie y las pruebas. Entre l"
+              },
+              "content": {
+                "ar": [
                   {
-                    "heading": "Tercer apartado: animales comestibles y no comestibles",
+                    "heading": "المبحث الثالث: حُكم سؤر ما يُؤكَل لحمه وما لا يُؤكل",
+                    "text": "سؤر الحيوان المأكول اللحم طاهر في الجملة. أما غير المأكول فتختلف أحكامه بين الفقهاء بحسب نوع الحيوان ودليل نجاسته أو طهارته. ومن المسائل الخاصة سؤر الهرة، وسؤر الكلب وولوغه في الإناء؛ ففي ولوغ الكلب ورد الأمر بغسل الإناء سبع مرات، واختلف الفقهاء في دلالة الحديث وحكم الماء والإناء، وفي اشتراط التراب."
+                  }
+                ],
+                "es": [
+                  {
+                    "heading": "Tercer apartado: restos de bebida de animales comestibles y no comestibles",
                     "text": "Los restos de bebida de animales cuya carne es lícita son, en general, puros. Para los animales no comestibles existen diferencias según la especie y las pruebas. Entre los casos específicos están el gato y el perro. Sobre el perro existe un hadiz que ordena lavar siete veces el recipiente; las escuelas discrepan sobre su alcance, el juicio del agua y del recipiente y el uso de tierra."
                   }
                 ]
