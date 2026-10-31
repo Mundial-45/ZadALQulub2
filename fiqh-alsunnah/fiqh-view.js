@@ -44,8 +44,16 @@
     const p = document.createElement("span"); p.className = "mt-1 block text-sm text-slate-500 dark:text-slate-400"; p.textContent = sub;
     b.append(h,p); b.addEventListener("click", action); return b;
   }
-  function renderBooks() {
+  function saveRoute(level, extra = {}) {
+    try {
+      const state = { view: "fiqh", level, ...extra };
+      const suffix = level === "books" ? "fiqh" : level === "book" ? "fiqh-" + extra.bookId : level === "section" ? "fiqh-" + extra.bookId + "-" + extra.sectionId : "fiqh-" + extra.bookId + "-" + extra.sectionId + "-" + extra.topicId;
+      history.pushState(state, "", "#" + suffix);
+    } catch (e) {}
+  }
+  function renderBooks(skipHistory = false) {
     const v = ensureView(), content = v.querySelector("#fiqhContent");
+    if (!skipHistory) saveRoute("books");
     activeBook = null; activeSection = null;
     v.querySelector("#fiqhHeading").textContent = lang() === "es" ? "Fiqh as-Sunnah" : "فقه السنة";
     v.querySelector("#fiqhIntro").textContent = lang() === "es" ? "Seleccione un libro para consultar sus temas." : "اختر كتابًا لاستعراض أبوابه ومسائله.";
@@ -53,8 +61,9 @@
     books().forEach(book => content.appendChild(card(tr(book.title), tr(book.intro), () => renderBook(book))));
     v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Contenido introductorio organizado por temas. Las pruebas textuales y las atribuciones se incorporarán con referencias verificadas." : "محتوى تمهيدي مرتب حسب الموضوعات. ستضاف الأدلة والنقول مع عزوها إلى مراجع موثقة.";
   }
-  function renderBook(book) {
+  function renderBook(book, skipHistory = false) {
     activeBook = book; activeSection = null;
+    if (!skipHistory) saveRoute("book", { bookId: book.id });
     const v = ensureView(), content = v.querySelector("#fiqhContent");
     v.querySelector("#fiqhHeading").textContent = tr(book.title);
     v.querySelector("#fiqhIntro").textContent = tr(book.intro);
@@ -62,8 +71,9 @@
     book.sections.forEach(section => content.appendChild(card(tr(section.title), section.topics.length + (lang()==="es" ? " temas" : " مسائل"), () => renderSection(section))));
     v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Seleccione un tema para leer su introducción." : "اختر مسألة لقراءة تعريفها التمهيدي.";
   }
-  function renderSection(section) {
+  function renderSection(section, skipHistory = false) {
     activeSection = section;
+    if (!skipHistory) saveRoute("section", { bookId: activeBook.id, sectionId: section.id });
     const v = ensureView(), content = v.querySelector("#fiqhContent");
     v.querySelector("#fiqhHeading").textContent = tr(section.title);
     v.querySelector("#fiqhIntro").textContent = tr(activeBook.title);
@@ -71,7 +81,8 @@
     section.topics.forEach(topic => content.appendChild(card(tr(topic.title), tr(topic.summary), () => renderTopic(topic))));
     v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Navegación: libro → sección → tema." : "مسار التصفح: الكتاب ← الباب ← المسألة.";
   }
-  function renderTopic(topic) {
+  function renderTopic(topic, skipHistory = false) {
+    if (!skipHistory) saveRoute("topic", { bookId: activeBook.id, sectionId: activeSection.id, topicId: topic.id });
     const v = ensureView(), content = v.querySelector("#fiqhContent");
     v.querySelector("#fiqhHeading").textContent = tr(topic.title);
     v.querySelector("#fiqhIntro").textContent = tr(activeBook.title) + " / " + tr(activeSection.title);
@@ -83,7 +94,19 @@
     v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Resumen introductorio; no constituye una fatwa ni sustituye la consulta de las fuentes y de especialistas." : "ملخص تمهيدي، وليس فتوى ولا يغني عن مراجعة المصادر وسؤال أهل العلم.";
   }
   function open() { hideOtherViews(); renderBooks(); }
+  function restoreRoute(state) {
+    const book = books().find(item => item.id === state.bookId);
+    if (!book || state.level === "books") { hideOtherViews(); renderBooks(true); return; }
+    const section = (book.sections || []).find(item => item.id === state.sectionId);
+    hideOtherViews();
+    if (state.level === "book" || !section) { renderBook(book, true); return; }
+    if (state.level === "section") { renderSection(section, true); return; }
+    const topic = (section.topics || []).find(item => item.id === state.topicId);
+    renderSection(section, true);
+    if (topic) renderTopic(topic, true);
+  }
   function back() {
+    if (history.state && history.state.view === "fiqh" && history.length > 1) { history.back(); return; }
     if (activeSection) { renderBook(activeBook); return; }
     if (activeBook) { renderBooks(); return; }
     const v = document.getElementById("fiqhView"); if (v) v.classList.add("hidden");
@@ -100,6 +123,7 @@
     if (card) card.querySelectorAll("[data-ar]").forEach(el => el.textContent = el.dataset[lang()]);
   }
   window.openFiqhSection = open;
+  window.restoreFiqhRoute = restoreRoute;
   window.refreshFiqhLanguage = refreshLanguage;
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", addHomeCard, { once: true });
   else addHomeCard();
