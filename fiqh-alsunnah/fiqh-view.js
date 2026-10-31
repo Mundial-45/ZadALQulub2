@@ -1,6 +1,6 @@
 // واجهة فقه السنة: تنقل ثنائي اللغة (عربي/إسباني).
 (function () {
-  const books = () => window.feqhData || [];
+  const books = () => { const registered = window.FiqhBooks && Object.values(window.FiqhBooks); return registered && registered.length ? registered : (Array.isArray(window.feqhData) ? window.feqhData : []); };
   const lang = () => (document.documentElement.lang === "es" ? "es" : "ar");
   const tr = value => value && (value[lang()] || value.ar || value.es) || "";
   let activeBook = null, activeSection = null;
@@ -78,8 +78,9 @@
     v.querySelector("#fiqhHeading").textContent = tr(section.title);
     v.querySelector("#fiqhIntro").textContent = tr(activeBook.title);
     content.replaceChildren();
-    section.topics.forEach(topic => content.appendChild(card(tr(topic.title), tr(topic.summary), () => renderTopic(topic))));
-    v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Navegación: libro → sección → tema." : "مسار التصفح: الكتاب ← الباب ← المسألة.";
+    const visibleTopics = section.id === "water" ? section.topics.filter(topic => ["water-classes", "water-absolute", "water-impure", "water-mixed", "water-used"].includes(topic.id)) : section.topics;
+    visibleTopics.forEach(topic => content.appendChild(card(tr(topic.title), tr(topic.summary), () => renderTopic(topic))));
+    v.querySelector("#fiqhNotice").textContent = section.id === "water" ? (lang() === "es" ? "Seleccione uno de los cinco apartados." : "اختر أحد المباحث الخمسة لعرض محتواه.") : (lang() === "es" ? "Navegación: libro → sección → tema." : "مسار التصفح: الكتاب ← الباب ← المسألة.");
   }
   function renderTopic(topic, skipHistory = false) {
     if (!skipHistory) saveRoute("topic", { bookId: activeBook.id, sectionId: activeSection.id, topicId: topic.id });
