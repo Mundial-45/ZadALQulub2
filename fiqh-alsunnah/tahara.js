@@ -19,64 +19,88 @@ window.FiqhBooks.tahara = {
       "intro": {
         "id": "water-intro",
         "title": {
-          "ar": "تمهيد: الطهارة وأهمية الماء",
-          "es": "Introducción: la purificación y la importancia del agua"
+          "ar": "تمهيد: أهمية الطهارة وتعريفها وأقسامها والحدث",
+          "es": "Introducción: importancia y definición de la purificación, sus clases y el estado ritual"
         },
         "summary": {
-          "ar": "أهمية الطهارة، وتعريفها وأقسامها، وتعريف الحدث وأقسامه.",
-          "es": "Importancia y definición de la purificación, sus clases y la definición del estado ritual."
+          "ar": "بيان عناية الإسلام بالطهارة، وتعريف الطهارة لغة وشرعاً، ومعنييها، وأقسامها باعتبار المحل والنوع، ثم تعريف الحدث وبيان قسميه.",
+          "es": "La importancia de la purificación en el islam; su definición lingüística y jurídica; sus sentidos y clasificaciones; y la definición del estado ritual y sus dos clases."
         },
         "content": {
           "ar": [
             {
               "heading": "أولاً: أهمية الطهارة في الإسلام",
-              "text": "اعتنى الإسلام بالطهارة عناية عظيمة؛ قال الله تعالى لنبيه ﷺ: ﴿وَثِيَابَكَ فَطَهِّرْ﴾ [المدثر: 4]. وقال رسول الله ﷺ: »الطُّهور شطر الإيمان« رواه مسلم (223) من حديث أبي مالك الأشعري رضي الله عنه. وقال تعالى: ﴿إِنَّ اللَّهَ يُحِبُّ التَّوَّابِينَ وَيُحِبُّ الْمُتَطَهِّرِينَ﴾ [البقرة: 222]، وقال سبحانه: ﴿فِيهِ رِجَالٌ يُحِبُّونَ أَنْ يَتَطَهَّرُوا وَاللَّهُ يُحِبُّ الْمُطَّهِّرِينَ﴾ [التوبة: 108]."
+              "text": "اعتنى الإسلام بالطهارة عناية ظاهرة، وجعلها من شعائر الدين ومقدمات عبادات عظيمة، وفي مقدمتها الصلاة.\n1- أمر الله تعالى نبيَّه ﷺ بالطهارة فقال: ﴿وَثِيَابَكَ فَطَهِّرْ﴾ [المدثر: 4].\n2- وبيَّن النبي ﷺ منزلة الطهارة فقال: »الطُّهور شطر الإيمان« رواه مسلم (223)، من حديث أبي مالك الأشعري رضي الله عنه. وذكر ابن رجب أن المراد بالطهور في هذا الحديث التطهر بالماء من الأحداث.\n3- وأخبر الله تعالى بمحبته للمتطهرين فقال: ﴿إِنَّ اللَّهَ يُحِبُّ التَّوَّابِينَ وَيُحِبُّ الْمُتَطَهِّرِينَ﴾ [البقرة: 222].\n4- وأثنى على أهل مسجد قباء بقوله: ﴿فِيهِ رِجَالٌ يُحِبُّونَ أَنْ يَتَطَهَّرُوا وَاللَّهُ يُحِبُّ الْمُطَّهِّرِينَ﴾ [التوبة: 108]."
             },
             {
-              "heading": "ثانياً: تعريف الطهارة وأقسامها",
-              "text": "الطهارة لغةً: النزاهة والنظافة من الأدناس والأوساخ. واصطلاحاً: رفع الحدث وما في معناه، وزوال الخبث. فالطهارة تشمل معنيين: زوال الخبث، أي إزالة النجاسة عن البدن والثوب والمكان؛ ورفع الحدث، ويكون بالوضوء أو الغسل، وما في معنى ذلك كطهارة صاحب العذر وتجديد الوضوء."
+              "heading": "ثانياً: تعريف الطهارة لغة واصطلاحاً",
+              "text": "الطهارة لغةً: النزاهة والنظافة من الأدناس والأوساخ.\nوالطهارة اصطلاحاً: رفع الحدث وما في معناه، وزوال الخبث.\nوعلى هذا فمدلول الطهارة الشرعية يجمع بين أمرين:\n1- زوال الخبث: أي إزالة النجاسة، والمقصود طهارة البدن والثوب والمكان.\n2- رفع الحدث: ويكون بالوضوء أو الغسل، ويدخل في معناه ما لا يرفع حدثاً جديداً، أو لا يكون عن حدث، مثل طهارة صاحب السلس بحسب أحكام عذره، وتجديد الوضوء، وغسل اليدين بعد الاستيقاظ من نوم الليل."
             },
             {
-              "heading": "أقسام الطهارة باعتبار محلها",
-              "text": "تنقسم إلى طهارة باطنة، وهي طهارة القلب من الشرك والغل والبغضاء؛ وطهارة حسية، وهي الطهارة من الأحداث والأنجاس. وطهارة القلب من أعظم مقاصد الشرع، قال تعالى: ﴿إِنَّمَا الْمُشْرِكُونَ نَجَسٌ﴾ [التوبة: 28]. وثبت عن النبي ﷺ أنه قال: »إن المؤمن لا ينجس« رواه البخاري (285) ومسلم (371)، والمقصود نفي النجاسة الحسية عن المؤمن."
+              "heading": "ثالثاً: أقسام الطهارة باعتبار محلها",
+              "text": "تنقسم الطهارة باعتبار محلها إلى قسمين:\n1- الطهارة الباطنة: وهي طهارة القلب من الشرك والغل والبغضاء وسائر أمراض القلوب. وهي أصل عظيم، ولا تغني طهارة الظاهر عن إصلاح الباطن.\nقال الله تعالى: ﴿إِنَّمَا الْمُشْرِكُونَ نَجَسٌ﴾ [التوبة: 28]. وثبت عن أبي هريرة رضي الله عنه أن النبي ﷺ قال: »إن المؤمن لا ينجس« رواه البخاري (285) ومسلم (371)، والحديث في نفي النجاسة الحسية عن المؤمن.\n2- الطهارة الحسية: وهي الطهارة من الأحداث والأنجاس، وهي موضوع أحكام المياه والوضوء والغسل والتيمم وإزالة النجاسة."
             },
             {
-              "heading": "أقسام الطهارة باعتبار نوعها",
-              "text": "الطهارة من الحدث ثلاثة أنواع: الطهارة الكبرى، وهي الغسل؛ والطهارة الصغرى، وهي الوضوء؛ والطهارة البدلية، وهي التيمم. والطهارة من الخبث تكون بالغسل أو المسح أو النضح، بحسب نوع النجاسة والدليل الوارد فيها."
+              "heading": "رابعاً: أقسام الطهارة باعتبار نوعها",
+              "text": "تنقسم الطهارة بهذا الاعتبار إلى نوعين:\nالنوع الأول: الطهارة من الحدث، ولها ثلاث صور:\n1- الطهارة الكبرى: وهي الغسل.\n2- الطهارة الصغرى: وهي الوضوء.\n3- الطهارة البدلية: وهي التيمم عند وجود سببه وشروطه.\nالنوع الثاني: الطهارة من الخبث، وتكون على صور:\n1- طهارة الغسل: بإزالة النجاسة بالماء حيث يشترط الغسل.\n2- طهارة المسح: في المواضع التي ورد الشرع فيها بالاكتفاء بالمسح.\n3- طهارة النضح: برش الماء في المواضع التي ورد الدليل فيها بالنضح.\nوتفاصيل ما يجزئ في كل نوع، وما يشترط له، تُبحث في مواضعها من أبواب الفقه."
             },
             {
-              "heading": "ثالثاً: تعريف الحدث وأقسامه",
-              "text": "الحدث في اللغة: الأمر الحادث المتجدد. وفي الاصطلاح: وصف حكمي قائم بالبدن يمنع من الصلاة ونحوها مما تشترط له الطهارة. وينقسم إلى حدث أصغر، وهو ما يوجب الوضوء كالبول والغائط وخروج الريح؛ وحدث أكبر، وهو ما يوجب الغسل كالجنابة."
+              "heading": "خامساً: تعريف الحدث لغة واصطلاحاً",
+              "text": "الحدث في اللغة من الحدوث، وهو الوقوع والتجدد وكون الشيء بعد أن لم يكن، ويأتي أيضاً بمعنى الأمر الحادث.\nوالحدث في الاصطلاح: وصف حكمي قائم بالبدن يمنع من الصلاة ونحوها مما تشترط له الطهارة.\nوهو وصف حكمي، وليس معناه وجود نجاسة حسية على البدن؛ فقد يكون بدن الإنسان وثوبه نظيفين، ومع ذلك يكون محدثاً."
             },
             {
-              "heading": "تنبيه منهجي",
-              "text": "هذه التعريفات والموضوعات تمهيد لفهم أبواب الطهارة. وعند تفصيل الأحكام العملية ستُعرض أقوال المذاهب الأربعة وأدلتها، مع تمييز مواضع الاتفاق والخلاف، وعدم نسبة قول إلى مذهب إلا بعد التحقق من مصادره."
+              "heading": "سادساً: أقسام الحدث",
+              "text": "ينقسم الحدث إلى قسمين:\n1- الحدث الأصغر: وهو ما يوجب الوضوء، ومن أمثلته البول والغائط وخروج الريح، وتفاصيل النواقض وأحكام أصحاب الأعذار تأتي في أبوابها.\n2- الحدث الأكبر: وهو ما يوجب الغسل، ومن أسبابه الجنابة، وتلحق به أسباب أخرى كالحيض والنفاس بالنسبة إلى المرأة، ولكل منها أحكامه المفصلة.\nوالفرق الإجمالي أن الحدث الأصغر ترفع أحكامه الطهارة بالوضوء، والحدث الأكبر ترفع أحكامه الطهارة بالغسل، وقد يقوم التيمم مقام الماء عند تحقق شروطه."
+            },
+            {
+              "heading": "خلاصة التمهيد",
+              "text": "يتبين أن الطهارة أوسع من مجرد النظافة المعتادة؛ فهي عبادة وأحكام شرعية تشمل طهارة القلب، وإزالة النجاسة، ورفع الحدث. ومدخل هذا الباب هو معرفة الماء وأحكامه؛ لأن الماء هو الأصل في الطهارة الحسية، ثم تأتي أحكام الوضوء والغسل والتيمم وإزالة النجاسة."
+            },
+            {
+              "heading": "المراجع",
+              "text": "الموسوعة الفقهية بالدرر السنية، تمهيد كتاب الطهارة: https://dorar.net/feqhia/3/تمهيد.\nومن المراجع التي أحالت إليها مادة التمهيد: لسان العرب لابن منظور؛ أنيس الفقهاء للقونوي؛ مواهب الجليل للحطاب؛ الفروع لابن مفلح؛ المجموع للنووي؛ الشرح الممتع لابن عثيمين؛ حاشية الدسوقي؛ بداية المجتهد لابن رشد؛ والفقه الإسلامي وأدلته للزحيلي."
+            },
+            {
+              "heading": "أسئلة وأجوبة",
+              "text": "1- ما الدليل من القرآن على عناية الإسلام بالطهارة؟ قوله تعالى: ﴿وَثِيَابَكَ فَطَهِّرْ﴾ [المدثر: 4].\n2- ما الحديث الذي يبين منزلة الطهارة؟ قوله ﷺ: »الطُّهور شطر الإيمان« رواه مسلم (223).\n3- كيف عبّر القرآن عن محبة الله للمتطهرين؟ بقوله تعالى: ﴿إِنَّ اللَّهَ يُحِبُّ التَّوَّابِينَ وَيُحِبُّ الْمُتَطَهِّرِينَ﴾ [البقرة: 222].\n4- بماذا أثنى الله على أهل مسجد قباء؟ بقوله: ﴿فِيهِ رِجَالٌ يُحِبُّونَ أَنْ يَتَطَهَّرُوا وَاللَّهُ يُحِبُّ الْمُطَّهِّرِينَ﴾ [التوبة: 108].\n5- ما معنى الطهارة لغة؟ النزاهة والنظافة من الأدناس والأوساخ.\n6- ما تعريف الطهارة اصطلاحاً؟ رفع الحدث وما في معناه، وزوال الخبث.\n7- ما المقصود بزوال الخبث؟ إزالة النجاسة عن البدن والثوب والمكان.\n8- ما المقصود برفع الحدث؟ الطهارة بالوضوء أو الغسل، وما في معناهما من أحكام الطهارة.\n9- إلى كم قسم تنقسم الطهارة باعتبار محلها؟ إلى طهارة باطنة وطهارة حسية.\n10- ما الطهارة الباطنة؟ طهارة القلب من الشرك والغل والبغضاء.\n11- ما الدليل على أن المؤمن لا ينجس؟ حديث »إن المؤمن لا ينجس« رواه البخاري (285) ومسلم (371).\n12- ما الطهارة الحسية؟ الطهارة من الأحداث والأنجاس.\n13- إلى كم نوع تنقسم الطهارة باعتبار نوعها؟ إلى طهارة من الحدث وطهارة من الخبث.\n14- ما أقسام الطهارة من الحدث؟ كبرى بالغسل، وصغرى بالوضوء، وبدلية بالتيمم.\n15- ما صور الطهارة من الخبث؟ الغسل والمسح والنضح، بحسب الدليل والحالة.\n16- ما معنى الحدث لغة؟ الحدوث والوقوع والتجدد.\n17- ما تعريف الحدث اصطلاحاً؟ وصف حكمي قائم بالبدن يمنع من الصلاة ونحوها مما تشترط له الطهارة.\n18- ما قسما الحدث؟ حدث أصغر يوجب الوضوء، وحدث أكبر يوجب الغسل."
             }
           ],
           "es": [
             {
               "heading": "Primero: importancia de la purificación en el islam",
-              "text": "El islam concede gran importancia a la purificación. Dios dijo a Su Profeta: »Purifica tus vestiduras« (Corán 74:4). El Mensajero de Dios ﷺ dijo: »La purificación es la mitad de la fe« (Muslim, 223), según el hadiz de Abu Malik al-Ash'ari. El Corán también dice que Dios ama a quienes se arrepienten y se purifican (2:222), y elogia a quienes desean purificarse (9:108)."
+              "text": "El islam concede una importancia manifiesta a la purificación y la establece como parte de sus prácticas religiosas y como condición para actos de adoración importantes, especialmente la oración.\n1- Dios ordenó a Su Profeta ﷺ: ﴿Y purifica tus vestiduras﴾ [Corán 74:4].\n2- El Profeta ﷺ explicó su rango: »La purificación es la mitad de la fe« (Muslim, 223), según el relato de Abu Malik al-Ash'ari. Ibn Rajab explicó que aquí se refiere a purificarse con agua de los estados rituales.\n3- Dios dice: ﴿Dios ama a quienes se arrepienten y a quienes se purifican﴾ [Corán 2:222].\n4- Y elogió a quienes desean purificarse: ﴿En él hay hombres que aman purificarse, y Dios ama a quienes se purifican﴾ [Corán 9:108]."
             },
             {
-              "heading": "Segundo: definición y clases de purificación",
-              "text": "En árabe, tahara significa limpieza y ausencia de suciedad. En terminología jurídica es levantar el estado ritual y eliminar la impureza. Comprende dos sentidos: eliminar la impureza física del cuerpo, la ropa o el lugar; y levantar el estado ritual mediante el wudu o el ghusl, así como actos relacionados, como la purificación de quien tiene una excusa continua o la renovación del wudu."
+              "heading": "Segundo: definición lingüística y jurídica de la purificación",
+              "text": "En árabe, tahara significa limpieza y ausencia de suciedad o impureza.\nEn terminología jurídica, significa levantar el estado ritual y lo que tiene un tratamiento equivalente, así como eliminar la impureza física.\nPor tanto, comprende dos sentidos:\n1- Eliminar la impureza física: limpiar el cuerpo, la ropa o el lugar.\n2- Levantar el estado ritual: mediante el wudu o el ghusl. También se incluyen situaciones relacionadas, como la purificación de quien padece una emisión continua, la renovación del wudu y el lavado de las manos después de despertarse del sueño nocturno."
             },
             {
-              "heading": "Clases según aquello que se purifica",
-              "text": "Se distingue entre purificación interior —limpiar el corazón de asociación, rencor y hostilidad— y purificación física, que consiste en eliminar los estados rituales y las impurezas. La purificación del corazón es uno de los grandes objetivos de la religión. El Corán dice: »Los asociadores son impuros« (9:28). El Profeta ﷺ también dijo: »El creyente no es impuro« (al-Bujari, 285; Muslim, 371), refiriéndose a la impureza física."
+              "heading": "Tercero: clases según aquello que se purifica",
+              "text": "Se divide en dos clases:\n1- Purificación interior: limpiar el corazón de la asociación a Dios, el rencor, la hostilidad y las enfermedades del corazón. Es un fundamento esencial; la limpieza externa no sustituye la rectificación interior.\nDios dice: ﴿Los asociadores son impuros﴾ [Corán 9:28]. Y el Profeta ﷺ dijo: »El creyente no es impuro« (al-Bujari, 285; Muslim, 371), refiriéndose a la impureza física.\n2- Purificación física: eliminar los estados rituales y las impurezas. Este es el ámbito de las normas del agua, el wudu, el ghusl, el tayammum y la eliminación de impurezas."
             },
             {
-              "heading": "Clases según su naturaleza",
-              "text": "La purificación del estado ritual tiene tres formas: mayor, mediante el ghusl; menor, mediante el wudu; y sustitutiva, mediante el tayammum. La eliminación de impurezas físicas puede realizarse lavando, pasando la mano húmeda o rociando agua, según el tipo de impureza y las pruebas específicas."
+              "heading": "Cuarto: clases según su naturaleza",
+              "text": "Hay dos tipos:\nTipo 1: purificación del estado ritual, con tres formas:\n1- Purificación mayor: ghusl, baño ritual completo.\n2- Purificación menor: wudu, ablución.\n3- Purificación sustitutiva: tayammum, cuando concurren sus causas y condiciones.\nTipo 2: purificación de la impureza física, que puede realizarse mediante:\n1- Lavado con agua, cuando así se exige.\n2- Frotado o pasada, en los casos en que la norma permite esa forma.\n3- Rociado de agua, cuando existe una prueba específica que lo establece.\nLos detalles de cada forma y sus condiciones se estudian en sus capítulos correspondientes."
             },
             {
-              "heading": "Tercero: definición y clases del estado ritual",
-              "text": "En lengua árabe, hadath es algo que sucede o se produce. En terminología jurídica es un estado legal atribuido al cuerpo que impide realizar la oración y otros actos que requieren purificación. Se divide en estado menor, que requiere wudu —como después de orinar, defecar o expulsar gases—, y estado mayor, que requiere ghusl, como la yanaba."
+              "heading": "Quinto: definición lingüística y jurídica del estado ritual",
+              "text": "En lengua árabe, hadath deriva de algo que ocurre o se produce.\nEn terminología jurídica es un estado legal atribuido al cuerpo que impide realizar la oración y otros actos para los que se exige purificación.\nEs un estado jurídico, no necesariamente suciedad física: una persona puede tener el cuerpo y la ropa limpios y, aun así, encontrarse en estado de hadath."
             },
             {
-              "heading": "Nota metodológica",
-              "text": "Estas definiciones sirven de introducción a los capítulos de purificación. Al desarrollar las normas prácticas se presentarán las opiniones y pruebas de las cuatro escuelas jurídicas, distinguiendo los acuerdos de las discrepancias y verificando las atribuciones."
+              "heading": "Sexto: clases del estado ritual",
+              "text": "El estado ritual se divide en dos:\n1- Estado menor: requiere wudu. Entre sus causas se encuentran orinar, defecar y expulsar gases; los detalles de los anuladores y de quienes tienen excusas continuas se estudian en sus capítulos.\n2- Estado mayor: requiere ghusl. Entre sus causas está la yanaba, y también se tratan aquí situaciones como la menstruación y el puerperio, con sus normas particulares.\nEn términos generales, el wudu levanta el estado menor y el ghusl levanta el mayor. Cuando se cumplen sus condiciones, el tayammum puede sustituir al uso del agua."
+            },
+            {
+              "heading": "Resumen de la introducción",
+              "text": "La purificación no es solamente limpieza ordinaria: es una práctica de adoración y un conjunto de normas que abarcan la purificación del corazón, la eliminación de impurezas físicas y el levantamiento del estado ritual. El estudio comienza con el agua y sus normas, pues el agua es el medio básico de la purificación física; después se estudian el wudu, el ghusl, el tayammum y la eliminación de impurezas."
+            },
+            {
+              "heading": "Referencias",
+              "text": "Enciclopedia jurídica de al-Durar al-Saniyya, introducción del Libro de la Purificación: https://dorar.net/feqhia/3/تمهيد.\nEntre las obras citadas en esa introducción: Lisan al-Arab; Anis al-Fuqaha; Mawahib al-Jalil; al-Furu'; al-Majmu'; al-Sharh al-Mumti'; Hashiyat al-Dusuqi; Bidayat al-Mujtahid; y al-Fiqh al-Islami wa Adillatuhu."
+            },
+            {
+              "heading": "Preguntas y respuestas",
+              "text": "1- ¿Qué prueba coránica muestra la importancia de la purificación? ﴿Y purifica tus vestiduras﴾ [74:4].\n2- ¿Qué hadiz expresa su rango? »La purificación es la mitad de la fe« (Muslim, 223).\n3- ¿Cómo expresa el Corán el amor de Dios por quienes se purifican? En 2:222.\n4- ¿A quiénes elogió Dios por querer purificarse? A los hombres mencionados en 9:108.\n5- ¿Qué significa tahara en lengua árabe? Limpieza y ausencia de suciedad.\n6- ¿Cuál es su definición jurídica? Levantar el estado ritual y eliminar la impureza física.\n7- ¿Qué significa eliminar la impureza? Limpiar el cuerpo, la ropa y el lugar.\n8- ¿Qué significa levantar el estado ritual? Purificarse mediante wudu o ghusl y normas relacionadas.\n9- ¿Cómo se clasifica según aquello que se purifica? En purificación interior y física.\n10- ¿Qué es la purificación interior? Limpiar el corazón de asociación, rencor y hostilidad.\n11- ¿Qué prueba indica que el creyente no es impuro? El hadiz recogido por al-Bujari 285 y Muslim 371.\n12- ¿Qué es la purificación física? Eliminar estados rituales e impurezas.\n13- ¿Qué dos tipos hay según su naturaleza? Purificación del estado ritual y de la impureza física.\n14- ¿Cuáles son las formas de purificación del estado ritual? Ghusl, wudu y tayammum.\n15- ¿Cuáles son las formas de eliminar impurezas? Lavado, frotado y rociado, según la prueba aplicable.\n16- ¿Qué significa hadath lingüísticamente? Algo que ocurre o se produce.\n17- ¿Cuál es su definición jurídica? Un estado legal que impide actos que requieren purificación.\n18- ¿Cuáles son sus dos clases? Estado menor, que requiere wudu, y mayor, que requiere ghusl."
             }
           ]
         }
