@@ -1,4 +1,3 @@
-window.FiqhBooks = window.FiqhBooks || {};
 window.FiqhBooks.tahara = {
   "id": "tahara",
   "title": {
@@ -55,14 +54,6 @@ window.FiqhBooks.tahara = {
             {
               "heading": "خلاصة التمهيد",
               "text": "يتبين أن الطهارة أوسع من مجرد النظافة المعتادة؛ فهي عبادة وأحكام شرعية تشمل طهارة القلب، وإزالة النجاسة، ورفع الحدث. ومدخل هذا الباب هو معرفة الماء وأحكامه؛ لأن الماء هو الأصل في الطهارة الحسية، ثم تأتي أحكام الوضوء والغسل والتيمم وإزالة النجاسة."
-            },
-            {
-              "heading": "المراجع",
-              "text": "الموسوعة الفقهية بالدرر السنية، تمهيد كتاب الطهارة: https://dorar.net/feqhia/3/تمهيد.\nومن المراجع التي أحالت إليها مادة التمهيد: لسان العرب لابن منظور؛ أنيس الفقهاء للقونوي؛ مواهب الجليل للحطاب؛ الفروع لابن مفلح؛ المجموع للنووي؛ الشرح الممتع لابن عثيمين؛ حاشية الدسوقي؛ بداية المجتهد لابن رشد؛ والفقه الإسلامي وأدلته للزحيلي."
-            },
-            {
-              "heading": "أسئلة وأجوبة",
-              "text": "1- ما الدليل من القرآن على عناية الإسلام بالطهارة؟ قوله تعالى: ﴿وَثِيَابَكَ فَطَهِّرْ﴾ [المدثر: 4].\n2- ما الحديث الذي يبين منزلة الطهارة؟ قوله ﷺ: »الطُّهور شطر الإيمان« رواه مسلم (223).\n3- كيف عبّر القرآن عن محبة الله للمتطهرين؟ بقوله تعالى: ﴿إِنَّ اللَّهَ يُحِبُّ التَّوَّابِينَ وَيُحِبُّ الْمُتَطَهِّرِينَ﴾ [البقرة: 222].\n4- بماذا أثنى الله على أهل مسجد قباء؟ بقوله: ﴿فِيهِ رِجَالٌ يُحِبُّونَ أَنْ يَتَطَهَّرُوا وَاللَّهُ يُحِبُّ الْمُطَّهِّرِينَ﴾ [التوبة: 108].\n5- ما معنى الطهارة لغة؟ النزاهة والنظافة من الأدناس والأوساخ.\n6- ما تعريف الطهارة اصطلاحاً؟ رفع الحدث وما في معناه، وزوال الخبث.\n7- ما المقصود بزوال الخبث؟ إزالة النجاسة عن البدن والثوب والمكان.\n8- ما المقصود برفع الحدث؟ الطهارة بالوضوء أو الغسل، وما في معناهما من أحكام الطهارة.\n9- إلى كم قسم تنقسم الطهارة باعتبار محلها؟ إلى طهارة باطنة وطهارة حسية.\n10- ما الطهارة الباطنة؟ طهارة القلب من الشرك والغل والبغضاء.\n11- ما الدليل على أن المؤمن لا ينجس؟ حديث »إن المؤمن لا ينجس« رواه البخاري (285) ومسلم (371).\n12- ما الطهارة الحسية؟ الطهارة من الأحداث والأنجاس.\n13- إلى كم نوع تنقسم الطهارة باعتبار نوعها؟ إلى طهارة من الحدث وطهارة من الخبث.\n14- ما أقسام الطهارة من الحدث؟ كبرى بالغسل، وصغرى بالوضوء، وبدلية بالتيمم.\n15- ما صور الطهارة من الخبث؟ الغسل والمسح والنضح، بحسب الدليل والحالة.\n16- ما معنى الحدث لغة؟ الحدوث والوقوع والتجدد.\n17- ما تعريف الحدث اصطلاحاً؟ وصف حكمي قائم بالبدن يمنع من الصلاة ونحوها مما تشترط له الطهارة.\n18- ما قسما الحدث؟ حدث أصغر يوجب الوضوء، وحدث أكبر يوجب الغسل."
             }
           ],
           "es": [
@@ -93,14 +84,6 @@ window.FiqhBooks.tahara = {
             {
               "heading": "Resumen de la introducción",
               "text": "La purificación no es solamente limpieza ordinaria: es una práctica de adoración y un conjunto de normas que abarcan la purificación del corazón, la eliminación de impurezas físicas y el levantamiento del estado ritual. El estudio comienza con el agua y sus normas, pues el agua es el medio básico de la purificación física; después se estudian el wudu, el ghusl, el tayammum y la eliminación de impurezas."
-            },
-            {
-              "heading": "Referencias",
-              "text": "Enciclopedia jurídica de al-Durar al-Saniyya, introducción del Libro de la Purificación: https://dorar.net/feqhia/3/تمهيد.\nEntre las obras citadas en esa introducción: Lisan al-Arab; Anis al-Fuqaha; Mawahib al-Jalil; al-Furu'; al-Majmu'; al-Sharh al-Mumti'; Hashiyat al-Dusuqi; Bidayat al-Mujtahid; y al-Fiqh al-Islami wa Adillatuhu."
-            },
-            {
-              "heading": "Preguntas y respuestas",
-              "text": "1- ¿Qué prueba coránica muestra la importancia de la purificación? ﴿Y purifica tus vestiduras﴾ [74:4].\n2- ¿Qué hadiz expresa su rango? »La purificación es la mitad de la fe« (Muslim, 223).\n3- ¿Cómo expresa el Corán el amor de Dios por quienes se purifican? En 2:222.\n4- ¿A quiénes elogió Dios por querer purificarse? A los hombres mencionados en 9:108.\n5- ¿Qué significa tahara en lengua árabe? Limpieza y ausencia de suciedad.\n6- ¿Cuál es su definición jurídica? Levantar el estado ritual y eliminar la impureza física.\n7- ¿Qué significa eliminar la impureza? Limpiar el cuerpo, la ropa y el lugar.\n8- ¿Qué significa levantar el estado ritual? Purificarse mediante wudu o ghusl y normas relacionadas.\n9- ¿Cómo se clasifica según aquello que se purifica? En purificación interior y física.\n10- ¿Qué es la purificación interior? Limpiar el corazón de asociación, rencor y hostilidad.\n11- ¿Qué prueba indica que el creyente no es impuro? El hadiz recogido por al-Bujari 285 y Muslim 371.\n12- ¿Qué es la purificación física? Eliminar estados rituales e impurezas.\n13- ¿Qué dos tipos hay según su naturaleza? Purificación del estado ritual y de la impureza física.\n14- ¿Cuáles son las formas de purificación del estado ritual? Ghusl, wudu y tayammum.\n15- ¿Cuáles son las formas de eliminar impurezas? Lavado, frotado y rociado, según la prueba aplicable.\n16- ¿Qué significa hadath lingüísticamente? Algo que ocurre o se produce.\n17- ¿Cuál es su definición jurídica? Un estado legal que impide actos que requieren purificación.\n18- ¿Cuáles son sus dos clases? Estado menor, que requiere wudu, y mayor, que requiere ghusl."
             }
           ]
         }
@@ -154,14 +137,6 @@ window.FiqhBooks.tahara = {
                     "text": "محل الخلاف هو: هل يُثبت للماء قسم ثالث، وهو الطاهر غير المطهِّر، أم يقتصر التقسيم على الطهور والنجس؟ والقول الأول هو التقسيم المعروف في المذاهب الأربعة إجمالاً، والقول الثاني اختيار عدد من أهل العلم المعاصرين والمتقدمين. وينبغي عند عرض الفروع اللاحقة بيان المذهب المعتمد والروايات والتخريج، وعدم إيهام القارئ أن المسألة محل اتفاق."
                   },
                   {
-                    "heading": "المراجع الفقهية",
-                    "text": "من مراجع القول الأول: حاشية الطحطاوي على مراقي الفلاح، بدائع الصنائع للكاساني، الكافي لابن عبد البر، مواهب الجليل للحطاب، المجموع للنووي، وكشاف القناع للبهوتي.\nومن مراجع القول الثاني: الفتاوى الكبرى ومجموع الفتاوى لابن تيمية، ومجموع فتاوى ابن باز، ومجموع فتاوى ورسائل ابن عثيمين.\nوتُراجع تخريجات الأحاديث في سنن أبي داود والترمذي والنسائي، وصحيحي البخاري ومسلم."
-                  },
-                  {
-                    "heading": "أسئلة وأجوبة",
-                    "text": "1- إلى كم قسم ينقسم الماء بحسب أقوال أهل العلم؟\nأشهر الأقوال قولان: ثلاثة أقسام (طهور وطاهر ونجس)، وقسمان (طهور ونجس).\n\n2- ما الدليل من السنة على طهورية ماء البحر؟\nحديث أبي هريرة رضي الله عنه: »هو الطهور ماؤه، الحل ميتته«.\n\n3- ما وجه الدلالة من حديث ماء البحر عند القائلين بثلاثة أقسام؟\nقالوا إن السؤال كان عن صلاحية ماء البحر للتطهر، لا عن كونه طاهراً أو نجساً، فاستدلوا به على الفرق بين الطاهر والطهور.\n\n4- ما الأحاديث التي استدلوا بها على وجود ماء طاهر لا يُتطهر به؟\nأحاديث النهي عن البول والاغتسال في الماء الدائم، وحديث النهي عن غمس اليد في الإناء بعد الاستيقاظ قبل غسلها.\n\n5- ما الدليل القرآني عند القائلين بأن الماء قسمان؟\nقوله تعالى: ﴿وَأَنْزَلْنَا مِنَ السَّمَاءِ مَاءً طَهُورًا﴾ [الفرقان: 48]، وقوله: ﴿مَاءً لِيُطَهِّرَكُمْ بِهِ﴾ [الأنفال: 11].\n\n6- ما الحديث الذي استدلوا به؟\nحديث أبي سعيد الخدري رضي الله عنه: »إن الماء طهور لا ينجسه شيء«.\n\n7- ما وجه الدلالة من الآيات والحديث؟\nأن النصوص أطلقت اسم الماء ووصفته بالطهورية، ولم تنص على قسم مستقل اسمه الطاهر غير المطهر.\n\n8- ما حكم الماء إذا خالطه طاهر ولم يزل عنه اسم الماء؟\nيبقى طهوراً ويجوز التطهر به، ومن أدلته حديث غسل ابنة النبي ﷺ بالماء والسدر."
-                  },
-                  {
                     "heading": "تفصيل الاستدلال بالآيات",
                     "text": "استدل القائلون بأن الماء قسمان بعموم قوله تعالى: ﴿وَأَنْزَلْنَا مِنَ السَّمَاءِ مَاءً طَهُورًا﴾ [الفرقان: 48]، وبقوله سبحانه: ﴿وَيُنَزِّلُ عَلَيْكُمْ مِنَ السَّمَاءِ مَاءً لِيُطَهِّرَكُمْ بِهِ﴾ [الأنفال: 11]. قالوا: إن النصوص علّقت التطهير باسم الماء، ولم تذكر قسماً ثالثاً يسمى طاهراً غير مطهِّر. وأجاب القائلون بالتقسيم الثلاثي بأن السنة دلت عندهم على التفريق في بعض الصور، وأن إطلاق اسم الماء لا يمنع ورود أحكام خاصة على بعض أنواعه."
                   },
@@ -202,14 +177,6 @@ window.FiqhBooks.tahara = {
                   {
                     "heading": "Resumen de la discrepancia",
                     "text": "La cuestión discutida es si existe una tercera categoría de agua pura pero no purificadora, o si la división se limita a agua purificadora e impura. La primera clasificación es la conocida, en términos generales, en las cuatro escuelas; la segunda fue elegida por diversos juristas. Al desarrollar los casos concretos se deben distinguir las posiciones oficiales, las narraciones internas y las pruebas, sin presentar la cuestión como un consenso."
-                  },
-                  {
-                    "heading": "Referencias jurídicas",
-                    "text": "Entre las referencias de la primera posición: Hashiyat al-Tahawi 'ala Maraqi al-Falah, Bada'i al-Sana'i, al-Kafi de Ibn Abd al-Barr, Mawahib al-Jalil, al-Majmu' y Kashshaf al-Qina'. Para la segunda: al-Fatawa al-Kubra y Majmu' al-Fatawa de Ibn Taymiyya, las colecciones de fatwas de Ibn Baz y de Ibn Uzaymin. Para los hadices: las Sunan de Abu Dawud, al-Tirmidhi y al-Nasa'i, y los Sahih de al-Bujari y Muslim."
-                  },
-                  {
-                    "heading": "Preguntas y respuestas",
-                    "text": "1- ¿En cuántas clases se divide el agua? Las dos posiciones más conocidas son tres clases (purificadora, pura no purificadora e impura) o dos (purificadora e impura).\n\n2- ¿Qué prueba de la Sunna demuestra que el agua del mar purifica? El hadiz: »Su agua es purificadora y sus animales muertos son lícitos«.\n\n3- ¿Cómo interpretan ese hadiz quienes sostienen tres clases? Entienden que se preguntó por la capacidad purificadora del agua del mar, no por su pureza física.\n\n4- ¿Qué otros hadices citan? Los relativos a orinar o bañarse en agua estancada y a introducir la mano en un recipiente después de despertar sin lavarla.\n\n5- ¿Qué pruebas coránicas citan quienes sostienen dos clases? Los versículos 25:48 y 8:11.\n\n6- ¿Qué hadiz citan? »El agua es purificadora; nada la vuelve impura«.\n\n7- ¿Cuál es su argumento? Que los textos describen el agua en general como purificadora y no establecen expresamente una tercera clase.\n\n8- ¿Qué ocurre si se mezcla con una sustancia pura sin perder el nombre de agua? Sigue siendo purificadora; entre las pruebas está el hadiz de lavar a la hija del Profeta ﷺ con agua y sidr."
                   },
                   {
                     "heading": "Detalle del argumento coránico",
@@ -317,14 +284,6 @@ window.FiqhBooks.tahara = {
                   {
                     "heading": "تنبيه في نسبة الأقوال إلى المذاهب",
                     "text": "ينبغي التفريق بين الاتفاق على أصل طهورية الأنواع الطبيعية من الماء، وبين الخلاف في بعض المسائل الخاصة كالكراهة في الماء المشمس، أو إزالة النجاسة بماء زمزم، أو حكم استعمال الماء المغصوب. كما ينبغي التفريق بين صحة الطهارة وارتفاع الإثم؛ فقد تصح العبادة مع وقوع المكلف في معصية من جهة أخرى."
-                  },
-                  {
-                    "heading": "المراجع",
-                    "text": "الدرر السنية، الموسوعة الفقهية، المبحث الثاني: الماء المطلق (الطهور). بداية المجتهد لابن رشد (1/23). شرح منتهى الإرادات للبهوتي (1/15-16). سنن أبي داود (83، 66)، جامع الترمذي (69، 66)، سنن النسائي (59، 326)، وصحيحا البخاري ومسلم في حديث الماء والثلج والبرد. مواهب الجليل للحطاب (1/64-66، 1/111). المجموع للنووي (1/87، 1/90-91). مجموع الفتاوى لابن تيمية (21/69، 21/72). زاد المعاد لابن القيم (4/391)."
-                  },
-                  {
-                    "heading": "أسئلة وأجوبة",
-                    "text": "1- ما المقصود بالماء المطلق؟\nهو الماء الباقي على أصل خلقته، ولم يزل عنه اسم الماء.\n\n2- ما حكم ماء المطر؟\nطهور يجوز الوضوء والغسل به، لقوله تعالى: ﴿مَاءً لِيُطَهِّرَكُمْ بِهِ﴾ [الأنفال: 11].\n\n3- هل يجوز الوضوء بماء البحر؟\nنعم، لقول النبي ﷺ: »هو الطهور ماؤه، الحل ميتته«.\n\n4- ما الدليل على طهورية ماء البئر؟\nحديث بئر بضاعة: »إن الماء طهور لا ينجسه شيء«، مع مراعاة أحكام التغير بالنجاسة.\n\n5- هل يجوز الوضوء والغسل بماء زمزم؟\nنعم، وهو قول المذاهب الأربعة، والجمهور على عدم كراهته.\n\n6- هل ماء الثلج والبَرَد طهور؟\nنعم، وهما من الماء النازل من السماء، وقد ورد ذكرهما في الدعاء النبوي.\n\n7- هل الماء المسخن بالشمس طهور؟\nنعم، ولا يثبت دليل صحيح على كراهة التطهر به.\n\n8- ما حكم الماء الذي سخن بوقود نجس؟\nيبقى طاهراً إذا لم تصل إليه النجاسة ولم يتغير بها.\n\n9- ما حكم الوضوء بالماء المغصوب؟\nيصح عند الجمهور مع الإثم بسبب الغصب.\n\n10- هل يصح إزالة النجاسة بماء زمزم؟ نعم، وهو مقرر في المذاهب الأربعة.\n11- هل كراهة الماء المشمس ثابتة بحديث صحيح؟ لا، والحديث الذي يذكر البرص ضعيف.\n12- ما حكم الماء المسخن بوقود طاهر؟ يجوز التطهر به.\n13- ما حكم الماء المسخن بوقود نجس إذا لم تصل النجاسة إليه؟ يبقى طهوراً.\n14- هل تصح الطهارة بالماء المغصوب؟ تصح عند الجمهور مع الإثم.\n15- ما الفرق بين صحة الطهارة والإثم؟ قد تصح الطهارة مع بقاء إثم الغصب أو السرقة."
                   }
                 ],
                 "es": [
@@ -407,14 +366,6 @@ window.FiqhBooks.tahara = {
                   {
                     "heading": "Nota sobre la atribución de opiniones",
                     "text": "Conviene distinguir entre el acuerdo sobre la pureza básica de las aguas naturales y las discrepancias particulares sobre la desaprobación del agua calentada por el sol, la eliminación de impurezas con Zamzam o el uso de agua usurpada. También debe distinguirse entre la validez de la purificación y la responsabilidad por un pecado cometido por otro motivo."
-                  },
-                  {
-                    "heading": "Referencias",
-                    "text": "Al-Durar al-Saniyya, Enciclopedia Jurídica, segundo apartado: agua absoluta (purificadora). Bidayat al-Mujtahid de Ibn Rushd (1/23). Sharh Muntaha al-Iradat de al-Buhuti (1/15-16). Abu Dawud (83, 66), al-Tirmidhi (69, 66), al-Nasa'i (59, 326), al-Bujari y Muslim (hadiz del agua, nieve y granizo). Mawahib al-Jalil (1/64-66, 1/111). Al-Majmu' de al-Nawawi (1/87, 1/90-91). Majmu' al-Fatawa de Ibn Taymiyya (21/69, 21/72). Zad al-Ma'ad de Ibn al-Qayyim (4/391)."
-                  },
-                  {
-                    "heading": "Preguntas y respuestas",
-                    "text": "1- ¿Qué es el agua absoluta?\nEs el agua que conserva su naturaleza original y sigue llamándose agua.\n\n2- ¿Se puede usar el agua de lluvia?\nSí, es purificadora, según el Corán 8:11.\n\n3- ¿Se puede hacer el wudu con agua del mar?\nSí. El Profeta ﷺ dijo: »Su agua es purificadora y sus animales muertos son lícitos«.\n\n4- ¿Qué prueba se cita para el agua de los pozos?\nEl hadiz: »El agua es purificadora y nada la vuelve impura«, junto con las reglas sobre los cambios causados por impurezas.\n\n5- ¿Se permite usar agua de Zamzam?\nSí, es la posición de las cuatro escuelas; la mayoría no lo considera desaconsejable.\n\n6- ¿El agua de nieve y granizo es purificadora?\nSí, procede del agua que desciende del cielo y se menciona en una súplica profética.\n\n7- ¿El agua calentada por el sol sigue siendo purificadora?\nSí; no hay una prueba auténtica que prohíba su uso.\n\n8- ¿Qué ocurre si se calienta con combustible impuro?\nSigue siendo pura si la impureza no llega al agua ni la altera.\n\n9- ¿Es válido el wudu con agua usurpada?\nSegún la mayoría, sí, aunque la usurpación sigue siendo pecado.\n\n10- ¿Se pueden eliminar impurezas con agua de Zamzam? Sí, según las cuatro escuelas.\n11- ¿Existe un hadiz auténtico que desapruebe el agua calentada por el sol? No; el relato sobre la lepra es débil.\n12- ¿Se puede usar agua calentada con combustible puro? Sí.\n13- ¿Qué ocurre si se calienta con combustible impuro sin que la impureza llegue al agua? El agua conserva su pureza.\n14- ¿Es válido purificarse con agua usurpada? Según la mayoría, sí, aunque hay pecado.\n15- ¿Cuál es la diferencia entre validez y pecado? La purificación puede ser válida aunque persista el pecado de usurpación o robo."
                   }
                 ]
               }
@@ -458,14 +409,6 @@ window.FiqhBooks.tahara = {
                   {
                     "heading": "سابعاً: خلاصة المبحث",
                     "text": "الضابط الواضح في هذا المبحث أن الماء إذا غيّرت النجاسة طعمه أو لونه أو ريحه فهو نجس، ولا تصح الطهارة به، قليلاً كان أو كثيراً، جارياً أو راكداً. وقد نقل الإجماع على هذا الحكم ابن المنذر وابن نجيم. أما مجرد وقوع النجاسة في الماء من غير تغير، فمسألة أخرى لها تفصيل وخلاف، فلا تدخل في الإجماع المذكور."
-                  },
-                  {
-                    "heading": "المراجع",
-                    "text": "1- الدرر السنية، الموسوعة الفقهية، «المبحث الثالث: الماء النجس»: https://dorar.net/feqhia/10/المبحث-الثالث-الماء-النجس\n2- ابن المنذر، «الأوسط» (1/368).\n3- ابن نجيم، «البحر الرائق» (1/78).\n4- ابن عثيمين، «الشرح الممتع» (1/54)."
-                  },
-                  {
-                    "heading": "أسئلة وأجوبة",
-                    "text": "1- ما تعريف الماء النجس؟ هو ما تغير بنجاسة في طعمه أو لونه أو ريحه.\n2- ما الصفات التي إذا تغيرت بالنجاسة حكم بنجاسة الماء؟ الطعم واللون والرائحة.\n3- ما حكم الوضوء بالماء الذي تغير بالنجاسة؟ لا يصح الوضوء به.\n4- ما حكم الاغتسال به؟ لا يصح الاغتسال به لرفع الحدث.\n5- هل يجوز إزالة النجاسة به؟ لا؛ لأنه ماء نجس.\n6- هل يختلف الحكم إذا كان الماء كثيراً؟ لا، إذا غيرت النجاسة أحد أوصافه ثبتت نجاسته.\n7- هل يختلف الحكم بين الماء الجاري والراكد؟ لا في صورة التغير المؤثر بالنجاسة.\n8- من نقل الإجماع على هذه المسألة؟ ابن المنذر وابن نجيم.\n9- ما الدليل على عدم جواز التطهر به؟ الإجماع المنقول، كما في «الأوسط» و«البحر الرائق».\n10- هل مجرد وقوع النجاسة في الماء يجعله نجساً في كل حال؟ هذه صورة أخرى فيها تفصيل وخلاف، ولا تساوي صورة تغير أوصاف الماء.\n11- هل يصح تعميم الإجماع المنقول إلى الماء الذي لم يتغير؟ لا؛ الإجماع المنقول هنا متعلق بالماء الذي تغير بالنجاسة.\n12- ما الفرق بين الماء المتغير بالنجاسة والماء المخلوط بطاهر؟ الأول تغير بسبب نجاسة، والثاني بسبب مادة طاهرة، ولكل منهما حكمه."
                   }
                 ],
                 "es": [
@@ -496,14 +439,6 @@ window.FiqhBooks.tahara = {
                   {
                     "heading": "Séptimo: conclusión",
                     "text": "La regla central es que el agua cuyo sabor, color u olor ha sido alterado por una impureza es impura y no sirve para la purificación, sea poca o mucha, corriente o estancada. Ibn al-Mundhir e Ibn Nujaym transmitieron consenso sobre este supuesto. La mera caída de una impureza sin cambio perceptible es una cuestión distinta, con detalles y discrepancias."
-                  },
-                  {
-                    "heading": "Referencias",
-                    "text": "1- Al-Durar al-Saniyya, Enciclopedia jurídica, «Tercer apartado: el agua impura»: https://dorar.net/feqhia/10/المبحث-الثالث-الماء-النجس\n2- Ibn al-Mundhir, «al-Awsat» (1/368).\n3- Ibn Nujaym, «al-Bahr al-Ra'iq» (1/78).\n4- Ibn Uzaymin, «al-Sharh al-Mumti'» (1/54)."
-                  },
-                  {
-                    "heading": "Preguntas y respuestas",
-                    "text": "1- ¿Qué es el agua impura? La que cambia por una impureza en su sabor, color u olor.\n2- ¿Qué atributos se consideran? Sabor, color y olor.\n3- ¿Es válido el wudu con agua alterada por una impureza? No.\n4- ¿Es válido el ghusl ritual con ella? No.\n5- ¿Puede utilizarse para quitar impurezas? No, porque es agua impura.\n6- ¿Cambia la norma si hay mucha agua? No, cuando la impureza altera uno de sus atributos.\n7- ¿Importa que el agua fluya o esté estancada? No, en el supuesto de alteración efectiva.\n8- ¿Quiénes transmitieron consenso? Ibn al-Mundhir e Ibn Nujaym.\n9- ¿Cuál es la prueba de la prohibición? El consenso transmitido en «al-Awsat» y «al-Bahr al-Ra'iq».\n10- ¿Toda impureza que cae en el agua la vuelve impura en cualquier caso? Si no hay cambio, se trata de otro supuesto con detalles y discrepancias.\n11- ¿Se extiende el consenso al agua que no cambia? No; el consenso citado se refiere al agua alterada por la impureza.\n12- ¿En qué se diferencia el agua alterada por impureza del agua mezclada con algo puro? La primera cambia por una sustancia impura; la segunda, por una sustancia pura, y sus normas son distintas."
                   }
                 ]
               }
