@@ -10,7 +10,7 @@
   };
   const lang = () => (document.documentElement.lang === "es" ? "es" : "ar");
   const tr = value => value && (value[lang()] || value.ar || value.es) || "";
-  let activeBook = null, activeSection = null, activeChapter = null;
+  let activeBook = null, activeSection = null, activeChapter = null, activeTopic = null, activeIssue = null;
 
   function addHomeCard() {
     const existing = document.getElementById("fiqhHomeCard")
@@ -106,16 +106,17 @@
       v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Navegación: libro → sección → tema." : "مسار التصفح: الكتاب ← الباب ← المسألة.";
     }
   }
-  function renderWaterChapter(chapter, skipHistory = false) {
+  function renderChapter(chapter, skipHistory = false) {
     activeChapter = chapter;
     if (!skipHistory) saveRoute("chapter", { bookId: activeBook.id, sectionId: activeSection.id, chapterId: chapter.id });
     const v = ensureView(), content = v.querySelector("#fiqhContent");
     v.querySelector("#fiqhHeading").textContent = tr(chapter.title);
     v.querySelector("#fiqhIntro").textContent = tr(activeBook.title) + " / " + tr(activeSection.title);
     content.replaceChildren();
-    chapter.topics.forEach(topic => content.appendChild(card(tr(topic.title), lang() === "es" ? "Abrir apartado" : "عرض المبحث", () => renderTopic(topic))));
-    v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Seleccione un apartado para consultar su contenido." : "اختر المبحث لعرض محتواه.";
+    (chapter.topics || []).forEach(topic => content.appendChild(card(tr(topic.title), lang() === "es" ? "Ver asuntos" : "عرض المطالب", () => renderTopic(topic))));
+    v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Seleccione un apartado." : "اختر المبحث.";
   }
+  const renderWaterChapter = renderChapter;
   // إبراز النصوص الشرعية والمراجع على نمط الموسوعة الفقهية بالدرر السنية.
   function appendStyledEvidence(target, value) {
     const lines = String(value || "").split("\n");
@@ -143,6 +144,17 @@
   }
 
   function renderTopic(topic, skipHistory = false) {
+    activeTopic = topic; activeIssue = null;
+    if (topic.issues && topic.issues.length) {
+      if (!skipHistory) saveRoute("topic", { bookId: activeBook.id, sectionId: activeSection.id, chapterId: activeChapter && activeChapter.id, topicId: topic.id });
+      const v = ensureView(), content = v.querySelector("#fiqhContent");
+      v.querySelector("#fiqhHeading").textContent = tr(topic.title);
+      v.querySelector("#fiqhIntro").textContent = tr(activeBook.title) + " / " + tr(activeSection.title);
+      content.replaceChildren();
+      topic.issues.forEach(issue => content.appendChild(card(tr(issue.title), lang() === "es" ? "Abrir contenido" : "فتح المحتوى", () => renderIssue(issue))));
+      v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Cada asunto se abre en una página independiente." : "كل مطلب يفتح في صفحة مستقلة.";
+      return;
+    }
     if (!skipHistory) saveRoute("topic", { bookId: activeBook.id, sectionId: activeSection.id, chapterId: activeChapter && activeChapter.id, topicId: topic.id });
     const v = ensureView(), content = v.querySelector("#fiqhContent");
     v.querySelector("#fiqhHeading").textContent = tr(topic.title);
@@ -264,6 +276,32 @@
     content.appendChild(article);
     v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Contenido educativo resumido a partir de fuentes jurídicas; no sustituye una fatwa ni la consulta de especialistas." : "محتوى تعليمي محرر من مصادر فقهية، ولا يغني عن الفتوى أو سؤال أهل العلم.";
   }
+  function renderIssue(issue, skipHistory = false) {
+    activeIssue = issue;
+    if (!skipHistory) saveRoute("issue", { bookId: activeBook.id, sectionId: activeSection.id, chapterId: activeChapter && activeChapter.id, topicId: activeTopic.id, issueId: issue.id });
+    const v = ensureView(), content = v.querySelector("#fiqhContent");
+    v.querySelector("#fiqhHeading").textContent = tr(issue.title);
+    v.querySelector("#fiqhIntro").textContent = tr(activeBook.title) + " / " + tr(activeSection.title) + " / " + tr(activeTopic.title);
+    content.replaceChildren();
+    const article = document.createElement("article");
+    article.className = "rounded-2xl border border-emerald-200 dark:border-emerald-900 bg-white dark:bg-slate-800 p-5 text-base leading-8 space-y-5";
+    const blocks = issue.content && (issue.content[lang()] || issue.content.ar || issue.content.es);
+    if (Array.isArray(blocks)) {
+      blocks.forEach(part => {
+        const block = document.createElement("section"); block.className = "space-y-2";
+        if (part.heading) { const h = document.createElement("h3"); h.className = "font-extrabold text-emerald-800 dark:text-emerald-300 text-lg"; h.textContent = part.heading; block.appendChild(h); }
+        const p = document.createElement("p"); p.className = "fiqh-article-text whitespace-pre-line text-slate-800 dark:text-slate-100";
+        appendStyledEvidence(p, part.text || ""); block.appendChild(p); article.appendChild(block);
+      });
+    } else {
+      const p = document.createElement("p"); p.className = "text-slate-600 dark:text-slate-300";
+      p.textContent = lang() === "es" ? "El contenido de este asunto se añadirá próximamente." : "سيُضاف محتوى هذا المطلب لاحقًا.";
+      article.appendChild(p);
+    }
+    content.appendChild(article);
+    v.querySelector("#fiqhNotice").textContent = "";
+  }
+
   function open() { hideOtherViews(); renderBooks(); }
   function restoreRoute(state) {
     const book = books().find(item => item.id === state.bookId);
