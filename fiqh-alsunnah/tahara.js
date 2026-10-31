@@ -1,4 +1,3 @@
-window.FiqhBooks = window.FiqhBooks || {};
 window.FiqhBooks.tahara = {
   "id": "tahara",
   "title": {
@@ -457,21 +456,21 @@ window.FiqhBooks.tahara = {
               "content": {
                 "ar": [
                   {
-                    "heading": "المبحث الرابع: الماء المختلط أو المتغير",
+                    "heading": "المطلب الأول: الماء المختلط أو المتغير بنجاسة",
                     "text": "إذا خالط الماء شيء طاهر، فالحكم يدور مع بقاء اسم الماء المطلق وأوصافه المؤثرة. فإذا غيّره تغيراً يسلب عنه اسم الماء، كأن صار شراباً أو مرقاً، لم يعد ماءً مطلقاً عند عامة الفقهاء. أما التغير اليسير أو بما يشق الاحتراز عنه ففيه تفصيل."
                   },
                   {
-                    "heading": "اختلاط الماء بطاهر",
+                    "heading": "المطلب الثاني: الماء المختلط بطاهر",
                     "text": "إذا خالط الماء شيء طاهر ولم يخرجه عن اسم الماء المطلق، بقي طهوراً. أما إذا غيّره حتى صار شراباً أو مرقاً، لم يعد ماءً مطلقاً، ولا يصح رفع الحدث به عند عامة الفقهاء. وللتغير اليسير وما يشق الاحتراز عنه تفصيل."
                   }
                 ],
                 "es": [
                   {
-                    "heading": "Cuarto apartado: agua mezclada o alterada",
+                    "heading": "Primer asunto: Agua mezclada o alterada por impureza",
                     "text": "Cuando se mezcla con una sustancia pura, se considera si conserva el nombre de agua absoluta. Si se transforma hasta convertirse en bebida o caldo, deja de ser agua absoluta para la mayoría de los juristas. Los cambios leves o difíciles de evitar tienen matices."
                   },
                   {
-                    "heading": "Mezcla con una sustancia pura",
+                    "heading": "Segundo asunto: Agua mezclada con una sustancia pura",
                     "text": "Si se mezcla con una sustancia pura sin dejar de llamarse agua absoluta, conserva su capacidad purificadora. Si se transforma en bebida o caldo, deja de ser agua absoluta y, en general, no sirve para levantar el estado ritual. Los cambios leves y los difíciles de evitar tienen detalles jurídicos."
                   }
                 ]
