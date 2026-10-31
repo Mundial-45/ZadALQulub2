@@ -64,7 +64,7 @@
     v.querySelector("#fiqhHeading").textContent = lang() === "es" ? "Fiqh as-Sunnah" : "فقه السنة";
     v.querySelector("#fiqhIntro").textContent = lang() === "es" ? "Seleccione un libro para consultar sus temas." : "اختر كتابًا لاستعراض أبوابه ومسائله.";
     content.replaceChildren();
-    books().forEach(book => content.appendChild(card(tr(book.title), tr(book.intro), () => renderBook(book))));
+    books().forEach(book => content.appendChild(card(tr(book.title), lang() === "es" ? "Abrir libro" : "فتح الكتاب", () => renderBook(book))));
     v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Contenido introductorio organizado por temas. Las pruebas textuales y las atribuciones se incorporarán con referencias verificadas." : "محتوى تمهيدي مرتب حسب الموضوعات. ستضاف الأدلة والنقول مع عزوها إلى مراجع موثقة.";
   }
   function renderBook(book, skipHistory = false) {
@@ -91,11 +91,11 @@
     content.replaceChildren();
     activeChapter = null;
     if (section.id === "water" && section.chapters) {
-      content.appendChild(card(tr(section.intro.title), tr(section.intro.summary), () => renderTopic(section.intro)));
+      content.appendChild(card(tr(section.intro.title), lang() === "es" ? "Introducción" : "عرض التمهيد", () => renderTopic(section.intro)));
       section.chapters.forEach(chapter => content.appendChild(card(tr(chapter.title), chapter.topics.length + (lang() === "es" ? " apartados" : " مباحث"), () => renderWaterChapter(chapter))));
       v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Introducción y tres capítulos del tema del agua." : "التمهيد والفصول الثلاثة لباب المياه.";
     } else {
-      section.topics.forEach(topic => content.appendChild(card(tr(topic.title), tr(topic.summary), () => renderTopic(topic))));
+      section.topics.forEach(topic => content.appendChild(card(tr(topic.title), lang() === "es" ? "Abrir apartado" : "عرض المبحث", () => renderTopic(topic))));
       v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Navegación: libro → sección → tema." : "مسار التصفح: الكتاب ← الباب ← المسألة.";
     }
   }
@@ -111,20 +111,26 @@
   }
   // إبراز النصوص الشرعية والمراجع على نمط الموسوعة الفقهية بالدرر السنية.
   function appendStyledEvidence(target, value) {
-    const pattern = /(﴿[^﴿﴾]*﴾|»[^»«]*«|«[^«»]*»|\\(\\([^()\\n]{2,}\\)\\)|(?:رواه|أخرجه|متفق عليه|انظر|راجع|المصدر:)\\s*[^\\n،؛.]*)/g;
-    let last = 0, match;
-    while ((match = pattern.exec(value)) !== null) {
-      if (match.index > last) target.appendChild(document.createTextNode(value.slice(last, match.index)));
-      const span = document.createElement("span");
-      const token = match[0];
-      if (token.startsWith("﴿")) span.className = "fiqh-quran";
-      else if (token.startsWith("»") || token.startsWith("«")) span.className = "fiqh-hadith";
-      else span.className = "fiqh-source";
-      span.textContent = token;
-      target.appendChild(span);
-      last = pattern.lastIndex;
-    }
-    if (last < value.length) target.appendChild(document.createTextNode(value.slice(last)));
+    const lines = String(value || "").split("\n");
+    lines.forEach((line, index) => {
+      if (index) target.appendChild(document.createElement("br"));
+      const pattern = /(﴿[^﴿﴾]*﴾|»[^»«]*«|«[^«»]*»|\(\([^()\n]{2,}\)\))/g;
+      let last = 0, match;
+      while ((match = pattern.exec(line)) !== null) {
+        if (match.index > last) target.appendChild(document.createTextNode(line.slice(last, match.index)));
+        const token = match[0], span = document.createElement("span");
+        const before = line.slice(0, match.index);
+        const prophetic = /(?:قال|عن|يروي|روى|سمعت|حدثنا|أخبرنا)\s*(?:رسول الله|النبي|الرسول)|(?:رسول الله|النبي)\s*(?:ﷺ|صلى الله عليه وسلم)|قال\s*ﷺ|قال\s*صلى الله عليه وسلم/.test(before);
+        if (token.startsWith("﴿")) span.className = "fiqh-quran";
+        else if ((token.startsWith("»") || token.startsWith("«")) && prophetic) span.className = "fiqh-hadith";
+        else if (token.startsWith("((")) span.className = "fiqh-source";
+        else span.className = "fiqh-quote";
+        span.textContent = token;
+        target.appendChild(span);
+        last = pattern.lastIndex;
+      }
+      if (last < line.length) target.appendChild(document.createTextNode(line.slice(last)));
+    });
   }
 
   function renderTopic(topic, skipHistory = false) {
@@ -135,10 +141,6 @@
     content.replaceChildren();
     const article = document.createElement("article");
     article.className = "rounded-2xl border border-emerald-200 dark:border-emerald-900 bg-white dark:bg-slate-800 p-5 text-base leading-8 space-y-5";
-    const summary = document.createElement("p");
-    summary.className = "font-semibold text-slate-700 dark:text-slate-200";
-    summary.textContent = tr(topic.summary);
-    article.appendChild(summary);
     const sections = topic.content && (topic.content[lang()] || topic.content.ar || topic.content.es);
     if (Array.isArray(sections)) {
       sections.forEach(part => {
