@@ -77,7 +77,7 @@
     book.sections.forEach(section => {
       const sub = section.id === "water" && section.chapters
         ? (lang() === "es" ? "Introducción y tres capítulos" : "تمهيد وثلاثة فصول")
-        : section.topics.length + (lang() === "es" ? " temas" : " مسائل");
+        : lang() === "es" ? "Abrir sección" : "فتح الباب";
       content.appendChild(card(tr(section.title), sub, () => renderSection(section)));
     });
     v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Seleccione un tema para leer su introducción." : "اختر مسألة لقراءة تعريفها التمهيدي.";
@@ -92,7 +92,7 @@
     activeChapter = null;
     if (section.id === "water" && section.chapters) {
       content.appendChild(card(tr(section.intro.title), lang() === "es" ? "Introducción" : "عرض التمهيد", () => renderTopic(section.intro)));
-      section.chapters.forEach(chapter => content.appendChild(card(tr(chapter.title), chapter.topics.length + (lang() === "es" ? " apartados" : " مباحث"), () => renderWaterChapter(chapter))));
+      section.chapters.forEach(chapter => content.appendChild(card(tr(chapter.title), lang() === "es" ? "Ver apartados" : "عرض المباحث", () => renderWaterChapter(chapter))));
       v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Introducción y tres capítulos del tema del agua." : "التمهيد والفصول الثلاثة لباب المياه.";
     } else {
       section.topics.forEach(topic => content.appendChild(card(tr(topic.title), lang() === "es" ? "Abrir apartado" : "عرض المبحث", () => renderTopic(topic))));
