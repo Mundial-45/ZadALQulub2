@@ -115,11 +115,32 @@
     v.querySelector("#fiqhHeading").textContent = tr(topic.title);
     v.querySelector("#fiqhIntro").textContent = tr(activeBook.title) + " / " + tr(activeSection.title);
     content.replaceChildren();
-    const p = document.createElement("article");
-    p.className = "rounded-2xl border border-emerald-200 dark:border-emerald-900 bg-white dark:bg-slate-800 p-5 text-base leading-8";
-    p.textContent = tr(topic.summary);
-    content.appendChild(p);
-    v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Resumen introductorio; no constituye una fatwa ni sustituye la consulta de las fuentes y de especialistas." : "ملخص تمهيدي، وليس فتوى ولا يغني عن مراجعة المصادر وسؤال أهل العلم.";
+    const article = document.createElement("article");
+    article.className = "rounded-2xl border border-emerald-200 dark:border-emerald-900 bg-white dark:bg-slate-800 p-5 text-base leading-8 space-y-5";
+    const summary = document.createElement("p");
+    summary.className = "font-semibold text-slate-700 dark:text-slate-200";
+    summary.textContent = tr(topic.summary);
+    article.appendChild(summary);
+    const sections = topic.content && (topic.content[lang()] || topic.content.ar || topic.content.es);
+    if (Array.isArray(sections)) {
+      sections.forEach(part => {
+        const block = document.createElement("section");
+        block.className = "space-y-2";
+        if (part.heading) {
+          const heading = document.createElement("h3");
+          heading.className = "font-extrabold text-emerald-800 dark:text-emerald-300 text-lg";
+          heading.textContent = part.heading;
+          block.appendChild(heading);
+        }
+        const paragraph = document.createElement("p");
+        paragraph.className = "whitespace-pre-line text-slate-800 dark:text-slate-100";
+        paragraph.textContent = part.text || "";
+        block.appendChild(paragraph);
+        article.appendChild(block);
+      });
+    }
+    content.appendChild(article);
+    v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Contenido educativo resumido a partir de fuentes jurídicas; no sustituye una fatwa ni la consulta de especialistas." : "محتوى تعليمي محرر من مصادر فقهية، ولا يغني عن الفتوى أو سؤال أهل العلم.";
   }
   function open() { hideOtherViews(); renderBooks(); }
   function restoreRoute(state) {
