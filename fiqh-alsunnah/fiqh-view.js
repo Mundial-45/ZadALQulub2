@@ -109,6 +109,24 @@
     chapter.topics.forEach(topic => content.appendChild(card(tr(topic.title), tr(topic.summary), () => renderTopic(topic))));
     v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Seleccione un apartado para consultar su contenido." : "اختر المبحث لعرض محتواه.";
   }
+  // إبراز النصوص الشرعية والمراجع على نمط الموسوعة الفقهية بالدرر السنية.
+  function appendStyledEvidence(target, value) {
+    const pattern = /(﴿[^﴿﴾]*﴾|»[^»«]*«|«[^«»]*»|\\(\\([^()\\n]{2,}\\)\\))/g;
+    let last = 0, match;
+    while ((match = pattern.exec(value)) !== null) {
+      if (match.index > last) target.appendChild(document.createTextNode(value.slice(last, match.index)));
+      const span = document.createElement("span");
+      const token = match[0];
+      if (token.startsWith("﴿")) span.className = "fiqh-quran";
+      else if (token.startsWith("»") || token.startsWith("«")) span.className = "fiqh-hadith";
+      else span.className = "fiqh-source";
+      span.textContent = token;
+      target.appendChild(span);
+      last = pattern.lastIndex;
+    }
+    if (last < value.length) target.appendChild(document.createTextNode(value.slice(last)));
+  }
+
   function renderTopic(topic, skipHistory = false) {
     if (!skipHistory) saveRoute("topic", { bookId: activeBook.id, sectionId: activeSection.id, chapterId: activeChapter && activeChapter.id, topicId: topic.id });
     const v = ensureView(), content = v.querySelector("#fiqhContent");
@@ -133,8 +151,8 @@
           block.appendChild(heading);
         }
         const paragraph = document.createElement("p");
-        paragraph.className = "whitespace-pre-line text-slate-800 dark:text-slate-100";
-        paragraph.textContent = part.text || "";
+        paragraph.className = "fiqh-article-text whitespace-pre-line text-slate-800 dark:text-slate-100";
+        appendStyledEvidence(paragraph, part.text || "");
         block.appendChild(paragraph);
         article.appendChild(block);
       });
