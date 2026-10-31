@@ -1,6 +1,13 @@
 // واجهة فقه السنة: تنقل ثنائي اللغة (عربي/إسباني).
 (function () {
-  const books = () => { const registered = window.FiqhBooks && Object.values(window.FiqhBooks); return registered && registered.length ? registered : (Array.isArray(window.feqhData) ? window.feqhData : []); };
+  const books = () => {
+    const registered = window.FiqhBooks && Object.values(window.FiqhBooks).filter(book => book && book.id && book.title);
+    const fallback = Array.isArray(window.feqhData) ? window.feqhData.filter(book => book && book.id && book.title) : [];
+    const list = registered && registered.length ? registered : fallback;
+    const tahara = window.FiqhBooks && window.FiqhBooks.tahara;
+    if (tahara && tahara.id === "tahara" && !list.some(book => book.id === "tahara")) list.unshift(tahara);
+    return list.sort((a, b) => (a.id === "tahara" ? -1 : b.id === "tahara" ? 1 : 0));
+  };
   const lang = () => (document.documentElement.lang === "es" ? "es" : "ar");
   const tr = value => value && (value[lang()] || value.ar || value.es) || "";
   let activeBook = null, activeSection = null, activeChapter = null;
