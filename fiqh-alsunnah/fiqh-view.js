@@ -60,7 +60,7 @@
   function saveRoute(level, extra = {}) {
     try {
       const state = { view: "fiqh", level, ...extra };
-      const suffix = level === "books" ? "fiqh" : level === "book" ? "fiqh-" + extra.bookId : level === "section" ? "fiqh-" + extra.bookId + "-" + extra.sectionId : "fiqh-" + extra.bookId + "-" + extra.sectionId + "-" + extra.topicId;
+      const suffix = level === "books" ? "fiqh" : level === "book" ? "fiqh-" + extra.bookId : level === "section" ? "fiqh-" + extra.bookId + "-" + extra.sectionId : level === "chapter" ? "fiqh-" + extra.bookId + "-" + extra.sectionId + "-" + extra.chapterId : level === "topic" ? "fiqh-" + extra.bookId + "-" + extra.sectionId + "-" + (extra.chapterId || "none") + "-" + extra.topicId : "fiqh-" + extra.bookId + "-" + extra.sectionId + "-" + (extra.chapterId || "none") + "-" + extra.topicId + "-" + extra.issueId;
       history.pushState(state, "", "#" + suffix);
     } catch (e) {}
   }
