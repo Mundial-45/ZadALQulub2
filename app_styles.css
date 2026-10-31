@@ -734,3 +734,19 @@ button[onclick="jumpToInputPage()"]:hover {
   margin-top: .15rem !important;
   gap: .55rem !important;
 }
+
+
+/* Fiqh as-Sunnah home tile: single visible amber button. */
+#homeView #fiqhHomeCard {
+  grid-column: 1 / -1 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #fff !important;
+  background: linear-gradient(135deg, #b45309 0%, #7c2d12 100%) !important;
+  border: 1px solid rgba(253, 230, 138, 0.45) !important;
+  box-shadow: 0 8px 18px rgba(124, 45, 18, 0.22) !important;
+}
+#homeView #fiqhHomeCard * { color: #fff !important; }
+#homeView #fiqhHomeCard:hover { background: linear-gradient(135deg, #92400e 0%, #7c2d12 100%) !important; }
