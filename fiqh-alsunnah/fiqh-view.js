@@ -6,12 +6,18 @@
   let activeBook = null, activeSection = null, activeChapter = null;
 
   function addHomeCard() {
+    const existing = document.getElementById("fiqhHomeCard")
+      || document.querySelector('.home-category-grid button[onclick="openFiqhSection()"]');
+    if (existing) {
+      existing.id = "fiqhHomeCard";
+      return;
+    }
     const grid = document.querySelector(".home-category-grid");
-    if (!grid || document.getElementById("fiqhHomeCard")) return;
+    if (!grid) return;
     const card = document.createElement("button");
     card.id = "fiqhHomeCard";
     card.type = "button";
-    card.className = "home-category-card home-category-wide bg-gradient-to-br from-amber-700 to-orange-900 hover:from-amber-800 text-white p-3 rounded-2xl shadow-lg transition transform active:scale-95 text-center flex flex-col items-center justify-center gap-2 cursor-pointer border border-amber-300/30";
+    card.className = "home-category-card home-category-wide text-white p-3 rounded-2xl shadow-lg text-center flex items-center justify-center gap-2 cursor-pointer";
     card.innerHTML = '<span class="text-3xl" aria-hidden="true">📚</span><span class="block"><span class="block text-lg font-extrabold" data-ar="فقه السنة" data-es="Fiqh as-Sunnah">فقه السنة</span><span class="block text-amber-100 text-xs mt-0.5" data-ar="أبواب الفقه وأحكامه" data-es="Temas y normas de jurisprudencia">أبواب الفقه وأحكامه</span></span>';
     card.addEventListener("click", open);
     grid.appendChild(card);
