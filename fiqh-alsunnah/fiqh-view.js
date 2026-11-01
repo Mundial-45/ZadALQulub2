@@ -90,7 +90,7 @@
     v.querySelector("#fiqhNotice").textContent = lang() === "es" ? "Seleccione un tema para leer su introducción." : "اختر مسألة لقراءة تعريفها التمهيدي.";
   }
   function renderSection(section, skipHistory = false) {
-    activeSection = section;
+    activeSection = section; activeChapter = null; activeTopic = null; activeIssue = null;
     if (!skipHistory) saveRoute("section", { bookId: activeBook.id, sectionId: section.id });
     const v = ensureView(), content = v.querySelector("#fiqhContent");
     v.querySelector("#fiqhHeading").textContent = tr(section.title);
@@ -107,7 +107,7 @@
     }
   }
   function renderChapter(chapter, skipHistory = false) {
-    activeChapter = chapter;
+    activeChapter = chapter; activeTopic = null; activeIssue = null;
     if (!skipHistory) saveRoute("chapter", { bookId: activeBook.id, sectionId: activeSection.id, chapterId: chapter.id });
     const v = ensureView(), content = v.querySelector("#fiqhContent");
     v.querySelector("#fiqhHeading").textContent = tr(chapter.title);
@@ -283,6 +283,8 @@
     v.querySelector("#fiqhHeading").textContent = tr(issue.title);
     v.querySelector("#fiqhIntro").textContent = tr(activeBook.title) + " / " + tr(activeSection.title) + " / " + tr(activeTopic.title);
     content.replaceChildren();
+    const backToIssues = card(lang() === "es" ? "Volver a los asuntos" : "العودة إلى المطالب", lang() === "es" ? "Regresar al listado" : "الرجوع إلى قائمة المطالب", () => renderTopic(activeTopic));
+    content.appendChild(backToIssues);
     const article = document.createElement("article");
     article.className = "rounded-2xl border border-emerald-200 dark:border-emerald-900 bg-white dark:bg-slate-800 p-5 text-base leading-8 space-y-5";
     const blocks = issue.content && (issue.content[lang()] || issue.content.ar || issue.content.es);
@@ -304,6 +306,12 @@
 
   function open() { hideOtherViews(); renderBooks(); }
   function restoreRoute(state) {
+    if (!state || state.view !== "fiqh") {
+      const v = document.getElementById("fiqhView"); if (v) { v.classList.add("hidden"); v.style.display = "none"; }
+      const home = document.getElementById("homeView"); if (home) { home.style.display = ""; home.classList.remove("hidden"); }
+      activeBook = activeSection = activeChapter = activeTopic = activeIssue = null;
+      return;
+    }
     const book = books().find(item => item.id === state.bookId);
     if (!book || state.level === "books") { hideOtherViews(); renderBooks(true); return; }
     const section = (book.sections || []).find(item => item.id === state.sectionId);
@@ -322,7 +330,7 @@
       if (chapter) {
         renderWaterChapter(chapter, true);
         topic = (chapter.topics || []).find(item => item.id === state.topicId);
-      } else if (state.topicId === section.intro.id) topic = section.intro;
+      } else if (section.intro && state.topicId === section.intro.id) topic = section.intro;
     }
     if (topic) {
       renderTopic(topic, true);
@@ -353,6 +361,10 @@
     const card = document.querySelector("#fiqhHomeCard");
     if (card) card.querySelectorAll("[data-ar]").forEach(el => el.textContent = el.dataset[lang()]);
   }
+  window.addEventListener("popstate", function (event) {
+    if (event.state && event.state.view === "fiqh") restoreRoute(event.state);
+    else restoreRoute(null);
+  });
   window.openFiqhSection = open;
   window.restoreFiqhRoute = restoreRoute;
   window.refreshFiqhLanguage = refreshLanguage;
