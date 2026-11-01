@@ -1557,4 +1557,49 @@ window.FiqhBooks.tahara = {
       visitTopics(chapter.topics);
     });
   });
+})();\n\n
+/* Arrange the source's eleven subject groups under the six requested main doors.
+   All original topics, chapters, introductions and issue text remain in the data. */
+(function () {
+  const book = window.FiqhBooks && window.FiqhBooks.tahara;
+  if (!book || !Array.isArray(book.sections) || book.sections.length !== 11) return;
+  const byId = Object.fromEntries(book.sections.map(section => [section.id, section]));
+  function asChapter(section, chapterId, titleAr, titleEs) {
+    if (section.chapters && section.chapters.length) {
+      return section.chapters;
+    }
+    return [{
+      id: chapterId,
+      title: { ar: titleAr || section.title.ar, es: titleEs || section.title.es },
+      topics: section.topics || []
+    }];
+  }
+  const water = byId.water;
+  const utensils = byId.utensils;
+  const qada = byId["qada-haja"];
+  const impurities = byId.impurities;
+  const fitra = byId.fitra;
+  const wudu = byId.wudu;
+  const wiping = byId.wiping;
+  const nullifiers = byId["wudu-nullifiers"];
+  const ghusl = byId.ghusl;
+  const tayammum = byId.tayammum;
+  const women = byId["women-bleeding"];
+  water.title = { ar: "الباب الأول: أحكام المياه والآنية", es: "Puerta 1: Normas del agua y los recipientes" };
+  water.chapters = (water.chapters || []).concat(asChapter(utensils, "utensils-chapter", "الفصل: أحكام الآنية", "Capítulo: Normas de los recipientes"));
+  delete water.topics;
+  qada.title = { ar: "الباب الثاني: الاستنجاء والاستجمار وإزالة النجاسة", es: "Puerta 2: Limpieza íntima y eliminación de impurezas" };
+  qada.chapters = asChapter(qada, "qada-chapter", "الفصل الأول: أحكام قضاء الحاجة والاستنجاء", "Capítulo 1: Necesidades fisiológicas y limpieza");
+  qada.chapters = qada.chapters.concat(asChapter(impurities, "impurities-chapter", "الفصل الثاني: إزالة النجاسة", "Capítulo 2: Eliminación de impurezas"));
+  delete qada.topics;
+  fitra.title = { ar: "الباب الثالث: الوضوء وما يتعلق به", es: "Puerta 3: Ablución y cuestiones relacionadas" };
+  fitra.chapters = asChapter(fitra, "fitra-chapter", "الفصل الأول: سنن الفطرة", "Capítulo 1: Prácticas de la fitra")
+    .concat(asChapter(wudu, "wudu-chapter", "الفصل الثاني: أحكام الوضوء", "Capítulo 2: Normas del wudu"))
+    .concat(asChapter(wiping, "wiping-chapter", "الفصل الثالث: المسح على الخفين والجبائر", "Capítulo 3: Pasar las manos húmedas sobre calzado y vendajes"))
+    .concat(asChapter(nullifiers, "nullifiers-chapter", "الفصل الرابع: نواقض الوضوء", "Capítulo 4: Anuladores del wudu"));
+  delete fitra.topics;
+  ghusl.title = { ar: "الباب الرابع: الغسل", es: "Puerta 4: Baño ritual (ghusl)" };
+  tayammum.title = { ar: "الباب الخامس: التيمم", es: "Puerta 5: Ablución seca (tayammum)" };
+  women.title = { ar: "الباب السادس: الحيض والنفاس والاستحاضة", es: "Puerta 6: Menstruación, puerperio y sangrado irregular" };
+  book.sections = [water, qada, fitra, ghusl, tayammum, women];
 })();\n
