@@ -1557,7 +1557,7 @@ window.FiqhBooks.tahara = {
       visitTopics(chapter.topics);
     });
   });
-})();\n\n
+})();\n
 /* Arrange the source's eleven subject groups under the six requested main doors.
    All original topics, chapters, introductions and issue text remain in the data. */
 (function () {
@@ -1602,4 +1602,4 @@ window.FiqhBooks.tahara = {
   tayammum.title = { ar: "الباب الخامس: التيمم", es: "Puerta 5: Ablución seca (tayammum)" };
   women.title = { ar: "الباب السادس: الحيض والنفاس والاستحاضة", es: "Puerta 6: Menstruación, puerperio y sangrado irregular" };
   book.sections = [water, qada, fitra, ghusl, tayammum, women];
-})();\n
+})();
