@@ -304,6 +304,46 @@
     v.querySelector("#fiqhNotice").textContent = "";
   }
 
+  function restoreHashRoute() {
+    const hash = (location.hash || "").replace(/^#/, "");
+    if (!hash.startsWith("fiqh")) return;
+    const allBooks = books();
+    if (hash === "fiqh") { hideOtherViews(); renderBooks(true); return; }
+    for (const book of allBooks) {
+      const bookState = { view: "fiqh", level: "book", bookId: book.id };
+      if ("fiqh-" + book.id === hash) { hideOtherViews(); renderBook(book, true); return; }
+      for (const section of book.sections || []) {
+        const sectionState = { view: "fiqh", level: "section", bookId: book.id, sectionId: section.id };
+        const sectionPrefix = "fiqh-" + book.id + "-" + section.id;
+        if (sectionPrefix === hash) { hideOtherViews(); renderSection(section, true); return; }
+        const chapters = section.chapters || [];
+        for (const chapter of chapters) {
+          const chapterPrefix = sectionPrefix + "-" + chapter.id;
+          if (chapterPrefix === hash) { hideOtherViews(); activeBook = book; activeSection = section; renderChapter(chapter, true); return; }
+          for (const topic of chapter.topics || []) {
+            const topicPrefix = chapterPrefix + "-" + topic.id;
+            if (topicPrefix === hash) { hideOtherViews(); activeBook = book; activeSection = section; activeChapter = chapter; renderTopic(topic, true); return; }
+            for (const issue of topic.issues || []) {
+              if (topicPrefix + "-" + issue.id === hash) {
+                hideOtherViews(); activeBook = book; activeSection = section; activeChapter = chapter; activeTopic = topic;
+                renderTopic(topic, true); renderIssue(issue, true); return;
+              }
+            }
+          }
+        }
+        for (const topic of section.topics || []) {
+          const topicPrefix = sectionPrefix + "-none-" + topic.id;
+          if (topicPrefix === hash) { hideOtherViews(); activeBook = book; activeSection = section; activeChapter = null; renderTopic(topic, true); return; }
+          for (const issue of topic.issues || []) {
+            if (topicPrefix + "-" + issue.id === hash) {
+              hideOtherViews(); activeBook = book; activeSection = section; activeChapter = null; activeTopic = topic;
+              renderTopic(topic, true); renderIssue(issue, true); return;
+            }
+          }
+        }
+      }
+    }
+  }
   function open() { hideOtherViews(); renderBooks(); }
   function restoreRoute(state) {
     if (!state || state.view !== "fiqh") {
@@ -368,8 +408,9 @@
   window.openFiqhSection = open;
   window.restoreFiqhRoute = restoreRoute;
   window.refreshFiqhLanguage = refreshLanguage;
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", addHomeCard, { once: true });
-  else addHomeCard();
+  function initializeFiqhView() { addHomeCard(); restoreHashRoute(); }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initializeFiqhView, { once: true });
+  else initializeFiqhView();
   const oldToggle = window.toggleLanguage;
   if (typeof oldToggle === "function") {
     window.toggleLanguage = function () { oldToggle.apply(this, arguments); refreshLanguage(); };
