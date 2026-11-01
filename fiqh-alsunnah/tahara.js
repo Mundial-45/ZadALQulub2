@@ -1522,3 +1522,39 @@ window.FiqhBooks.tahara = {
     ]
   };
 })();
+\n
+/* Build independent issue pages from the existing content blocks.
+   Existing Arabic/Spanish text is preserved verbatim. */
+(function () {
+  const book = window.FiqhBooks && window.FiqhBooks.tahara;
+  if (!book || !Array.isArray(book.sections)) return;
+  function visitTopics(list) {
+    (list || []).forEach(function (topic) {
+      if (!topic || topic.issues || !topic.content) return;
+      const ar = Array.isArray(topic.content.ar) ? topic.content.ar : [];
+      const es = Array.isArray(topic.content.es) ? topic.content.es : [];
+      if (!ar.length) return;
+      topic.issues = ar.map(function (block, index) {
+        const translated = es[index];
+        const headingAr = block.heading || ((topic.title && topic.title.ar) || "المطلب") + " " + (index + 1);
+        const headingEs = translated && translated.heading
+          ? translated.heading
+          : (((topic.title && topic.title.es) || "Apartado") + " — Asunto " + (index + 1));
+        return {
+          id: topic.id + "-issue-" + (index + 1),
+          title: { ar: headingAr, es: headingEs },
+          content: {
+            ar: [block],
+            es: translated ? [translated] : [block]
+          }
+        };
+      });
+    });
+  }
+  book.sections.forEach(function (section) {
+    visitTopics(section.topics);
+    (section.chapters || []).forEach(function (chapter) {
+      visitTopics(chapter.topics);
+    });
+  });
+})();\n
