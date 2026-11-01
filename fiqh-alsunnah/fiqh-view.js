@@ -343,9 +343,12 @@
   function refreshLanguage() {
     const v = document.getElementById("fiqhView");
     if (v && !v.classList.contains("hidden")) {
-      if (activeSection) renderSection(activeSection);
-      else if (activeBook) renderBook(activeBook);
-      else renderBooks();
+      if (activeIssue && activeTopic) renderIssue(activeIssue, true);
+      else if (activeTopic) renderTopic(activeTopic, true);
+      else if (activeChapter) renderChapter(activeChapter, true);
+      else if (activeSection) renderSection(activeSection, true);
+      else if (activeBook) renderBook(activeBook, true);
+      else renderBooks(true);
     }
     const card = document.querySelector("#fiqhHomeCard");
     if (card) card.querySelectorAll("[data-ar]").forEach(el => el.textContent = el.dataset[lang()]);
