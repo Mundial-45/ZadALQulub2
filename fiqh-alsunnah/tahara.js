@@ -1440,6 +1440,35 @@ window.FiqhBooks.tahara = {
       topic("istihada-rulings","المبحث الثاني: أحكام المستحاضة","Apartado 2: Normas de la mujer con metrorragia",makeIssues("istihada-rulings",[["الوضوء لكل صلاة","Ablución para cada oración"],["الجماع والصيام","Relaciones sexuales y ayuno"],["ما يجب عليها","Obligaciones de la mujer afectada"]]))
     ])
   ]);
+
+  // تمهيدات مستقلة للأبواب، بالعربية والإسبانية.
+  const makeIntro = (id, arTitle, esTitle, arText, esText) => ({
+    id: id + "-intro",
+    title: { ar: "تمهيد: " + arTitle, es: "Introducción: " + esTitle },
+    content: {
+      ar: [{ heading: arTitle, text: arText }],
+      es: [{ heading: esTitle, text: esText }]
+    }
+  });
+  b1.intro = makeIntro("water", "أحكام المياه", "Normas del agua",
+    "الماء هو الأصل في التطهر الحسي، وبه تكون الطهارة من الحدث وإزالة النجاسة في الجملة. ويتناول هذا الباب أنواع المياه، وما يبقى منها صالحاً للتطهير، وأحكام الآنية المتصلة باستعمال الماء.",
+    "El agua es el medio básico de la purificación física: se utiliza para levantar el estado ritual y, en términos generales, eliminar las impurezas. Este capítulo estudia sus clases, cuándo conserva su capacidad purificadora y las normas de los recipientes relacionados con su uso.");
+  b2.intro = makeIntro("istinja", "الاستنجاء والاستجمار", "Istinyá e istijmar",
+    "يعالج هذا الباب أحكام إزالة الخارج من السبيلين، والفرق بين الاستنجاء بالماء والاستجمار بما يقوم مقامه، مع بيان الآداب والشروط وما يجوز استعماله.",
+    "Este capítulo aborda la limpieza después de las necesidades fisiológicas, distinguiendo entre el istinyá con agua y el istijmar con materiales sustitutivos, así como sus modales, condiciones y materiales permitidos.");
+  b3.intro = makeIntro("wudu", "الوضوء", "Wudu",
+    "الوضوء طهارة مخصوصة شرعت للصلاة وغيرها مما تشترط له الطهارة. ويعرض هذا الباب تعريفه وفضله وشروطه وفرائضه وسننه وصفته، ثم ما ينقضه وما لا ينقضه، مع بيان مواضع الاتفاق والخلاف بين الفقهاء.",
+    "El wudu es una purificación ritual específica exigida para la oración y otros actos que requieren pureza. Este capítulo presenta su definición, virtud, condiciones, obligaciones, actos recomendados y forma de realizarlo, además de aquello que lo invalida o no lo invalida.");
+  b4.intro = makeIntro("ghusl", "الغسل", "Ghusl",
+    "الغسل هو تعميم البدن بالماء على صفة مخصوصة، ويجب لأسباب معلومة، كما يشرع في مواضع أخرى على سبيل الاستحباب. ويبين هذا الباب موجباته وفرائضه وسننه وصفته الكاملة والمجزئة.",
+    "El ghusl consiste en hacer llegar agua a todo el cuerpo de una manera determinada. Es obligatorio por causas conocidas y recomendado en otras ocasiones. Este capítulo explica sus causas, elementos obligatorios, actos recomendados y formas completa y mínima válida.");
+  b5.intro = makeIntro("tayammum", "التيمم", "Tayammum",
+    "التيمم طهارة بديلة عن استعمال الماء عند فقده أو العجز عن استعماله لعذر معتبر. ويتناول هذا الباب مشروعيته وأسبابه وشروطه وصفته وما يبطله، مع مراعاة اختلاف الفقهاء في بعض التفاصيل.",
+    "El tayammum es una purificación sustitutiva del agua cuando esta falta o no puede utilizarse por una excusa válida. Este capítulo estudia su fundamento, causas, condiciones, forma de realizarlo y aquello que lo invalida, señalando las discrepancias jurídicas pertinentes.");
+  b6.intro = makeIntro("women", "الحيض والنفاس والاستحاضة", "Menstruación, puerperio y metrorragia",
+    "يتناول هذا الباب أحكام الدماء التي تختص بالمرأة، والتمييز بين الحيض والنفاس والاستحاضة، وما يترتب على كل نوع من أحكام الصلاة والصيام والغسل وسائر العبادات، مع عرض المسائل التي وقع فيها الخلاف.",
+    "Este capítulo estudia los sangrados propios de la mujer y distingue entre menstruación, puerperio y metrorragia. Expone sus efectos sobre la oración, el ayuno, el baño ritual y otros actos de culto, indicando las cuestiones en las que existen diferencias entre los juristas.");
+
   book.sections = [b1,b2,b3,b4,b5,b6];
   book._outlineVersion = 1;
 })();
